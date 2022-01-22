@@ -49,7 +49,7 @@ def fusionrs(optical, radar, stand_varb = True, **kwargs):
     
     for args in [optical, radar]:
         if not isinstance(args, (rasterio.io.DatasetReader)): 
-            raise TypeError('The arguments A and B muste be rasterio.io.DatasetReader.')
+            raise TypeError('The arguments A and B must be rasterio.io.DatasetReader.')
     
     if not optical.width != radar.width and optical.height != radar.height:
         raise ValueError('Both optical and radar must have the same dimensions in rows and cols.')
@@ -123,40 +123,3 @@ def fusionrs(optical, radar, stand_varb = True, **kwargs):
              }
 
     return results
-
-
-# +
-# La ruta de la imagen
-path_img = "G:/4_RS_Python/Leccion5/Datos/232066/LC08_SUBSET_232066_20190727_STACK.tif"
-# Luego procedemos a leerla con la funcion gdal.Open()
-img = rasterio.open(path_img)
-
-pca = fusionrs(optical = img, radar = img)
-# -
-
-pca.get('Correlation')
-
-import matplotlib.pyplot as plt
-plt.figure(figsize=(10,10))
-plt.imshow(pca.get('Fused_images')[:,:,:3])
-plt.show()
-
-# - https://zhang-yang.medium.com/python-code-examples-of-explained-variance-in-pca-a19cfa73a257
-# - https://www.datacamp.com/community/tutorials/principal-component-analysis-in-python
-# - https://plotly.com/python/pca-visualization/
-# - https://stackoverflow.com/questions/41823728/how-to-perform-correlation-between-two-dataframes-with-different-column-names
-# - https://stackoverflow.com/questions/41823728/how-to-perform-correlation-between-two-dataframes-with-different-column-names
-
-n = np.linspace(1,13, 12).reshape((3,4))
-m = np.linspace(1,13,12).reshape((3,4))
-a = np.corrcoef(n, m)
-a.shape
-
-n = np.linspace(1,13, 12).reshape((3,4))
-n.shape
-
-list('abcd')
-
-[f'pc{i}' for i in range(1, 5)]
-
-
