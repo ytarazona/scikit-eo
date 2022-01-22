@@ -173,7 +173,8 @@ class mla():
         output = {'Overall_Accuracy': oa,
                   'Kappa_Index': kappa,
                   'Confusion_Matrix': confusionMatrix,
-                  'Classification_Map': classSVM
+                  'Classification_Map': classSVM,
+                  'Image': self.image
                  } 
     
         return output
@@ -282,7 +283,8 @@ class mla():
         output = {'Overall_Accuracy': oa,
                   'Kappa_Index': kappa,
                   'Confusion_Matrix': confusionMatrix,
-                  'Classification_Map': classDT
+                  'Classification_Map': classDT,
+                  'Image': self.image
                  } 
     
         return output
@@ -391,7 +393,8 @@ class mla():
         output = {'Overall_Accuracy': oa,
                   'Kappa_Index': kappa,
                   'Confusion_Matrix': confusionMatrix,
-                  'Classification_Map': classRF
+                  'Classification_Map': classRF,
+                  'Image': self.image
                  } 
     
         return output
@@ -500,7 +503,8 @@ class mla():
         output = {'Overall_Accuracy': oa,
                   'Kappa_Index': kappa,
                   'Confusion_Matrix': confusionMatrix,
-                  'Classification_Map': classNB
+                  'Classification_Map': classNB,
+                  'Image': self.image
                  } 
     
         return output
@@ -548,8 +552,8 @@ class mla():
             test_size = 1 - training_split, 
             random_state = 0)
         
-        # applying a support vector machine
-        inst_nn = MLP(max_inter = max_iter, **kwargs)
+        # applying neural network
+        inst_nn = MLP(max_iter = max_iter, **kwargs)
         
         # model trained
         mt_nn = inst_nn.fit(Xtrain, ytrain)
@@ -609,7 +613,8 @@ class mla():
         output = {'Overall_Accuracy': oa,
                   'Kappa_Index': kappa,
                   'Confusion_Matrix': confusionMatrix,
-                  'Classification_Map': classNN
+                  'Classification_Map': classNN,
+                  'Image': self.image
                  } 
     
         return output
