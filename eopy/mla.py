@@ -1,4 +1,8 @@
 # +
+import rasterio
+import numpy as np
+import pandas as pd
+from dbfread import DBF
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier as DT
 from sklearn.ensemble import RandomForestClassifier as RF
@@ -8,19 +12,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import cohen_kappa_score
 from sklearn.metrics import confusion_matrix
-import rasterio
-import numpy as np
-import pandas as pd
-from dbfread import DBF
 
 class mla():
     
     'Supervised and unsupervised classification in Remote Sensing'
     
-    def __init__(self, image, endm):
+    def __init__(self, image, endmembers, nodata = -99999):
+        
+        '''
+        Parameter:
+        
+            image: Optical images. It must be rasterio.io.DatasetReader with 3d.
+            
+            endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember. 
+                    Rows represent the endmembers and columns represent the spectral bands.
+                    The number of bands must be equal to the number of endmembers.
+                    E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$ 
+                    is rows with the number of endmembers and 6 is the number of bands 
+                    (should be equal).
+                    In addition, Endmembers must have a field (type int or float) with the names 
+                    of classes to be predicted.
+            
+            nodata: The NoData value to replace with -99999.
+        
+        '''
         
         self.image = image
-        self.endm = endm
+        self.endm = endmembers
+        self.nodata = nodata
         
         if not isinstance(self.image, (rasterio.io.DatasetReader)):
             raise TypeError('"image" must be raster read by rasterio.open().')
@@ -36,8 +55,12 @@ class mla():
         # data in [rows, cols, bands]
         st_reorder = np.moveaxis(st, 0, -1) 
         # data in [rows*cols, bands]
-        arr = st_reorder.reshape(rows*cols, bands)
+        arr = st_reorder.reshape((rows*cols, bands))
 
+        # nodata
+        if np.isnan(np.sum(arr)):
+            arr[np.isnan(arr)] = self.nodata
+        
         # if it is read by pandas.read_csv()
         if isinstance(self.endm, (pd.core.frame.DataFrame)):
             
