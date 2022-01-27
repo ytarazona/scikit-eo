@@ -3,35 +3,27 @@ from sklearn.cluster import KMeans
 import rasterio
 import numpy as np
 
-def rkmeans(image, **kwargs):
+def rkmeans(image, k, nodata = -99999, **kwargs):
     
-    '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
-        does not assume a preliminary distribution of input data. Its discrimination criterion is a 
-        hyperplane that separates the classes in the multidimensional space in which the samples 
-        that have established the same classes are located, generally some training areas.
-        
-        SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
-        
+    '''
+    This function allows to classify satellite images using k-means.
+    
+    In principle, this function allows to classify satellite images specifying
+    a ```k``` value (clusters), however it is recommended to find the optimal value of ```k``` using
+    the ```calkmeans``` function embedded in this package.
         
         Parameters:
             
             image: Optical images. It must be rasterio.io.DatasetReader with 3d.
     
-            training_split: For splitting samples into two subsets, i.e. training data and for testing
-                            data.
-    
-            kernel : {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies 
-                     the kernel type to be used in the algorithm. It must be one of 'linear', 'poly', 
-                     'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will 
-                     be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
-                     for more details.
+            nodata: The NoData value to replace with -99999.
                      
-            **kwargs: These will be passed to SVM, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+            **kwargs: These will be passed to scikit-learn KMeans, please see full lists at:
+                  https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
     
         Return:
         
-            Labels of classification as numpy object.
+            Labels of classification as numpy object with 2d.
     '''
     
     if not isinstance(image, (rasterio.io.DatasetReader)):
@@ -52,13 +44,16 @@ def rkmeans(image, **kwargs):
     # data in [rows, cols, bands]
     st_reorder = np.moveaxis(st, 0, -1) 
     # data in [rows*cols, bands]
-    arr = st_reorder.reshape(rows*cols, bands)
+    arr = st_reorder.reshape((rows*cols, bands))
     
-    kmeans = KMeans(**kwargs) # max_iter=300 (por defecto)
+    # nodata
+    if np.isnan(np.sum(arr)):
+        arr[np.isnan(arr)] = self.nodata
+    
+    kmeans = KMeans(**kwargs) # max_iter=300 by default
     kmeans.fit(arr)
     
     labels_km = kmeans.labels_
     classKM = labels_km.reshape((rows, cols))
     
     return classKM
-        
