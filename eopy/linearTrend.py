@@ -7,15 +7,18 @@ class linearTrend(object):
     
     "Linear Trend in Remote Sensing"
     
-    def __init__(self, image):
+    def __init__(self, image, nodata = -99999):
         
         '''
         Parameters:
     
-            image: Optical images. It must be numpy.ndarray with 3d.
+            image: Optical images. It must be rasterio.io.DatasetReader with 3d.
+            
+            nodata: The NoData value to replace with -99999.
         '''
         
         self.image = image
+        self.nodata = nodata
     
     def LN(self, **kwargs):
         
@@ -28,8 +31,7 @@ class linearTrend(object):
         
             **kwargs: These will be passed to LN, please see full lists at:
                   https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
-    
-    
+                  
         Return:
             a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray 
             with 2d.
@@ -83,6 +85,10 @@ class linearTrend(object):
         
         arr = st_reorder.reshape((rows*cols, bands))
         
+        # nodata
+        if np.isnan(np.sum(arr)):
+            arr[np.isnan(arr)] = self.nodata
+        
         sequences = range(0, rows*cols)
         
         x = range(0, bands)
@@ -108,41 +114,4 @@ class linearTrend(object):
     def MLN(**kwargs):
         
         pass
-
-
-# +
-import os
-import rasterio
-import numpy as np
-from scipy import stats
-
-path = r'F:\RepositoriosGitHub\Ejemplos_ForesToolboxRS\data'
-os.getcwd()
-
-img = rasterio.open(path+'/serie_pv.tif')
-ln = linearTrend(image = img)
-ln.LN()
-# -
-
-
-
-# - https://stackoverflow.com/questions/11479064/multiple-linear-regression-in-python
-# - https://www.earthdatascience.org/courses/use-data-open-source-python/spatial-data-applications/lidar-remote-sensing-uncertainty/compare-lidar-and-measured-tree-height-regression/
-# - https://stackoverflow.com/questions/27928275/find-p-value-significance-in-scikit-learn-linearregression/42677750#42677750
-# - https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9
-#
-# FUNCIONES LAMBDA
-# - https://realpython.com/python-lambda/
-# - https://www.guru99.com/python-lambda-function.html
-
-sequences = range(0, 143*151)
-filtered_result = map(lambda i: stats.linregress(x, img[i,:]), sequences)
-#list(filtered_result)
-
-n = np.stack(list(filtered_result))[:,0]
-
-n.reshape((143,151)).shape
-
-x
-
 
