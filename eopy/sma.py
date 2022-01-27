@@ -2,7 +2,7 @@
 import rasterio
 import numpy as np
 
-def sma(image, endmembers):
+def sma(image, endmembers, nodata = -99999):
     '''
     The SMA assumes that the energy received within the field of vision of the remote sensor 
     can be considered as the sum of the energies received from each dominant endmember. 
@@ -14,7 +14,7 @@ def sma(image, endmembers):
     
     Parameters:
     
-        image: Optical images. It must be numpy.ndarray with 3d.
+        image: Optical images. It must be rasterio.io.DatasetReader with 3d.
         
         endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember. 
                     Rows represent the endmembers and columns represent the spectral bands.
@@ -22,6 +22,8 @@ def sma(image, endmembers):
                     E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$ 
                     is rows with the number of endmembers and 6 is the number of bands 
                     (should be equal).
+                    
+        nodata: The NoData value to replace with -99999.
     
     Return:
         numpy.ndarray with 2d.
@@ -51,6 +53,10 @@ def sma(image, endmembers):
     st_reorder = np.moveaxis(st, 0, -1) 
     # data in [rows*cols, bands]
     arr = st_reorder.reshape((rows*cols, bands))
+    
+    # nodata
+    if np.isnan(np.sum(arr)):
+        arr[np.isnan(arr)] = self.nodata
     
     if not arr.shape[1] > n_endm:
         raise ValueError('The number of bands must be greater than the number of endmembers.')
