@@ -1,7 +1,7 @@
 # +
 import numpy as np
 
-def tassCap(image, sat = "Landsat8OLI"):
+def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
     
     '''
     The Tasseled-Cap Transformation is a linear transformation method for various 
@@ -11,10 +11,11 @@ def tassCap(image, sat = "Landsat8OLI"):
     
     Parameters:
     
-        image: Optical images. It must be numpy.ndarray with 3d.
+        image: Optical images. It must be rasterio.io.DatasetReader with 3d.
         
-        endmembers: Specify satellite and sensor type (Landsat5TM, Landsat7ETM or Landsat8OLI).
-                    See the list of satellites below.
+        sat: Specify satellite and sensor type (Landsat5TM, Landsat7ETM or Landsat8OLI).
+                    
+        nodata: The NoData value to replace with -99999.
     
     Return:
         numpy.ndarray with 2d.
@@ -99,6 +100,10 @@ def tassCap(image, sat = "Landsat8OLI"):
     # data in [rows*cols, bands]
     arr = st_reorder.reshape((rows*cols, bands))
     
+    # nodata
+    if np.isnan(np.sum(arr)):
+        arr[np.isnan(arr)] = self.nodata
+        
     if bands != coefc.shape[1]:
         raise ValueError('The number of bands must be equal to the number of coefficients in bands.')
     
