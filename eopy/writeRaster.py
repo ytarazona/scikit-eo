@@ -62,6 +62,9 @@ def writeRaster(arr, image, filename = None, filepath = None, n = 1):
         
     kwargs = image.meta
     
+    if arr.dtype == 'int64':
+        arr = arr.astype(np.int32)
+    
     dtype = str(arr.dtype)
     
     kwargs.update({      
