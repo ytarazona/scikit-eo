@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-import numpy as np
-import rasterio
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-
 # +
 import numpy as np
 import pandas as pd
@@ -11,7 +6,7 @@ import rasterio
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-def fusionrs(optical, radar, stand_varb = True, **kwargs):
+def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     
     '''
     Fusion of images with different observation geometries through Principal Component Analysis (PCA).
@@ -29,8 +24,11 @@ def fusionrs(optical, radar, stand_varb = True, **kwargs):
         stand_varb: Logical. If ``stand.varb = True``, the PCA is calculated using the correlation 
                     matrix (standardized variables) instead of the covariance matrix 
                     (non-standardized variables).
-        nan: Logical. If ``na.rm = True`` the NaN values of the images will be omitted from 
-               the analysis
+                    
+        nodata: The NoData value to replace with -99999.
+        
+        **kwargs: These will be passed to scikit-learn PCA, please see full lists at:
+                  https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
     
     Return:
         numpy.ndarray with 3d.
@@ -69,6 +67,10 @@ def fusionrs(optical, radar, stand_varb = True, **kwargs):
     
     # data in [rows*cols, bands]
     arr = st.reshape((rows*cols, bands_total))
+    
+    # nodata
+    if np.isnan(np.sum(arr)):
+        arr[np.isnan(arr)] = self.nodata
     
     # standardized variables
     if stand_varb:
