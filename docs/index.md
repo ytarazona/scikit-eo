@@ -9,7 +9,7 @@
 
 -   Free software: Apache Software License 2.0
 -   Documentation: <https://ytarazona.github.io/eopy>
-    
+
 
 ## Features
 
