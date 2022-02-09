@@ -17,9 +17,9 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     
     Parameters:
     
-        optical: Optical image. It must be numpy.ndarray with 3d.
+        optical: Optical image. It must be rasterio.io.DatasetReader with 3d.
         
-        radar: Radar image. It must be numpy.ndarray with 3d.
+        radar: Radar image. It must be rasterio.io.DatasetReader with 3d.
         
         stand_varb: Logical. If ``stand.varb = True``, the PCA is calculated using the correlation 
                     matrix (standardized variables) instead of the covariance matrix 
