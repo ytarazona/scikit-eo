@@ -1,4 +1,0 @@
- 
-# eopy module
-
-::: eopy.eopy
