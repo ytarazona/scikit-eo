@@ -92,7 +92,7 @@ class mla():
         
         self.cols = cols
         
-    def SVM(self, training_split = 0.8, kernel = 'linear', **kwargs):
+    def SVM(self, training_split = 0.8, random_state = None, kernel = 'linear', **kwargs):
         
         '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
         does not assume a preliminary distribution of input data. Its discrimination criterion is a 
@@ -133,7 +133,7 @@ class mla():
             y, 
             train_size = training_split, 
             test_size = 1 - training_split, 
-            random_state = 0)
+            random_state = random_state)
         
         # applying a support vector machine
         inst_svm = SVC(kernel = kernel, **kwargs)
