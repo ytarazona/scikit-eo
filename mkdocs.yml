@@ -4,18 +4,20 @@ site_url: https://ytarazona.github.io/eopy
 
 repo_url: https://github.com/ytarazona/eopy
 
-theme:
-    palette:
-        scheme: preference
-    name: material
-    icon:
-        repo: fontawesome/brands/github
-    features:
-        - navigation.instant
-        - search.highlight
+#theme:
+    #palette:
+        #scheme: preference
+    #name: material
+    #icon:
+        #repo: fontawesome/brands/github
+    #features:
+        #- navigation.instant
+        #- search.highlight
         # - navigation.expand
         # - navigation.tabs
-    custom_dir: "docs/overrides"
+    #custom_dir: "docs/overrides"
+
+theme: readthedocs
 
 plugins:
     - search
@@ -23,8 +25,8 @@ plugins:
     - git-revision-date
     - mkdocs-jupyter:
           include_source: True
-        #   ignore_h1_titles: True
-        #   execute: True
+          ignore_h1_titles: True
+          execute: True
         #   execute_ignore: "*.ipynb"
           
 markdown_extensions:
@@ -49,4 +51,10 @@ nav:
     - Changelog: changelog.md
     - Report Issues: https://github.com/ytarazona/eopy/issues
     - API Reference:
-          - eopy module: eopy.md
+          - fusionrs module: fusionrs.md
+          - linearTrend module: linearTrend.md
+          - mla module: mla.md
+          - rkmeans module: rkmeans.md
+          - sma module: sma.md
+          - tassCap module: tassCap.md
+          - writeRaster module: writeRaster.md
