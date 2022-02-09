@@ -57,3 +57,4 @@ def rkmeans(image, k, nodata = -99999, **kwargs):
     classKM = labels_km.reshape((rows, cols))
     
     return classKM
+
