@@ -42,7 +42,7 @@ Parameter:
 ### <kbd>method</kbd> `DT`
 
 ```python
-DT(training_split=0.8, **kwargs)
+DT(training_split=0.8, random_state=None, **kwargs)
 ```
 
 The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
@@ -78,7 +78,7 @@ Labels of classification as numpy object.
 ### <kbd>method</kbd> `NB`
 
 ```python
-NB(training_split=0.8, **kwargs)
+NB(training_split=0.8, random_state=None, **kwargs)
 ```
 
 The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
@@ -114,7 +114,7 @@ Labels of classification as numpy object.
 ### <kbd>method</kbd> `NN`
 
 ```python
-NN(training_split=0.8, max_iter=300, **kwargs)
+NN(training_split=0.8, max_iter=300, random_state=None, **kwargs)
 ```
 
 The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
@@ -150,7 +150,7 @@ Labels of classification as numpy object.
 ### <kbd>method</kbd> `RF`
 
 ```python
-RF(training_split=0.8, **kwargs)
+RF(training_split=0.8, random_state=None, **kwargs)
 ```
 
 The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
@@ -186,7 +186,7 @@ Labels of classification as numpy object.
 ### <kbd>method</kbd> `SVM`
 
 ```python
-SVM(training_split=0.8, kernel='linear', **kwargs)
+SVM(training_split=0.8, random_state=None, kernel='linear', **kwargs)
 ```
 
 The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
