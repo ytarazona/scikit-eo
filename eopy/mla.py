@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import cohen_kappa_score
 from sklearn.metrics import confusion_matrix
 
-class mla():
+class mla(object):
     
     'Supervised and unsupervised classification in Remote Sensing'
     
@@ -202,7 +202,7 @@ class mla():
     
         return output
     
-    def DT(self, training_split = 0.8, **kwargs):
+    def DT(self, training_split = 0.8, random_state = None, **kwargs):
         
         '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
         does not assume a preliminary distribution of input data. Its discrimination criterion is a 
@@ -243,7 +243,7 @@ class mla():
             y, 
             train_size = training_split, 
             test_size = 1 - training_split, 
-            random_state = 0)
+            random_state = random_state)
         
         # applying a support vector machine
         inst_dt = DT(**kwargs)
@@ -312,7 +312,7 @@ class mla():
     
         return output
     
-    def RF(self, training_split = 0.8, **kwargs):
+    def RF(self, training_split = 0.8, random_state = None, **kwargs):
         
         '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
         does not assume a preliminary distribution of input data. Its discrimination criterion is a 
@@ -353,7 +353,7 @@ class mla():
             y, 
             train_size = training_split, 
             test_size = 1 - training_split, 
-            random_state = 0)
+            random_state = random_state)
         
         # applying a support vector machine
         inst_rf = RF(**kwargs)
@@ -422,7 +422,7 @@ class mla():
     
         return output
     
-    def NB(self, training_split = 0.8, **kwargs):
+    def NB(self, training_split = 0.8, random_state = None, **kwargs):
         
         '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
         does not assume a preliminary distribution of input data. Its discrimination criterion is a 
@@ -463,7 +463,7 @@ class mla():
             y, 
             train_size = training_split, 
             test_size = 1 - training_split, 
-            random_state = 0)
+            random_state = random_state)
         
         # applying a support vector machine
         inst_nb = GNB(**kwargs)
@@ -532,7 +532,7 @@ class mla():
     
         return output
     
-    def NN(self, training_split = 0.8, max_iter = 300, **kwargs):
+    def NN(self, training_split = 0.8, max_iter = 300, random_state = None, **kwargs):
         
         '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
         does not assume a preliminary distribution of input data. Its discrimination criterion is a 
@@ -573,7 +573,7 @@ class mla():
             y, 
             train_size = training_split, 
             test_size = 1 - training_split, 
-            random_state = 0)
+            random_state = random_state)
         
         # applying neural network
         inst_nn = MLP(max_iter = max_iter, **kwargs)
