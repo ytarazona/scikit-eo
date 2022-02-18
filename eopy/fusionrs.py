@@ -36,6 +36,16 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     Note:
     Before executing the function, it is recommended that images coming from different sensors 
     or from the same sensor have a co-registration.
+    
+    The contributions of variables in accounting for the variability in a given principal component 
+    are expressed in percentage. Variables that are correlated with PC1 (i.e., Dim.1) and PC2 
+    (i.e., Dim.2) are the most important in explaining the variability in the data set. Variables 
+    that do not correlated with any PC or correlated with the last dimensions are variables with 
+    low contribution and might be removed to simplify the overall analysis.
+    The contribution is a scaled version of the squared correlation between variables and component 
+    axes (or the cosine, from a geometrical point of view) --- this is used to assess the quality of 
+    the representation of the variables of the principal component, and it is computed as 
+    (cos(variable,axis)^2/total cos2 of the component)×100.
 
     References:
     - Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A. 
@@ -116,12 +126,40 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
 
     corr_mat = corr(df_ori, df_pca).T
     
+    # Contributions
+    
+    def contributions(corr_matrix):
+        
+        corr2 = corr_matrix.pow(2)
+        
+        sum_corr2 = corr2.sum(axis = 0) # columns
+        
+        mat_1d = np.reshape(np.array(sum_corr2), (1,12))
+        
+        i = 0
+        matrix_sum_corr2 = mat_1d.copy()
+        
+        while i < (bands_total - 1):
+            
+            matrix_sum_corr2 = np.vstack([matrix_sum_corr2, mat_1d])
+            
+            i = i + 1
+            
+        matrix_sum_corr2 = pd.DataFrame(matrix_sum_corr2)
+        
+        contrib = corr2.div(matrix_sum_corr2.values)*100
+        
+        return contrib
+    
+    contri_mat = contributions(corr_mat)
+    
+    
     results = {'Fused_images':pc,
               'Variance':var,
               'Proportion_of_variance':pro_var,
               'Cumulative_variance':cum_var,
-              'Correlation':corr_mat
-              #'Contribution_in_%':
+              'Correlation':corr_mat,
+              'Contributions_in_%': contri_mat
              }
 
     return results
