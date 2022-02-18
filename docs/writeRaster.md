@@ -40,13 +40,7 @@ This algorithm allows to save array images to raster format (.tif).
 
  - <b>`n`</b>:  Number of images to be saved. 
 
-Return: A dictionary with Fused images (array), Variance, Proportion of variance, Cumulative variance, Correlation and Contribution in percentage. 
-
-
-
-**Note:**
-
-> Currently implemented for satellites such as Landsat-4 TM, Landsat-5 TM, Landsat-7 ETM+, Landsat-8 OLI and Sentinel2. The input data must be in top of atmosphere reflectance (toa). Bands required as input must be ordered as: 
+Return: A raster in your filepath. 
 
 
 
