@@ -10,7 +10,10 @@ from sklearn.naive_bayes import GaussianNB as GNB
 from sklearn.neural_network import MLPClassifier as MLP
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import LeaveOneOut
+from sklearn.model_selection import KFold
+from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import cross_val_score
 
 class calmla(object):
     
@@ -207,17 +210,302 @@ class calmla(object):
         return errors_setApproach 
         
         
-    # LOOCV
+    # Leave One Out Cross-Validation calibration
     
-    def LOOCV():
-        pass
+    def LOOCV(self, split_data, models = ('svm', 'dt'), cv = LeaveOneOut(), n_iter = 10, **kwargs):
+        
+        '''
+        This module allows to calibrate supervised classification in satellite images 
+        through various algorithms and using Leave One Out Cross-Validation.
+        
+        Parameters:
+        
+            split_data: A dictionary obtained from the *splitData* method of this package.
+            
+            models: Models to be used such as Support Vector Machine ('svm'), Decision Tree ('dt'),
+            Random Forest ('rf'), Naive Bayes ('nb') and Neural Networks ('nn'). This parameter
+            can be passed like models = ('svm', 'dt', 'rf', 'nb', 'nn').
+            
+            cv: For splitting samples into two subsets, i.e. training data and 
+            for testing data. Following Leave One Out Cross-Validation.
+            
+            n_iter: Number of iterations, i.e number of times the analysis is executed.
+            
+            **kwargs:
+            
+        Return:
+            
+        '''
+        svm_error_loocv = []
+        dt_error_loocv = []
+        rf_error_loocv = []
+        nb_error_loocv = []
+        nn_error_loocv = []
+        
+        #cv = LeaveOneOut()
+        
+        X = split_data.get('X')
+        
+        y = split_data.get('y')
+        
+        for i in range(n_iter):
+            
+            if 'svm' in models:
+                # applying a support vector machine
+                inst_svm = SVC(**kwargs)
+                
+                scores = cross_val_score(inst_svm, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                svm_error_loocv.append(1 - mean_scores)
+            
+            if 'dt' in models:
+                # applying a support vector machine
+                inst_dt = DT(**kwargs)
+                
+                scores = cross_val_score(inst_dt, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                dt_error_loocv.append(1 - mean_scores)
+            
+            if 'rf' in models:
+                # applying a support vector machine
+                inst_rf = RF(**kwargs)
+                
+                scores = cross_val_score(inst_rf, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                rf_error_loocv.append(1 - mean_scores)
+            
+            if 'nb' in models:
+                # applying a support vector machine
+                inst_nb = GNB(**kwargs)
+                
+                scores = cross_val_score(inst_nb, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nb_error_loocv.append(1 - mean_scores)
+            
+            if 'nn' in models:
+                # applying a support vector machine
+                inst_nn = MLP(**kwargs)
+                
+                scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nn_error_loocv.append(1 - mean_scores)
+            
+            
+            dic = {'svm': svm_error_loocv,
+                  'dt': dt_error_loocv,
+                  'rf': rf_error_loocv,
+                  'nb': nb_error_loocv,
+                  'nn': nn_error_loocv}
+
+            all_models = ('svm', 'dt', 'rf', 'nb', 'nn')
+
+            for model in all_models:
+                if model not in models:
+                    del dic[model]
+                    
+        errors_LOOCV = dic
+        
+        return errors_LOOCV
     
-    # CV
+    # Cross-Validation Calibration
     
-    def CV():
-        pass
+    def CV(self, split_data, models = ('svm', 'dt'), k = 5, n_iter = 10, random_state = None, **kwargs):
+        
+        
+        '''
+        This module allows to calibrate supervised classification in satellite images 
+        through various algorithms and using Cross-Validation.
+        
+        Parameters:
+        
+            split_data: A dictionary obtained from the *splitData* method of this package.
+            
+            models: Models to be used such as Support Vector Machine ('svm'), Decision Tree ('dt'),
+            Random Forest ('rf'), Naive Bayes ('nb') and Neural Networks ('nn'). This parameter
+            can be passed like models = ('svm', 'dt', 'rf', 'nb', 'nn').
+            
+            cv: For splitting samples into two subsets, i.e. training data and 
+            for testing data. Following Leave One Out Cross-Validation.
+            
+            n_iter: Number of iterations, i.e number of times the analysis is executed.
+            
+            **kwargs:
+            
+        Return:
+            
+        '''
+        
+        svm_error_cv = []
+        dt_error_cv = []
+        rf_error_cv = []
+        nb_error_cv = []
+        nn_error_cv = []
+        
+        cv = KFold(n_splits = k, shuffle = True, random_state = random_state)
+        
+        #cv = LeaveOneOut()
+        
+        X = split_data.get('X')
+        
+        y = split_data.get('y')
+        
+        for i in range(n_iter):
+            
+            if 'svm' in models:
+                # applying a support vector machine
+                inst_svm = SVC(**kwargs)
+                
+                scores = cross_val_score(inst_svm, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                svm_error_cv.append(1 - mean_scores)
+            
+            if 'dt' in models:
+                # applying a support vector machine
+                inst_dt = DT(**kwargs)
+                
+                scores = cross_val_score(inst_dt, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                dt_error_cv.append(1 - mean_scores)
+            
+            if 'rf' in models:
+                # applying a support vector machine
+                inst_rf = RF(**kwargs)
+                
+                scores = cross_val_score(inst_rf, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                rf_error_cv.append(1 - mean_scores)
+            
+            if 'nb' in models:
+                # applying a support vector machine
+                inst_nb = GNB(**kwargs)
+                
+                scores = cross_val_score(inst_nb, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nb_error_cv.append(1 - mean_scores)
+            
+            if 'nn' in models:
+                # applying a support vector machine
+                inst_nn = MLP(**kwargs)
+                
+                scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nn_error_cv.append(1 - mean_scores)
+            
+            
+            dic = {'svm': svm_error_cv,
+                  'dt': dt_error_cv,
+                  'rf': rf_error_cv,
+                  'nb': nb_error_cv,
+                  'nn': nn_error_cv}
+
+            all_models = ('svm', 'dt', 'rf', 'nb', 'nn')
+
+            for model in all_models:
+                if model not in models:
+                    del dic[model]
+                    
+        errors_CV = dic
+        
+        return errors_CV
     
-    # MCCV
+    # Monte Carlo Cross-Validation Calibration
     
-    def MCCV():
-        pass
+    def MCCV(self, split_data, models = ('svm'), train_size = 0.5, n_splits = 5, n_iter = 10, random_state = None, **kwargs):
+        
+        
+        '''
+        This module allows to calibrate supervised classification in satellite images 
+        through various algorithms and using Cross-Validation.
+        
+        Parameters:
+        
+            split_data: A dictionary obtained from the *splitData* method of this package.
+            
+            models: Models to be used such as Support Vector Machine ('svm'), Decision Tree ('dt'),
+            Random Forest ('rf'), Naive Bayes ('nb') and Neural Networks ('nn'). This parameter
+            can be passed like models = ('svm', 'dt', 'rf', 'nb', 'nn').
+            
+            cv: For splitting samples into two subsets, i.e. training data and 
+            for testing data. Following Leave One Out Cross-Validation.
+            
+            n_iter: Number of iterations, i.e number of times the analysis is executed.
+            
+            **kwargs:
+            
+        Return:
+            
+        '''
+        
+        svm_error_mccv = []
+        dt_error_mccv = []
+        rf_error_mccv = []
+        nb_error_mccv = []
+        nn_error_mccv = []
+        
+        test_size = 1 - train_size
+        
+        mc = ShuffleSplit(n_splits = n_splits, test_size = test_size, random_state = random_state)
+        
+        X = split_data.get('X')
+        
+        y = split_data.get('y')
+        
+        for i in range(n_iter):
+            
+            if 'svm' in models:
+                # applying a support vector machine
+                inst_svm = SVC(**kwargs)
+                
+                scores = cross_val_score(inst_svm, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                svm_error_mccv.append(1 - mean_scores)
+            
+            if 'dt' in models:
+                # applying a support vector machine
+                inst_dt = DT(**kwargs)
+                
+                scores = cross_val_score(inst_dt, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                dt_error_mccv.append(1 - mean_scores)
+            
+            if 'rf' in models:
+                # applying a support vector machine
+                inst_rf = RF(**kwargs)
+                
+                scores = cross_val_score(inst_rf, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                rf_error_mccv.append(1 - mean_scores)
+            
+            if 'nb' in models:
+                # applying a support vector machine
+                inst_nb = GNB(**kwargs)
+                
+                scores = cross_val_score(inst_nb, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nb_error_mccv.append(1 - mean_scores)
+            
+            if 'nn' in models:
+                # applying a support vector machine
+                inst_nn = MLP(**kwargs)
+                
+                scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
+                mean_scores = np.mean(scores)
+                nn_error_mccv.append(1 - mean_scores)
+            
+            
+            dic = {'svm': svm_error_mccv,
+                  'dt': dt_error_mccv,
+                  'rf': rf_error_mccv,
+                  'nb': nb_error_mccv,
+                  'nn': nn_error_mccv}
+
+            all_models = ('svm', 'dt', 'rf', 'nb', 'nn')
+
+            for model in all_models:
+                if model not in models:
+                    del dic[model]
+                    
+        errors_MCCV = dic
+        
+        return errors_MCCV
+
