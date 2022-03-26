@@ -32,7 +32,7 @@ def writeRaster(arr, image, filename = None, filepath = None, n = 1):
         raise TypeError(f'The image must be rasterio.io.DatasetReader. image = {type(image)}')
     
     if not arr.ndim >= 2:
-        raise ValueError(f'Input mus have two or three dimensions. ndim = f{arr.ndim}')
+        raise ValueError(f'Input mus have two or three dimensions. ndim = {arr.ndim}')
     
     if filename is None:
         
