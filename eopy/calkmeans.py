@@ -34,7 +34,7 @@ def calkmeans(image, k = None, algo = ("auto", "elkan"), max_iter = 300, n_iter 
             nodata: The NoData value to replace with -99999. 
                      
             **kwargs: These will be passed to scikit-learn KMeans, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+                  https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html.
     
         Return:
         
