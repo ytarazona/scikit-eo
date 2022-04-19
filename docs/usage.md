@@ -1,7 +1,11 @@
 # Usage
 
-To use EOpy in a project:
+To use scikit-eo in a project:
 
 ```
-import eopy
+import scikit-eo
+```
+
+```python
+
 ```
