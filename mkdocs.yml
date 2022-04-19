@@ -1,8 +1,8 @@
-site_name: eopy
+site_name: scikit-eo
 
-site_url: https://ytarazona.github.io/eopy
+site_url: https://ytarazona.github.io/scikit-eo
 
-repo_url: https://github.com/ytarazona/eopy
+repo_url: https://github.com/ytarazona/scikit-eo
 
 #theme:
     #palette:
@@ -49,7 +49,7 @@ nav:
     - Contributing: contributing.md
     - FAQ: faq.md
     - Changelog: changelog.md
-    - Report Issues: https://github.com/ytarazona/eopy/issues
+    - Report Issues: https://github.com/ytarazona/scikit-eo/issues
     - API Reference:
           - fusionrs module: fusionrs.md
           - linearTrend module: linearTrend.md
