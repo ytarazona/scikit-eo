@@ -1,15 +1,6 @@
-<!-- markdownlint-disable -->
-
-<a href="..\eopy\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
-# <kbd>module</kbd> `atmosCorr`
-
-
-
-
-
-
 ---
+<a href="..\eopy\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+# <kbd>module</kbd> `atmosCorr`
 
 <a href="..\eopy\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
@@ -35,7 +26,6 @@ Parameter:
 
 
 
----
 
 <a href="..\eopy\atmosCorr.py#L191"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
@@ -60,7 +50,6 @@ The Dark Object Subtraction Method was proposed by Chavez (1988). This image-bas
 
 Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
 
----
 
 <a href="..\eopy\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
@@ -86,7 +75,6 @@ Lλ = TOA spectral radiance (Watts/(m2*srad*μm)) ML = Band-specific multiplicat
 
 Return: An array with radiance values with 3d, i.e. (rows, cols, bands). 
 
----
 
 <a href="..\eopy\atmosCorr.py#L123"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
@@ -109,6 +97,6 @@ Return: An array with TOA values with 3d, i.e. (rows, cols, bands).
 
 
 
----
 
 _This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+---
