@@ -1,4 +1,4 @@
-# Welcome to eopy
+# Welcome to scikit-eo
 
 
 [![image](https://img.shields.io/pypi/v/eopy.svg)](https://pypi.python.org/pypi/eopy)
@@ -8,7 +8,7 @@
 
 
 -   Free software: Apache Software License 2.0
--   Documentation: <https://ytarazona.github.io/eopy>
+-   Documentation: <https://ytarazona.github.io/scikit-eo>
 
 
 ## Features
