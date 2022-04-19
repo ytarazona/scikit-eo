@@ -1,13 +1,22 @@
----
-<a href="..\eopy\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<!-- markdownlint-disable -->
+
+<a href="..\scikit-eo\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 # <kbd>module</kbd> `atmosCorr`
 
-<a href="..\eopy\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+
+
+
+
+---
+
+<a href="..\scikit-eo\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `atmosCorr`
 Atmospheric Correction in Optical domain 
 
-<a href="..\eopy\atmosCorr.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\atmosCorr.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -19,15 +28,14 @@ Parameter:
 
  path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-2. For example: path = '/folder/image/raster'.  
 
- nodata: The NoData value to replace with -99999.  
+ nodata: The NoData value to replace with -99999. 
 
 
 
 
+---
 
-
-
-<a href="..\eopy\atmosCorr.py#L191"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\atmosCorr.py#L188"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -50,8 +58,9 @@ The Dark Object Subtraction Method was proposed by Chavez (1988). This image-bas
 
 Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
 
+---
 
-<a href="..\eopy\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `RAD`
 
@@ -75,8 +84,9 @@ Lλ = TOA spectral radiance (Watts/(m2*srad*μm)) ML = Band-specific multiplicat
 
 Return: An array with radiance values with 3d, i.e. (rows, cols, bands). 
 
+---
 
-<a href="..\eopy\atmosCorr.py#L123"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\atmosCorr.py#L121"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
@@ -97,6 +107,6 @@ Return: An array with TOA values with 3d, i.e. (rows, cols, bands).
 
 
 
+---
 
 _This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
----
