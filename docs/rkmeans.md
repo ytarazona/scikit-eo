@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\eopy\rkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\rkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `rkmeans`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\eopy\rkmeans.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\rkmeans.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `rkmeans`
 
@@ -18,7 +18,7 @@
 rkmeans(image, k, nodata=-99999, **kwargs)
 ```
 
-This function allows to classify satellite images using k-means. 
+This function allows to classify satellite images using k-means 
 
 In principle, this function allows to classify satellite images specifying a ```k``` value (clusters), however it is recommended to find the optimal value of ```k``` using the ```calkmeans``` function embedded in this package.  
 
