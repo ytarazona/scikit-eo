@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\eopy\fusionrs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\fusionrs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `fusionrs`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\eopy\fusionrs.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikit-eo\fusionrs.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `fusionrs`
 
