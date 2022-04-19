@@ -9,7 +9,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at <https://github.com/ytarazona/eopy/issues>.
+Report bugs at <https://github.com/ytarazona/scikit-eo/issues>.
 
 If you are reporting a bug, please include:
 
@@ -29,14 +29,14 @@ Look through the GitHub issues for features. Anything tagged with
 
 ### Write Documentation
 
-EOpy could always use more documentation,
-whether as part of the official EOpy docs,
+scikit-eo could always use more documentation,
+whether as part of the official scikit-eo docs,
 in docstrings, or even on the web in blog posts, articles, and such.
 
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at
-<https://github.com/ytarazona/eopy/issues>.
+<https://github.com/ytarazona/scikit-eo/issues>.
 
 If you are proposing a feature:
 
@@ -46,14 +46,14 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up eopy for local development.
+Ready to contribute? Here's how to set up scikit-eo for local development.
 
-1.  Fork the eopy repo on GitHub.
+1.  Fork the scikit-eo repo on GitHub.
 
 2.  Clone your fork locally:
 
     ```shell
-    $ git clone git@github.com:your_name_here/eopy.git
+    $ git clone git@github.com:your_name_here/scikit-eo.git
     ```
 
 3.  Install your local copy into a virtualenv. Assuming you have
@@ -61,8 +61,8 @@ Ready to contribute? Here's how to set up eopy for local development.
     local development:
 
     ```shell
-    $ mkvirtualenv eopy
-    $ cd eopy/
+    $ mkvirtualenv scikit-eo
+    $ cd scikit-eo/
     $ python setup.py develop
     ```
 
@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up eopy for local development.
     and the tests, including testing other Python versions with tox:
 
     ```shell
-    $ flake8 eopy tests
+    $ flake8 scikit-eo tests
     $ python setup.py test or pytest
     $ tox
     ```
@@ -104,5 +104,9 @@ Before you submit a pull request, check that it meets these guidelines:
     Put your new functionality into a function with a docstring, and add
     the feature to the list in README.rst.
 3.  The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and
-    for PyPy. Check <https://github.com/ytarazona/eopy/pull_requests> and make sure that the tests pass for all
+    for PyPy. Check <https://github.com/ytarazona/scikit-eo/pull_requests> and make sure that the tests pass for all
     supported Python versions.
+
+```python
+
+```
