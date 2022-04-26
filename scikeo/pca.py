@@ -29,6 +29,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
                   https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
     
     Return:
+    
         numpy.ndarray with 3d.
     
     Note:
