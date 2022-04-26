@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\writeRaster.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\writeRaster.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `writeRaster`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\writeRaster.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\writeRaster.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `writeRaster`
 
@@ -18,7 +18,7 @@
 writeRaster(arr, image, filename=None, filepath=None, n=1)
 ```
 
-This algorithm allows to save array images to raster format (.tif) 
+This algorithm allows to save array images to raster format (.tif). 
 
 
 
