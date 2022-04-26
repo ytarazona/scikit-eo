@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\sma.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\sma.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `sma`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\sma.py#L5"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\sma.py#L5"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `sma`
 
@@ -36,7 +36,9 @@ A regression analysis is used to obtain the fractions. In least squares inversio
 
  - <b>`nodata`</b>:  The NoData value to replace with -99999. 
 
-Return: numpy.ndarray with 2d. 
+Return: 
+
+numpy.ndarray with 2d. 
 
 
 
