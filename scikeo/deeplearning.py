@@ -32,6 +32,7 @@ class DL(object):
                     of classes to be predicted.
             
             nodata: The NoData value to replace with -99999.
+            
         '''
         
         self.image = image
