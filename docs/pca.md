@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\pca.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\pca.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `pca`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\pca.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\pca.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `PCA`
 
@@ -40,7 +40,9 @@ This algorithm allows to obtain Principal Components from images either radar or
  - <b>`**kwargs`</b>:  These will be passed to scikit-learn PCA, please see full lists at: 
  - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html 
 
-Return: numpy.ndarray with 3d. 
+Return: 
+
+numpy.ndarray with 3d. 
 
 
 
