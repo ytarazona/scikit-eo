@@ -23,6 +23,7 @@ def crop(image, shp, filename = None, filepath = None):
         filepath: The path which the image will be stored.
         
     Return:
+    
         A raster in your filepath.
     '''
         
