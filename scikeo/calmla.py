@@ -37,6 +37,7 @@ class calmla(object):
                     (should be equal).
                     In addition, Endmembers must have a field (type int or float) with the names 
                     of classes to be predicted.
+                    
         '''
         
         self.endm = endmembers
