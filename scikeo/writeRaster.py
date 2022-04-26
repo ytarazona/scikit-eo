@@ -6,7 +6,7 @@ import os
 def writeRaster(arr, image, filename = None, filepath = None, n = 1):
     
     '''
-    This algorithm allows to save array images to raster format (.tif)
+    This algorithm allows to save array images to raster format (.tif).
     
     Parameters:
     
