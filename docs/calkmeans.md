@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\calkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `calkmeans`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\calkmeans.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calkmeans.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `calkmeans`
 
@@ -72,6 +72,7 @@ Labels of classification as numpy object with 2d.
 **Note:**
 
 > If the idea is to find the optimal value of 'k' (clusters or classes), k = None as an argument of the function must be put, because the function find 'k' for which the intra-class inertia is stabilized. If the 'k' value is known and the idea is to find the best algorithm embedded in kmeans (that maximizes inter-class distances), k = n, which 'n' is a specific class number, must be put. It can be greater than or equal to 0. 
+>
 
 
 
