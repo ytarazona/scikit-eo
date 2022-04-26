@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `atmosCorr`
 
@@ -11,12 +11,12 @@
 
 ---
 
-<a href="..\scikit-eo\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `atmosCorr`
 Atmospheric Correction in Optical domain 
 
-<a href="..\scikit-eo\atmosCorr.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -28,14 +28,16 @@ Parameter:
 
  path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-2. For example: path = '/folder/image/raster'.  
 
- nodata: The NoData value to replace with -99999. 
+ nodata: The NoData value to replace with -99999.  
+
+
 
 
 
 
 ---
 
-<a href="..\scikit-eo\atmosCorr.py#L188"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L189"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -60,7 +62,7 @@ Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, band
 
 ---
 
-<a href="..\scikit-eo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `RAD`
 
@@ -86,7 +88,7 @@ Return: An array with radiance values with 3d, i.e. (rows, cols, bands).
 
 ---
 
-<a href="..\scikit-eo\atmosCorr.py#L121"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L122"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
