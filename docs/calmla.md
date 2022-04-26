@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\calmla.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `calmla`
 
@@ -11,14 +11,14 @@
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `calmla`
 **Calibrating supervised classification in Remote Sensing** 
 
 This module allows to calibrate supervised classification in satellite images through various algorithms and using approaches such as Set-Approach,  Leave-One-Out Cross-Validation (LOOCV), Cross-Validation (k-fold) and  Monte Carlo Cross-Validation (MCCV) 
 
-<a href="..\scikit-eo\calmla.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -28,14 +28,16 @@ __init__(endmembers)
 
 Parameter:  
 
- endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted. 
+ endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted.  
+
+
 
 
 
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L309"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L310"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `CV`
 
@@ -75,7 +77,7 @@ Return:
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L213"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L214"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LOOCV`
 
@@ -108,7 +110,7 @@ Return:
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L408"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L409"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `MCCV`
 
@@ -149,7 +151,7 @@ Return:
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L91"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `SA`
 
@@ -182,7 +184,7 @@ Return:
 
 ---
 
-<a href="..\scikit-eo\calmla.py#L66"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `splitData`
 
