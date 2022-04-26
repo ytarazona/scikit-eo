@@ -18,6 +18,7 @@ class atmosCorr(object):
                   Collection 2 Level-2. For example: path = '/folder/image/raster'.
             
             nodata: The NoData value to replace with -99999.
+            
         '''
         
         self.path = path
