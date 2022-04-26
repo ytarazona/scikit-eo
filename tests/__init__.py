@@ -1,1 +1,1 @@
-"""Unit test package for eopy."""
+"""Unit test package for scikit-eo."""
