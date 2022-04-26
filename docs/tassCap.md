@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\tassCap.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\tassCap.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `tassCap`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\tassCap.py#L4"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\tassCap.py#L4"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `tassCap`
 
@@ -37,6 +37,8 @@ The Tasseled-Cap Transformation is a linear transformation method for various  r
 Return: numpy.ndarray with 2d. 
 
 References: 
+
+
 - Crist, E.P., R. Laurin, and R.C. Cicone. 1986. Vegetation and soils information  contained in transformed Thematic Mapper data. Pages 1465-1470 Ref. ESA SP-254.  
  - <b>`European Space Agency, Paris, France. http`</b>: //www.ciesin.org/docs/005-419/005-419.html. 
 
