@@ -47,6 +47,7 @@ def calkmeans(image, k = None, algo = ("auto", "elkan"), max_iter = 300, n_iter 
         inertia is stabilized. If the 'k' value is known and the idea is to find the best algorithm 
         embedded in kmeans (that maximizes inter-class distances), k = n, which 'n' is a specific 
         class number, must be put. It can be greater than or equal to 0.  
+        
     '''
     
     if not isinstance(image, (rasterio.io.DatasetReader)):
