@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\rkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\rkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `rkmeans`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\rkmeans.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\rkmeans.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `rkmeans`
 
@@ -28,14 +28,14 @@ In principle, this function allows to classify satellite images specifying a ```
   
 
 
-     - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d. 
+ - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d. 
 
 
-     - <b>`nodata`</b>:  The NoData value to replace with -99999.  
+ - <b>`nodata`</b>:  The NoData value to replace with -99999.  
 
 
-     - <b>`**kwargs`</b>:  These will be passed to scikit-learn KMeans, please see full lists at: 
-     - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html 
+ - <b>`**kwargs`</b>:  These will be passed to scikit-learn KMeans, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html 
 
 Return: 
 
