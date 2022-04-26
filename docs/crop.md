@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\crop.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\crop.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `crop`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\crop.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\crop.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `crop`
 
@@ -37,7 +37,9 @@ This algorithm allows to clip a raster (.tif) including a satellite image using 
 
  - <b>`filepath`</b>:  The path which the image will be stored. 
 
-Return: A raster in your filepath. 
+Return: 
+
+A raster in your filepath. 
 
 
 
