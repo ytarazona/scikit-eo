@@ -15,6 +15,7 @@ class linearTrend(object):
             image: Optical images. It must be rasterio.io.DatasetReader with 3d.
             
             nodata: The NoData value to replace with -99999.
+            
         '''
         
         self.image = image
