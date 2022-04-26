@@ -27,6 +27,7 @@ def sma(image, endmembers, nodata = -99999):
         nodata: The NoData value to replace with -99999.
     
     Return:
+    
         numpy.ndarray with 2d.
     '''
     
