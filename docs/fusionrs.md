@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\fusionrs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\fusionrs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `fusionrs`
 
@@ -10,7 +10,7 @@
 
 ---
 
-<a href="..\scikit-eo\fusionrs.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\fusionrs.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `fusionrs`
 
@@ -43,7 +43,9 @@ This algorithm allows to fusion images coming from different spectral sensors  (
  - <b>`**kwargs`</b>:  These will be passed to scikit-learn PCA, please see full lists at: 
  - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html 
 
-Return: numpy.ndarray with 3d. 
+Return: 
+
+numpy.ndarray with 3d. 
 
 
 
