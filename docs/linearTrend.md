@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikit-eo\linearTrend.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `linearTrend`
 
@@ -11,12 +11,12 @@
 
 ---
 
-<a href="..\scikit-eo\linearTrend.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `linearTrend`
 Linear Trend in Remote Sensing 
 
-<a href="..\scikit-eo\linearTrend.py#L10"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L10"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -38,9 +38,11 @@ __init__(image, nodata=-99999)
 
 
 
+
+
 ---
 
-<a href="..\scikit-eo\linearTrend.py#L23"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L24"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LN`
 
@@ -84,7 +86,7 @@ References:
 
 ---
 
-<a href="..\scikit-eo\linearTrend.py#L113"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L114"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `MLN`
 
