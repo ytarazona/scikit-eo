@@ -12,18 +12,18 @@ def rkmeans(image, k, nodata = -99999, **kwargs):
     a ```k``` value (clusters), however it is recommended to find the optimal value of ```k``` using
     the ```calkmeans``` function embedded in this package.
         
-        Parameters:
+    Parameters:
             
-            image: Optical images. It must be rasterio.io.DatasetReader with 3d.
+        image: Optical images. It must be rasterio.io.DatasetReader with 3d.
     
-            nodata: The NoData value to replace with -99999.
+        nodata: The NoData value to replace with -99999.
                      
-            **kwargs: These will be passed to scikit-learn KMeans, please see full lists at:
+        **kwargs: These will be passed to scikit-learn KMeans, please see full lists at:
                   https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
     
-        Return:
+    Return:
         
-            Labels of classification as numpy object with 2d.
+        Labels of classification as numpy object with 2d.
     '''
     
     if not isinstance(image, (rasterio.io.DatasetReader)):
