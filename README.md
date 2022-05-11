@@ -23,9 +23,7 @@ obtain the best k value and the best embedded algorithm in kmeans.              
 | **`atmosCorr`**    | Atmospheric Correction of satellite imagery                               |
 | **`deepLearning`** | Deep Learning algorithms                                                  |
 | **`linearTrend`**  | Linear trend is useful for mapping forest degradation or land degradation |
-| **`fusionrs`**     | This algorithm allows to fusion images coming from different spectral 
-sensors (e.g., optical-optical, optical and SAR or SAR-SAR). Among many of the qualities of 
-this function, it is possible to obtain the contribution (%) of each variable in the fused image |
+| **`fusionrs`**     | This algorithm allows to fusion images coming from different spectral sensors (e.g., optical-optical, optical and SAR or SAR-SAR). Among many of the qualities of this function, it is possible to obtain the contribution (%) of each variable in the fused image |
 | **`sma`**          | Spectral Mixture Analysis - Classification sup-pixel                      |
 | **`tassCap`**      | The Tasseled-Cap Transformation                                           |
 
