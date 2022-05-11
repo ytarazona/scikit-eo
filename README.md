@@ -17,8 +17,7 @@ Some available functions in this version:
 | **`mla`**          | Machine Learning                                                          |
 | **`calmla`**       | Calibrating supervised classification in Remote Sensing                   |
 | **`rkmeans`**      | K-means classification                                                    |
-| **`calkmeans`**    | This function allows to calibrate the kmeans algorithm. It is possible to
-obtain the best k value and the best embedded algorithm in kmeans.                               |
+| **`calkmeans`**    | This function allows to calibrate the kmeans algorithm. It is possible to obtain the best k value and the best embedded algorithm in kmeans.                               |
 | **`pca`**          | Principal Components Analysis                                             |
 | **`atmosCorr`**    | Atmospheric Correction of satellite imagery                               |
 | **`deepLearning`** | Deep Learning algorithms                                                  |
