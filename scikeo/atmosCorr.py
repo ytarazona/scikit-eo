@@ -117,6 +117,9 @@ class atmosCorr(object):
         
         arr_rad = np.moveaxis(np.stack(rad_bands), 0, -1) 
         
+        # negative values -> nodata
+        arr_rad[arr_rad < 0] = np.nan
+        
         return arr_rad
     
     def TOA(self, sat = 'LC08'):
@@ -183,6 +186,9 @@ class atmosCorr(object):
             toa_bands.append(TOA)
         
         arr_toa = np.moveaxis(np.stack(toa_bands), 0, -1) 
+        
+        # negative values -> nodata
+        arr_toa[arr_toa < 0] = np.nan
         
         return arr_toa
     
@@ -274,5 +280,8 @@ class atmosCorr(object):
             dos_bands.append(DOS)
         
         arr_dos = np.moveaxis(np.stack(dos_bands), 0, -1) 
+        
+        # negative values -> nodata
+        arr_dos[arr_dos < 0] = np.nan
         
         return arr_dos
