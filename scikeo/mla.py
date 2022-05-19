@@ -319,12 +319,6 @@ class MLA(object):
     
             training_split: For splitting samples into two subsets, i.e. training data and for testing
                             data.
-    
-            kernel : {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies 
-                     the kernel type to be used in the algorithm. It must be one of 'linear', 'poly', 
-                     'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will 
-                     be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
-                     for more details.
                      
             **kwargs: These will be passed to RF, please see full lists at:
                   https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
@@ -429,12 +423,6 @@ class MLA(object):
     
             training_split: For splitting samples into two subsets, i.e. training data and for testing
                             data.
-    
-            kernel : {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies 
-                     the kernel type to be used in the algorithm. It must be one of 'linear', 'poly', 
-                     'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will 
-                     be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
-                     for more details.
                      
             **kwargs: These will be passed to SVM, please see full lists at:
                   https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
