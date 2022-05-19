@@ -129,6 +129,8 @@ class MLA(object):
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
+        y = y.values
+        
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
             X, 
@@ -235,6 +237,8 @@ class MLA(object):
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
+        y = y.values
+        
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
             X, 
@@ -339,6 +343,8 @@ class MLA(object):
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
+        
+        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
@@ -446,6 +452,8 @@ class MLA(object):
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
+        y = y.values
+        
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
             X, 
@@ -550,6 +558,8 @@ class MLA(object):
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
+        
+        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
