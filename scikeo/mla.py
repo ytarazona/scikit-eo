@@ -15,7 +15,7 @@ from sklearn.metrics import confusion_matrix
 
 class MLA(object):
     
-    'Supervised and unsupervised classification in Remote Sensing'
+    'Supervised classification in Remote Sensing'
     
     def __init__(self, image, endmembers, nodata = -99999):
         
@@ -100,7 +100,7 @@ class MLA(object):
         that have established the same classes are located, generally some training areas.
         
         SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
-        
+     
         
         Parameters:
     
@@ -118,7 +118,7 @@ class MLA(object):
     
         Return:
         
-            Labels of classification as numpy object.
+            A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix.
         '''
         
         # removing the class column
@@ -204,31 +204,25 @@ class MLA(object):
     
     def DT(self, training_split = 0.8, random_state = None, **kwargs):
         
-        '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
-        does not assume a preliminary distribution of input data. Its discrimination criterion is a 
-        hyperplane that separates the classes in the multidimensional space in which the samples 
-        that have established the same classes are located, generally some training areas.
+        '''Decision Tree is also a supervised non-parametric statistical learning technique, where the input data is divided recursively 
+        into branches depending on certain decision thresholds until the data are segmented into homogeneous subgroups. 
+        This technique has substantial advantages for remote sensing classification problems due to its flexibility, intuitive simplicity, 
+        and computational efficiency.
         
-        SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
+        DT support raster data read by rasterio (rasterio.io.DatasetReader) as input.
         
         
         Parameters:
     
             training_split: For splitting samples into two subsets, i.e. training data and for testing
                             data.
-    
-            kernel : {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies 
-                     the kernel type to be used in the algorithm. It must be one of 'linear', 'poly', 
-                     'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will 
-                     be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
-                     for more details.
                      
-            **kwargs: These will be passed to SVM, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+            **kwargs: These will be passed to DT, please see full lists at:
+                  https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
     
         Return:
         
-            Labels of classification as numpy object.
+            A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix.
         '''
         
         # removing the class column
@@ -314,12 +308,11 @@ class MLA(object):
     
     def RF(self, training_split = 0.8, random_state = None, **kwargs):
         
-        '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
-        does not assume a preliminary distribution of input data. Its discrimination criterion is a 
-        hyperplane that separates the classes in the multidimensional space in which the samples 
-        that have established the same classes are located, generally some training areas.
+        '''Random Forest is a derivative of Decision Tree which provides an improvement over DT to overcome the weaknesses of a single DT. 
+        The prediction model of the RF classifier only requires two parameters to be identified: the number of classification trees desired, 
+        known as “ntree,” and the number of prediction variables, known as “mtry,” used in each node to make the tree grow.
         
-        SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
+        RF support raster data read by rasterio (rasterio.io.DatasetReader) as input.
         
         
         Parameters:
@@ -333,12 +326,12 @@ class MLA(object):
                      be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
                      for more details.
                      
-            **kwargs: These will be passed to SVM, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+            **kwargs: These will be passed to RF, please see full lists at:
+                  https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
     
         Return:
         
-            Labels of classification as numpy object.
+            A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix.
         '''
         
         # removing the class column
@@ -424,12 +417,12 @@ class MLA(object):
     
     def NB(self, training_split = 0.8, random_state = None, **kwargs):
         
-        '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
-        does not assume a preliminary distribution of input data. Its discrimination criterion is a 
-        hyperplane that separates the classes in the multidimensional space in which the samples 
-        that have established the same classes are located, generally some training areas.
+        '''Naive Bayes classifier is an effective and simple method for image classification based on probability theory. The NB 
+        classifier assumes an underlying probabilistic model and captures the uncertainty about the model in a principled way, 
+        that is, by calculating the occurrence probabilities of different attribute values for different classes in a training 
+        set.
         
-        SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
+        NB support raster data read by rasterio (rasterio.io.DatasetReader) as input.
         
         
         Parameters:
@@ -444,11 +437,11 @@ class MLA(object):
                      for more details.
                      
             **kwargs: These will be passed to SVM, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+                  https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
     
         Return:
         
-            Labels of classification as numpy object.
+            A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix.
         '''
         
         # removing the class column
@@ -534,31 +527,24 @@ class MLA(object):
     
     def NN(self, training_split = 0.8, max_iter = 300, random_state = None, **kwargs):
         
-        '''The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that 
-        does not assume a preliminary distribution of input data. Its discrimination criterion is a 
-        hyperplane that separates the classes in the multidimensional space in which the samples 
-        that have established the same classes are located, generally some training areas.
+        '''This classification consists of a neural network that is organized into several layers, that is, an input layer of predictor 
+        variables, one or more layers of hidden nodes, in which each node represents an activation function acting on a weighted input 
+        of the previous layers’ outputs, and an output layer.
         
-        SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
+        NN support raster data read by rasterio (rasterio.io.DatasetReader) as input.
         
         
         Parameters:
     
             training_split: For splitting samples into two subsets, i.e. training data and for testing
                             data.
-    
-            kernel : {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies 
-                     the kernel type to be used in the algorithm. It must be one of 'linear', 'poly', 
-                     'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will 
-                     be used. See https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
-                     for more details.
                      
             **kwargs: These will be passed to SVM, please see full lists at:
-                  https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+                  https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
     
         Return:
         
-            Labels of classification as numpy object.
+            A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix.
         '''
         
         # removing the class column
