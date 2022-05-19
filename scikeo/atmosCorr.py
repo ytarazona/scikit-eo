@@ -128,6 +128,12 @@ class atmosCorr(object):
         A reduction in scene-to-scene variability can be achieved by converting the at-sensor 
         spectral radiance to exoatmospheric TOA reflectance, also known as in-band planetary albedo.
         
+        Equation to obtain TOA reflectance:
+        
+        ρλ′ = Mρ*DN + Aρ
+        
+        ρλ = ρλ′/sin(theta)
+        
         Parameters:
             sat: Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2.
         
@@ -208,6 +214,10 @@ class atmosCorr(object):
             mindn: Min of digital number for each band in a list.
             
         Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands).
+        
+        References:
+            - Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric 
+            Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479.
         '''
         
         if sat == 'LC09':
