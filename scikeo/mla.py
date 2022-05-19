@@ -124,12 +124,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
-        #X = X.values
-        
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
-        
-        #y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
@@ -143,7 +139,7 @@ class MLA(object):
         inst_svm = SVC(kernel = kernel, **kwargs)
         
         # model trained
-        mt_svm = inst_svm.fit(Xtrain.values, ytrain.values)
+        mt_svm = inst_svm.fit(Xtrain, ytrain)
         
         labels_svm = mt_svm.predict(self.arr)
         classSVM = labels_svm.reshape((self.rows, self.cols))
@@ -231,13 +227,9 @@ class MLA(object):
         
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
-        
-        X = X.values
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
-        
-        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
@@ -338,13 +330,9 @@ class MLA(object):
         
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
-        
-        X = X.values
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
-        
-        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
@@ -446,13 +434,9 @@ class MLA(object):
         
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
-        
-        X = X.values
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
-        
-        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
@@ -553,13 +537,9 @@ class MLA(object):
         
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
-        
-        X = X.values
             
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
-        
-        y = y.values
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
