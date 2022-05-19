@@ -124,6 +124,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
+        X = X.values
+        
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
@@ -228,6 +230,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
+        X = X.values
+            
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
@@ -331,6 +335,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
+        X = X.values
+            
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
@@ -435,6 +441,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
+        X = X.values
+            
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
@@ -538,6 +546,8 @@ class MLA(object):
         # removing the class column
         X = self.endm.drop(self.endm.columns[[self.indx]], axis = 1)
         
+        X = X.values
+            
         # only predictor variables
         y = self.endm.iloc[:, self.indx]
         
