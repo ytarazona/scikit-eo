@@ -108,7 +108,8 @@ class calmla(object):
             
             n_iter: Number of iterations, i.e number of times the analysis is executed.
             
-            **kwargs:
+            **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
+                  https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
         Return:  
         '''
@@ -230,7 +231,8 @@ class calmla(object):
             
             n_iter: Number of iterations, i.e number of times the analysis is executed.
             
-            **kwargs:
+            **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
+                  https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
         Return: 
         '''
@@ -326,7 +328,8 @@ class calmla(object):
             
             n_iter: Number of iterations, i.e number of times the analysis is executed.
             
-            **kwargs:
+            **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
+                  https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
         Return:
         '''
@@ -425,7 +428,8 @@ class calmla(object):
             
             n_iter: Number of iterations, i.e number of times the analysis is executed.
             
-            **kwargs:
+            **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
+                  https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
         Return: 
         '''
