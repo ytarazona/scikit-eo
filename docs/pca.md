@@ -42,7 +42,7 @@ This algorithm allows to obtain Principal Components from images either radar or
 
 Return: 
 
-numpy.ndarray with 3d. 
+A dictionary. 
 
 
 
