@@ -1,5 +1,6 @@
 # +
 import numpy as np
+import rasterio
 
 def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
     
