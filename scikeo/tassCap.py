@@ -19,7 +19,7 @@ def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
         nodata: The NoData value to replace with -99999.
     
     Return:
-        numpy.ndarray with 2d.
+        numpy.ndarray with 3d containing brightness, greenness and wetness indices.
     
     References:
     
