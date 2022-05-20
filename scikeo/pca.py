@@ -30,7 +30,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
     
     Return:
     
-        numpy.ndarray with 3d.
+        A dictionary.
     
     Note:
     The contributions of variables in accounting for the variability in a given principal component 
