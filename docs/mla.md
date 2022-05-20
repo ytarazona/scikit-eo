@@ -14,7 +14,7 @@
 <a href="..\scikeo\mla.py#L16"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `MLA`
-Supervised and unsupervised classification in Remote Sensing 
+Supervised classification in Remote Sensing 
 
 <a href="..\scikeo\mla.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
@@ -47,9 +47,9 @@ Parameter:
 DT(training_split=0.8, random_state=None, **kwargs)
 ```
 
-The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
+Decision Tree is also a supervised non-parametric statistical learning technique, where the input data is divided recursively  into branches depending on certain decision thresholds until the data are segmented into homogeneous subgroups.  This technique has substantial advantages for remote sensing classification problems due to its flexibility, intuitive simplicity,  and computational efficiency. 
 
-SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
+DT support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
 
 
 
@@ -59,23 +59,19 @@ SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
  
 
 
- - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data. 
+ - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data.  
 
 
- - <b>`kernel `</b>:  {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies   the kernel type to be used in the algorithm. It must be one of 'linear', 'poly',   'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will  
- - <b>`be used. See https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC for more details. 
-
-
- - <b>`**kwargs`</b>:  These will be passed to SVM, please see full lists at: 
- - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC 
+ - <b>`**kwargs`</b>:  These will be passed to DT, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier 
 
 Return: 
 
-Labels of classification as numpy object. 
+A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
 
-<a href="..\scikeo\mla.py#L425"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\mla.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `NB`
 
@@ -83,9 +79,9 @@ Labels of classification as numpy object.
 NB(training_split=0.8, random_state=None, **kwargs)
 ```
 
-The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
+Naive Bayes classifier is an effective and simple method for image classification based on probability theory. The NB  classifier assumes an underlying probabilistic model and captures the uncertainty about the model in a principled way,  that is, by calculating the occurrence probabilities of different attribute values for different classes in a training  set. 
 
-SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
+NB support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
 
 
 
@@ -95,23 +91,19 @@ SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
  
 
 
- - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data. 
-
-
- - <b>`kernel `</b>:  {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies   the kernel type to be used in the algorithm. It must be one of 'linear', 'poly',   'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will  
- - <b>`be used. See https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC for more details. 
+ - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data.  
 
 
  - <b>`**kwargs`</b>:  These will be passed to SVM, please see full lists at: 
- - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html 
 
 Return: 
 
-Labels of classification as numpy object. 
+A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
 
-<a href="..\scikeo\mla.py#L535"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\mla.py#L516"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `NN`
 
@@ -119,9 +111,9 @@ Labels of classification as numpy object.
 NN(training_split=0.8, max_iter=300, random_state=None, **kwargs)
 ```
 
-The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
+This classification consists of a neural network that is organized into several layers, that is, an input layer of predictor  variables, one or more layers of hidden nodes, in which each node represents an activation function acting on a weighted input  of the previous layers’ outputs, and an output layer. 
 
-SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
+NN support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
 
 
 
@@ -131,23 +123,19 @@ SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
  
 
 
- - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data. 
-
-
- - <b>`kernel `</b>:  {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies   the kernel type to be used in the algorithm. It must be one of 'linear', 'poly',   'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will  
- - <b>`be used. See https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC for more details. 
+ - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data.  
 
 
  - <b>`**kwargs`</b>:  These will be passed to SVM, please see full lists at: 
- - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html 
 
 Return: 
 
-Labels of classification as numpy object. 
+A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
 
-<a href="..\scikeo\mla.py#L315"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\mla.py#L309"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `RF`
 
@@ -155,9 +143,9 @@ Labels of classification as numpy object.
 RF(training_split=0.8, random_state=None, **kwargs)
 ```
 
-The Support Vector Machine (SVM) classifier is a supervised non-parametric statistical learning technique that  does not assume a preliminary distribution of input data. Its discrimination criterion is a  hyperplane that separates the classes in the multidimensional space in which the samples  that have established the same classes are located, generally some training areas. 
+Random Forest is a derivative of Decision Tree which provides an improvement over DT to overcome the weaknesses of a single DT.  The prediction model of the RF classifier only requires two parameters to be identified: the number of classification trees desired,  known as “ntree,” and the number of prediction variables, known as “mtry,” used in each node to make the tree grow. 
 
-SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
+RF support raster data read by rasterio (rasterio.io.DatasetReader) as input. 
 
 
 
@@ -167,19 +155,15 @@ SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
  
 
 
- - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data. 
+ - <b>`training_split`</b>:  For splitting samples into two subsets, i.e. training data and for testing  data.  
 
 
- - <b>`kernel `</b>:  {'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'}, default='rbf' Specifies   the kernel type to be used in the algorithm. It must be one of 'linear', 'poly',   'rbf', 'sigmoid', 'precomputed' or a callable. If None is given, 'rbf' will  
- - <b>`be used. See https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC for more details. 
-
-
- - <b>`**kwargs`</b>:  These will be passed to SVM, please see full lists at: 
- - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC 
+ - <b>`**kwargs`</b>:  These will be passed to RF, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html 
 
 Return: 
 
-Labels of classification as numpy object. 
+A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
 
@@ -215,7 +199,7 @@ SVM support raster data read by rasterio (rasterio.io.DatasetReader) as input.
 
 Return: 
 
-Labels of classification as numpy object. 
+A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 
 
