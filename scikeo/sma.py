@@ -45,7 +45,6 @@ def sma(image, endmembers, nodata = -99999):
     inversion algorithms, the common objective is to estimate abundances that
     minimize the squared error between the actual spectrum and the estimated spectrum.
     The values of the fractions will be between 0 and 1.
-
     '''
     
     if not isinstance(image, (rasterio.io.DatasetReader)):
@@ -77,10 +76,10 @@ def sma(image, endmembers, nodata = -99999):
     if np.isnan(np.sum(arr)):
         arr[np.isnan(arr)] = self.nodata
     
-    if n_endm > arr.shape[1]:
+    if not arr.shape[1] > n_endm:
         raise ValueError('The number of bands must be greater than the number of endmembers.')
     
-    if arr.shape[1] != b_endm:
+    if not arr.shape[1] == b_endm:
         raise ValueError('The number of values extracted in band should be equal.')
     
     M = np.transpose(endmembers)
