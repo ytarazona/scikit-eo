@@ -77,10 +77,10 @@ def sma(image, endmembers, nodata = -99999):
     if np.isnan(np.sum(arr)):
         arr[np.isnan(arr)] = self.nodata
     
-    if not arr.shape[1] > n_endm:
+    if n_endm > arr.shape[1]:
         raise ValueError('The number of bands must be greater than the number of endmembers.')
     
-    if not arr.shape[1] == b_endm:
+    if arr.shape[1] != b_endm:
         raise ValueError('The number of values extracted in band should be equal.')
     
     M = np.transpose(endmembers)
