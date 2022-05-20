@@ -32,7 +32,7 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     
     Return:
     
-        numpy.ndarray with 3d.
+        A dictionary.
     
     Note:
     Before executing the function, it is recommended that images coming from different sensors 
