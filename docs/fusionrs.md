@@ -45,7 +45,7 @@ This algorithm allows to fusion images coming from different spectral sensors  (
 
 Return: 
 
-numpy.ndarray with 3d. 
+A dictionary. 
 
 
 
