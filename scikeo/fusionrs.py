@@ -134,7 +134,7 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
         
         sum_corr2 = corr2.sum(axis = 0) # columns
         
-        mat_1d = np.reshape(np.array(sum_corr2), (1,12))
+        mat_1d = np.reshape(np.array(sum_corr2), (1,bands_total))
         
         i = 0
         matrix_sum_corr2 = mat_1d.copy()
