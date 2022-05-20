@@ -2,7 +2,7 @@
 import numpy as np
 import rasterio
 
-def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
+def tassCap(image, sat = "Landsat8OLI", nodata = -99999, scale = None):
     
     '''
     The Tasseled-Cap Transformation is a linear transformation method for various 
@@ -17,6 +17,8 @@ def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
         sat: Specify satellite and sensor type (Landsat5TM, Landsat7ETM or Landsat8OLI).
                     
         nodata: The NoData value to replace with -99999.
+        
+        scale: Conversion of coefficients values
     
     Return:
         numpy.ndarray with 3d containing brightness, greenness and wetness indices.
@@ -86,6 +88,9 @@ def tassCap(image, sat = "Landsat8OLI", nodata = -99999):
     else:
         raise ValueError('Satellite not supported. Please see the list of satellites mentioned'
                          'in docstrings.')
+        
+    if not scale is None:
+        coefc = coefc*scale
     
     bands = image.count
         
