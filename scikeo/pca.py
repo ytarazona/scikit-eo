@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import rasterio
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA as Pca
 from sklearn.preprocessing import StandardScaler
 
 def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
@@ -68,7 +68,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
     if stand_varb:
         arr = StandardScaler().fit_transform(arr)
     
-    inst_pca = PCA(**kwargs)
+    inst_pca = Pca(**kwargs)
     
     fit_pca = inst_pca.fit(arr)
     
