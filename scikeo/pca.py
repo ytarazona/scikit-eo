@@ -121,7 +121,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
         i = 0
         matrix_sum_corr2 = mat_1d.copy()
         
-        while i < (bands_total - 1):
+        while i < (bands - 1):
             
             matrix_sum_corr2 = np.vstack([matrix_sum_corr2, mat_1d])
             
