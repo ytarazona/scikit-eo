@@ -181,7 +181,7 @@ class calmla(object):
             
             if 'nn' in models:
                 # applying a support vector machine
-                inst_nn = MLP(**kwargs)
+                inst_nn = MLP(max_iter = 400, **kwargs)
         
                 # model trained
                 mt_nn = inst_nn.fit(Xtrain, ytrain)
@@ -284,7 +284,7 @@ class calmla(object):
             
             if 'nn' in models:
                 # applying a support vector machine
-                inst_nn = MLP(**kwargs)
+                inst_nn = MLP(max_iter = 400, **kwargs)
                 
                 scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
                 mean_scores = np.mean(scores)
@@ -384,7 +384,7 @@ class calmla(object):
             
             if 'nn' in models:
                 # applying a support vector machine
-                inst_nn = MLP(**kwargs)
+                inst_nn = MLP(max_iter = 400, **kwargs)
                 
                 scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = cv, n_jobs = -1)
                 mean_scores = np.mean(scores)
@@ -484,7 +484,7 @@ class calmla(object):
             
             if 'nn' in models:
                 # applying a support vector machine
-                inst_nn = MLP(**kwargs)
+                inst_nn = MLP(max_iter = 400, **kwargs)
                 
                 scores = cross_val_score(inst_nn, X, y, scoring = 'accuracy', cv = mc, n_jobs = -1)
                 mean_scores = np.mean(scores)
