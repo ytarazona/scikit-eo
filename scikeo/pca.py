@@ -55,7 +55,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
         
     st = image.read()
     
-    st_reorder = np.moveaxis(opt, 0, -1)
+    st_reorder = np.moveaxis(st, 0, -1)
     
     # data in [rows*cols, bands]
     arr = st_reorder.reshape((rows*cols, bands))
