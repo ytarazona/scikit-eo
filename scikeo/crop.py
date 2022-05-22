@@ -13,7 +13,7 @@ def crop(image, shp, filename = None, filepath = None):
     
     Parameters:
         
-        image: This parameter can be a string with the raster path (e.g., '/home/image/b3.tif') or
+        image: This parameter can be a string with the raster path (e.g., r'/home/image/b3.tif') or
         it can be a rasterio.io.DatasetReader type.
         
         shp: vector file, tipically shapefile.
@@ -103,4 +103,4 @@ def crop(image, shp, filename = None, filepath = None):
             dest.write(out_image)
         
     else:
-        raise TypeError(f'"image" must be a string like /home/image/b5.tif or must be rasterio.io.DatasetReader. image = {type(image)}')
+        raise TypeError(f'"image" must be a string like r"/home/image/b5.tif" or must be rasterio.io.DatasetReader. image = {type(image)}')
