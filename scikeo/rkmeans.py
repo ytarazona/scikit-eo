@@ -15,6 +15,8 @@ def rkmeans(image, k, nodata = -99999, **kwargs):
     Parameters:
             
         image: Optical images. It must be rasterio.io.DatasetReader with 3d.
+        
+        k: The number of clusters to be detected.
     
         nodata: The NoData value to replace with -99999.
                      
