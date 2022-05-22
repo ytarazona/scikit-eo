@@ -15,7 +15,7 @@ class atmosCorr(object):
         Parameter:
         
             path: String. The folder in which the satellite bands are located. This images could be Landsat
-                  Collection 2 Level-1. For example: path = '/folder/image/raster'.
+                  Collection 2 Level-1. For example: path = r'/folder/image/raster'.
             
             nodata: The NoData value to replace with -99999.
             
