@@ -39,7 +39,7 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\deeplearning.py#L233"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\deeplearning.py#L235"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `CNN`
 
@@ -81,7 +81,10 @@ This algorithm consiste of a network with a sequence of Dense layers, which area
  - <b>`hidden_layers`</b>:  Number of hidden layers to be used. 3 is for default. 
 
 
- - <b>`hidden_units`</b>:  Number of units to be used. This is related to 'neurons' in each hidden   layers. 
+ - <b>`hidden_units`</b>:  Number of units to be used. This is related to 'neurons' in each hidden   layers.  
+
+
+ - <b>`output_units`</b>:  Number of clases to be obtained. 
 
 
  - <b>`input_shape`</b>:  The input shape is generally the shape of the input data provided to the   Keras model while training. The model cannot know the shape of the   training data. The shape of other tensors(layers) is computed automatically. 
