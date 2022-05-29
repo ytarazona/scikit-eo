@@ -26,18 +26,16 @@ __init__(path, nodata=-99999)
 
 Parameter: 
 
- path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-1. For example: path = '/folder/image/raster'.  
+ path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-1. For example: path = r'/folder/image/raster'.  
 
- nodata: The NoData value to replace with -99999.  
-
-
+ nodata: The NoData value to replace with -99999. 
 
 
 
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L201"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L200"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -65,7 +63,7 @@ References:
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `RAD`
 
@@ -91,7 +89,7 @@ Return: An array with radiance values with 3d, i.e. (rows, cols, bands).
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L125"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
