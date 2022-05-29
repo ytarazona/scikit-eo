@@ -26,7 +26,7 @@ This algorithm allows to clip a raster (.tif) including a satellite image using 
   
 
 
- - <b>`image`</b>:  This parameter can be a string with the raster path (e.g., '/home/image/b3.tif') or it can be a rasterio.io.DatasetReader type. 
+ - <b>`image`</b>:  This parameter can be a string with the raster path (e.g., r'/home/image/b3.tif') or it can be a rasterio.io.DatasetReader type. 
 
 
  - <b>`shp`</b>:  vector file, tipically shapefile. 
