@@ -37,7 +37,7 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\calmla.py#L310"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L312"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `CV`
 
@@ -71,13 +71,15 @@ This module allows to calibrate supervised classification in satellite images  t
 
  - <b>`n_iter`</b>:  Number of iterations, i.e number of times the analysis is executed. 
 
-**kwargs: 
+
+ - <b>`**kwargs`</b>:  These will be passed to SVM, DT, RF, NB and NN, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning 
 
 Return: 
 
 ---
 
-<a href="..\scikeo\calmla.py#L214"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L215"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LOOCV`
 
@@ -104,13 +106,15 @@ This module allows to calibrate supervised classification in satellite images  t
 
  - <b>`n_iter`</b>:  Number of iterations, i.e number of times the analysis is executed. 
 
-**kwargs: 
+
+ - <b>`**kwargs`</b>:  These will be passed to SVM, DT, RF, NB and NN, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning 
 
 Return:  
 
 ---
 
-<a href="..\scikeo\calmla.py#L409"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `MCCV`
 
@@ -145,7 +149,9 @@ This module allows to calibrate supervised classification in satellite images  t
 
  - <b>`n_iter`</b>:  Number of iterations, i.e number of times the analysis is executed. 
 
-**kwargs: 
+
+ - <b>`**kwargs`</b>:  These will be passed to SVM, DT, RF, NB and NN, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning 
 
 Return:  
 
@@ -178,7 +184,9 @@ This module allows to calibrate supervised classification in satellite images  t
 
  - <b>`n_iter`</b>:  Number of iterations, i.e number of times the analysis is executed. 
 
-**kwargs: 
+
+ - <b>`**kwargs`</b>:  These will be passed to SVM, DT, RF, NB and NN, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning 
 
 Return:   
 
