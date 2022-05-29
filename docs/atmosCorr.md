@@ -26,7 +26,7 @@ __init__(path, nodata=-99999)
 
 Parameter: 
 
- path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-2. For example: path = '/folder/image/raster'.  
+ path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-1. For example: path = '/folder/image/raster'.  
 
  nodata: The NoData value to replace with -99999.  
 
@@ -37,7 +37,7 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L189"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L201"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -59,6 +59,9 @@ The Dark Object Subtraction Method was proposed by Chavez (1988). This image-bas
  - <b>`mindn`</b>:  Min of digital number for each band in a list. 
 
 Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
+
+References: 
+    - Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. 
 
 ---
 
@@ -88,7 +91,7 @@ Return: An array with radiance values with 3d, i.e. (rows, cols, bands).
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L122"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L125"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
@@ -97,6 +100,12 @@ TOA(sat='LC08')
 ```
 
 A reduction in scene-to-scene variability can be achieved by converting the at-sensor  spectral radiance to exoatmospheric TOA reflectance, also known as in-band planetary albedo. 
+
+Equation to obtain TOA reflectance: 
+
+ρλ′ = Mρ*DN + Aρ 
+
+ρλ = ρλ′/sin(theta) 
 
 
 
