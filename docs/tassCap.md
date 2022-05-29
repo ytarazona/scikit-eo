@@ -10,12 +10,12 @@
 
 ---
 
-<a href="..\scikeo\tassCap.py#L4"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\tassCap.py#L5"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `tassCap`
 
 ```python
-tassCap(image, sat='Landsat8OLI', nodata=-99999)
+tassCap(image, sat='Landsat8OLI', nodata=-99999, scale=None)
 ```
 
 The Tasseled-Cap Transformation is a linear transformation method for various  remote sensing data. Not only can it perform volume data compression, but it can also provide parameters associated with the physical characteristics,  such as brightness, greenness and wetness indices. 
@@ -34,7 +34,10 @@ The Tasseled-Cap Transformation is a linear transformation method for various  r
 
  - <b>`nodata`</b>:  The NoData value to replace with -99999. 
 
-Return: numpy.ndarray with 2d. 
+
+ - <b>`scale`</b>:  Conversion of coefficients values 
+
+Return: numpy.ndarray with 3d containing brightness, greenness and wetness indices. 
 
 References: 
 
