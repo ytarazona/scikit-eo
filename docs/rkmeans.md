@@ -31,6 +31,9 @@ In principle, this function allows to classify satellite images specifying a ```
  - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d. 
 
 
+ - <b>`k`</b>:  The number of clusters to be detected. 
+
+
  - <b>`nodata`</b>:  The NoData value to replace with -99999.  
 
 
