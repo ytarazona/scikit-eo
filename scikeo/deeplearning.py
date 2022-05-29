@@ -105,6 +105,8 @@ class DL(object):
     
             hidden_units: Number of units to be used. This is related to 'neurons' in each hidden 
                           layers.
+                          
+            output_units: Number of clases to be obtained.
             
             input_shape: The input shape is generally the shape of the input data provided to the 
                          Keras model while training. The model cannot know the shape of the 
