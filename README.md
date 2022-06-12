@@ -1,6 +1,6 @@
 # scikit-eo
 
-[![License: MIT](https://img.shields.io/badge/licence-MIT-green)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/licence-MIT-blue)](https://opensource.org/licenses/MIT)
 [![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
 [![image](https://img.shields.io/pypi/v/eopy.svg)](https://pypi.python.org/pypi/scikit-eo)
 
