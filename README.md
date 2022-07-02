@@ -146,8 +146,9 @@ Confusion matrix or error matrix
 rf_class.get('Confusion_Matrix')
 ```
 
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" width = 75%></a>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" alt ="header" width = 75%>
+</a>
 </p>
 
 
