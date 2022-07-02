@@ -104,6 +104,7 @@ df.head()
   <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" align="left" width="550"></a>
 </p>
 
+<img src="scikeo/docs/figures/endmembers.png" width = 100%/>
 
 
 Instance of ```mla()```:
