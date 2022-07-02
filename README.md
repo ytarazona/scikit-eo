@@ -98,10 +98,8 @@ endm = DBF(path_endm)
 df = pd.DataFrame(iter(endm))
 df.head()
 ```
-<img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%/>
-
-<p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%></a>
+<p align="center">
+  <a href="https://github.com/ytarazona/scikit-eo"><img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%></a>
 </p>
 
 
@@ -147,7 +145,7 @@ rf_class.get('Confusion_Matrix')
 ```
 
 <p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" align="left" width="580"></a>
+  <a href="https://github.com/ytarazona/scikit-eo"><img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" width = 75%></a>
 </p>
 
 
