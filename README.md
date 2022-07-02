@@ -102,6 +102,8 @@ df.head()
 
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%/ align="left">
 
+
+
 <!-- #region -->
 
 
