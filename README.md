@@ -189,8 +189,9 @@ axes[1].set_title("Classification Map")
 axes[1].grid(False)
 ```
 
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" align="left" width="700"></a>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" alt ="header" width = "700">
+</a>
 </p>
 
 
