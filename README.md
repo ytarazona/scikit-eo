@@ -1,3 +1,4 @@
+<!-- #region -->
 # scikit-eo
 
 [![License: MIT](https://img.shields.io/badge/licence-MIT-blue)](https://opensource.org/licenses/MIT)
@@ -36,22 +37,164 @@ You will find more algorithms!.
 
 # Installation
 
-To used **scikit-eo** it is necessary to install first. There are three options:
+To use **scikit-eo** it is necessary to install it. There are two options:
 
 ## 1. From PyPI
 
-It is not yet available
+It is not available yet.
 
 ## 2. Installing from source
 
 It is also possible to install the latest development version directly from the GitHub repository with:
-    
-    pip install git+https://github.com/ytarazona/scikit-eo
 <!-- #endregion -->
 
-## Features
+```python
+pip install git+https://github.com/ytarazona/scikit-eo
+```
 
--   TODO
+# Example
+
+## 1. Applying Machine Learning
+
+Libraries to be used:
+
+```python
+import rasterio
+import numpy as np
+from scikeo.mla import MLA
+import matplotlib.pyplot as plt
+from dbfread import DBF
+import matplotlib as mpl
+import pandas as pd
+```
+
+## 2.0 Optical image
+
+
+Landsat-8 OLI (Operational Land Imager) will be used to obtain in order to classify using Random Forest (RF). This image, which is in surface reflectance with bands:
+- Blue -> B2
+- Green -> B3 
+- Red -> B4
+- Nir -> B5
+- Swir1 -> B6
+- Swir2 -> B7
+
+The image and signatures to be used can be downloaded [here](https://drive.google.com/drive/folders/193RhNpACu9THcOZu8OzMh-btnFCOgHrU?usp=sharing):
+
+
+## 3.0 Supervised Classification using Random Forest
+
+Image and endmembers
+
+```python
+path_raster = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\LC08_232066_20190727_SR.tif"
+img = rasterio.open(path_raster)
+
+path_endm = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\endmembers.dbf"
+endm = DBF(path_endm)
+```
+
+```python
+# endmembers
+df = pd.DataFrame(iter(endm))
+df.head()
+```
+
+<p align="center">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" align="left" width="550"></a>
+</p>
+
+
+Instance of ```mla()```:
+
+```python
+inst = MLA(image = img, endmembers = endm)
+```
+
+Applying Random Forest:
+
+```python
+import warnings 
+warnings.filterwarnings("ignore")
+
+rf_class = inst.SVM(training_split = 0.7)
+```
+
+## 4.0 Results
+
+Dictionary of results
+
+```python
+rf_class.keys()
+```
+
+Overall accuracy
+
+```python
+rf_class.get('Overall_Accuracy')
+```
+
+Kappa index
+
+```python
+rf_class.get('Kappa_Index')
+```
+
+Confusion matrix or error matrix
+
+```python
+rf_class.get('Confusion_Matrix')
+```
+
+<p align="center">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" align="left" width="580"></a>
+</p>
+
+
+Preparing the image before plotting
+
+```python
+# convert to array
+arr_img = img.read()
+# stacking the image
+rgb = np.stack([arr_img[4,:,:], arr_img[3,:,:], arr_img[2,:,:]], axis = -1)
+
+# Normalizing bands
+def stretch_std(arr, std_val):
+    """ Returns the data with a standard deviation contrast applied """
+    mean = np.mean(arr)
+    std = np.std(arr)*std_val
+    min_val = np.max([mean - std, np.min(arr)])
+    max_val = np.min([mean + std, np.max(arr)])
+    clipped_arr = np.clip(arr, min_val, max_val)
+    img = (clipped_arr - min_val)/(max_val - min_val)
+    return img
+
+rgb_norm = stretch_std(rgb, 2.5)
+```
+
+```python
+# Let's define the color palette
+palette = mpl.colors.ListedColormap(["#2232F9","#F922AE","#229954","#7CED5E"])
+
+# Let´s plot
+fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize = (15, 9))
+axes[0].imshow(rgb_norm)
+axes[0].set_title("Image in Surface Reflectance")
+axes[0].grid(False)
+
+axes[1].imshow(rf_class.get('Classification_Map'), cmap = palette)
+axes[1].set_title("Classification Map")
+axes[1].grid(False)
+```
+
+<p align="center">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" align="left" width="700"></a>
+</p>
+
+
+-   Free software: Apache Software License 2.0
+-   Documentation: <https://ytarazona.github.io/scikit-eo>
 
 ## Credits
 
