@@ -100,6 +100,10 @@ df.head()
 ```
 <img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%/>
 
+<p align="center">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt="header"></a>
+</p>
+
 
 Instance of ```mla()```:
 
