@@ -98,9 +98,7 @@ endm = DBF(path_endm)
 df = pd.DataFrame(iter(endm))
 df.head()
 ```
-
-<img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70% align="left"/>
-
+<img align="left" src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" width = 70%/>
 
 Instance of ```mla()```:
 
