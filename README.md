@@ -99,8 +99,8 @@ endm = DBF(path_endm)
 df = pd.DataFrame(iter(endm))
 df.head()
 ```
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt="header" width = 70%>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt ="header" width = 70%>
 </a>
 </p>
 
