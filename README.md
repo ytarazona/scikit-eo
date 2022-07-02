@@ -104,11 +104,8 @@ df.head()
 
 
 
-<!-- #region -->
-
 
 Instance of ```mla()```:
-<!-- #endregion -->
 
 ```python
 inst = MLA(image = img, endmembers = endm)
