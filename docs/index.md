@@ -5,9 +5,8 @@
 [![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
 [![image](https://img.shields.io/pypi/v/eopy.svg)](https://pypi.python.org/pypi/scikit-eo)
 
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"></a>
-</p>
+
+<img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
 <!-- #region -->
 # Introduction
@@ -46,6 +45,7 @@ It is not available yet.
 ## 2. Installing from source
 
 It is also possible to install the latest development version directly from the GitHub repository with:
+
 <!-- #endregion -->
 
 ```python
@@ -99,9 +99,9 @@ endm = DBF(path_endm)
 df = pd.DataFrame(iter(endm))
 df.head()
 ```
-
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" align="left" width="550"></a>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt ="header" width = 75%>
+</a>
 </p>
 
 
@@ -146,8 +146,9 @@ Confusion matrix or error matrix
 rf_class.get('Confusion_Matrix')
 ```
 
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" align="left" width="580"></a>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" alt ="header" width = 80%>
+</a>
 </p>
 
 
@@ -188,13 +189,14 @@ axes[1].set_title("Classification Map")
 axes[1].grid(False)
 ```
 
-<p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" align="left" width="700"></a>
+<p align="left">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" alt ="header" width = "750">
+</a>
 </p>
 
 
 -   Free software: Apache Software License 2.0
--   Documentation: <https://ytarazona.github.io/scikit-eo>
+-   Documentation: 
 
 ## Credits
 
