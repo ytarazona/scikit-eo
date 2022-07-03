@@ -100,7 +100,7 @@ df = pd.DataFrame(iter(endm))
 df.head()
 ```
 <p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt ="header" width = 70%>
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt ="header" width = 75%>
 </a>
 </p>
 
@@ -147,7 +147,7 @@ rf_class.get('Confusion_Matrix')
 ```
 
 <p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" alt ="header" width = 75%>
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" alt ="header" width = 80%>
 </a>
 </p>
 
@@ -190,13 +190,13 @@ axes[1].grid(False)
 ```
 
 <p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" alt ="header" width = "700">
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" alt ="header" width = "750">
 </a>
 </p>
 
 
 -   Free software: Apache Software License 2.0
--   Documentation: <https://ytarazona.github.io/scikit-eo>
+-   Documentation: 
 
 ## Credits
 
