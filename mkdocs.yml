@@ -51,10 +51,17 @@ nav:
     - Changelog: changelog.md
     - Report Issues: https://github.com/ytarazona/scikit-eo/issues
     - API Reference:
-          - fusionrs module: fusionrs.md
-          - linearTrend module: linearTrend.md
           - mla module: mla.md
+          - calmla module: calmla.md
           - rkmeans module: rkmeans.md
+          - calkmeans module: calkmeans.md
+          - pca module: pca.md
+          - atmosCorr module: atmosCorr.md
+          - deepLearning module: deepLearning.md
+          - linearTrend module: linearTrend.md
+          - fusionrs module: fusionrs.md
           - sma module: sma.md
           - tassCap module: tassCap.md
+          - plot module: plot.md
           - writeRaster module: writeRaster.md
+          - crop module: crop.md
