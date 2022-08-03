@@ -1,15 +1,5 @@
 <!-- #region -->
-# scikit-eo
-
-[![License: MIT](https://img.shields.io/badge/licence-MIT-blue)](https://opensource.org/licenses/MIT)
-[![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
-[![image](https://img.shields.io/pypi/v/eopy.svg)](https://pypi.python.org/pypi/scikit-eo)
-
-
-<img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
-
-<!-- #region -->
-# Introduction
+# scikit-eo: A Python package for Remote Sensing Tools
 
 **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
@@ -197,7 +187,3 @@ axes[1].grid(False)
 
 -   Free software: Apache Software License 2.0
 -   Documentation: 
-
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
