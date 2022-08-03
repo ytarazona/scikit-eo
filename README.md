@@ -40,7 +40,11 @@ To use **scikit-eo** it is necessary to install it. There are two options:
 
 ## 1. From PyPI
 
-It is not available yet.
+**scikit-eo** is available on [PyPI](https://pypi.org/project/scikeo/), so to install it, run this command in your terminal:
+
+```python
+pip install scikeo
+```
 
 ## 2. Installing from source
 
