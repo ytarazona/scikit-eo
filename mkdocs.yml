@@ -57,7 +57,7 @@ nav:
           - calkmeans module: calkmeans.md
           - pca module: pca.md
           - atmosCorr module: atmosCorr.md
-          - deepLearning module: deepLearning.md
+          - deeplearning module: deeplearning.md
           - linearTrend module: linearTrend.md
           - fusionrs module: fusionrs.md
           - sma module: sma.md
