@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # +
 import rasterio
 import numpy as np
@@ -129,8 +130,8 @@ class MLA(object):
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
-            X, 
-            y, 
+            X.values, 
+            y.values, 
             train_size = training_split, 
             test_size = 1 - training_split, 
             random_state = random_state)
@@ -233,8 +234,8 @@ class MLA(object):
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
-            X, 
-            y, 
+            X.values, 
+            y.values, 
             train_size = training_split, 
             test_size = 1 - training_split, 
             random_state = random_state)
@@ -336,8 +337,8 @@ class MLA(object):
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
-            X, 
-            y, 
+            X.values, 
+            y.values, 
             train_size = training_split, 
             test_size = 1 - training_split, 
             random_state = random_state)
@@ -440,8 +441,8 @@ class MLA(object):
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
-            X, 
-            y, 
+            X.values, 
+            y.values, 
             train_size = training_split, 
             test_size = 1 - training_split, 
             random_state = random_state)
@@ -543,8 +544,8 @@ class MLA(object):
         
         # split in training and testing
         Xtrain, Xtest, ytrain, ytest = train_test_split(
-            X, 
-            y, 
+            X.values, 
+            y.values, 
             train_size = training_split, 
             test_size = 1 - training_split, 
             random_state = random_state)
