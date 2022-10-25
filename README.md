@@ -5,9 +5,7 @@
 [![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
 [![PyPI version](https://badge.fury.io/py/scikeo.svg)](https://badge.fury.io/py/scikeo)
 
-[![Google Colab](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-.. image:: https://colab.research.google.com/assets/colab-badge.svg
-        :target: https://gishub.org/geemap-colab
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
         
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
