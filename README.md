@@ -1,13 +1,12 @@
 <!-- #region -->
-# scikit-eo
+# scikit-eo: A Python package for Remote Sensing Tools
 
 [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
 [![PyPI version](https://badge.fury.io/py/scikeo.svg)](https://badge.fury.io/py/scikeo)
 [![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()     
-[![Twitter](https://img.shields.io/twitter/follow/GeoYons?style=social)](https://twitter.com/GeoYons) 
- 
+[![Twitter](https://img.shields.io/twitter/url?label=Follow%20%40GeoYons&style=social&url=https%3A%2F%2Ftwitter.com%2FGeoYons)](https://twitter.com/GeoYons)
 
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
@@ -15,11 +14,11 @@
 <!-- #region -->
 # Introduction
 
-**scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
+Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other (Tarazona et al., 2018). Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices (Tarazona and Miyasiro, 2021), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
-**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite images processing and analysis.
+Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
-Some available functions in this version:
+# Tools for Remote Sensing
 
 | Name of functions  | Description|
 | -------------------| --------------------------------------------------------------------------|
@@ -54,11 +53,10 @@ pip install scikeo
 
 It is also possible to install the latest development version directly from the GitHub repository with:
 
-<!-- #endregion -->
-
 ```python
 pip install git+https://github.com/ytarazona/scikit-eo
 ```
+<!-- #endregion -->
 
 # Example
 
@@ -95,10 +93,10 @@ The image and signatures to be used can be downloaded [here](https://drive.googl
 Image and endmembers
 
 ```python
-path_raster = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\LC08_232066_20190727_SR.tif"
+path_raster = r"C:\data\ml\LC08_232066_20190727_SR.tif"
 img = rasterio.open(path_raster)
 
-path_endm = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\endmembers.dbf"
+path_endm = r"C:\data\ml\endmembers.dbf"
 endm = DBF(path_endm)
 ```
 
@@ -122,9 +120,6 @@ inst = MLA(image = img, endmembers = endm)
 Applying Random Forest:
 
 ```python
-import warnings 
-warnings.filterwarnings("ignore")
-
 rf_class = inst.SVM(training_split = 0.7)
 ```
 
@@ -202,10 +197,19 @@ axes[1].grid(False)
 </a>
 </p>
 
-
+<!-- #region -->
 -   Free software: Apache Software License 2.0
 -   Documentation: 
+
+## Acknowledgment
+
+Special thanks to:
+- [David Montero Loaiza](https://github.com/davemlz) for the idea of the package name **scikit-eo**.
+
+- [Qiusheng Wu](https://github.com/giswqs) for the suggestions that helped to improve the package.
+
 
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
+<!-- #endregion -->
