@@ -158,37 +158,22 @@ rf_class.get('Confusion_Matrix')
 Preparing the image before plotting
 
 ```python
-# convert to array
-arr_img = img.read()
-# stacking the image
-rgb = np.stack([arr_img[4,:,:], arr_img[3,:,:], arr_img[2,:,:]], axis = -1)
-
-# Normalizing bands
-def stretch_std(arr, std_val):
-    """ Returns the data with a standard deviation contrast applied """
-    mean = np.mean(arr)
-    std = np.std(arr)*std_val
-    min_val = np.max([mean - std, np.min(arr)])
-    max_val = np.min([mean + std, np.max(arr)])
-    clipped_arr = np.clip(arr, min_val, max_val)
-    img = (clipped_arr - min_val)/(max_val - min_val)
-    return img
-
-rgb_norm = stretch_std(rgb, 2.5)
-```
-
-```python
 # Let's define the color palette
 palette = mpl.colors.ListedColormap(["#2232F9","#F922AE","#229954","#7CED5E"])
+```
 
+Applying the ```plotRGB()``` algorithm is easy:
+
+```python
 # Let´s plot
 fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize = (15, 9))
-axes[0].imshow(rgb_norm)
-axes[0].set_title("Image in Surface Reflectance")
-axes[0].grid(False)
 
-axes[1].imshow(rf_class.get('Classification_Map'), cmap = palette)
-axes[1].set_title("Classification Map")
+# satellite image
+plotRGB(img, title = 'Image in Surface Reflectance', ax = axes[0])
+
+# class results
+axes[1].imshow(svm_class.get('Classification_Map'), cmap = palette)
+axes[1].set_title("Classification map")
 axes[1].grid(False)
 ```
 
