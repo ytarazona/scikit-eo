@@ -12,7 +12,7 @@
 <!-- #region -->
 ### Links of interest:
 
-- GitHub repo: https://github.com/ytarazona/scikit-eo
+- GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
 - Documentation: https://ytarazona.github.io/scikit-eo/
 - PyPI: https://pypi.org/project/scikeo/
 - Notebooks examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
