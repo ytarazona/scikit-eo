@@ -58,6 +58,10 @@
                     </li>
                 </ul>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="get-started/">Get Started</a>
+                    </li>
+                </ul>
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="usage/">Usage</a>
                     </li>
                 </ul>
@@ -67,10 +71,6 @@
                 </ul>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="faq/">FAQ</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="changelog/">Changelog</a>
                     </li>
                 </ul>
                 <ul>
@@ -141,11 +141,29 @@
           <div role="main">
             <div class="section">
               
-                <!-- #region -->
+                <h1 id="welcome-to">Welcome to<a class="headerlink" href="#welcome-to" title="Permanent link">&para;</a></h1>
 <h1 id="scikit-eo-a-python-package-for-remote-sensing-tools">scikit-eo: A Python package for Remote Sensing Tools<a class="headerlink" href="#scikit-eo-a-python-package-for-remote-sensing-tools" title="Permanent link">&para;</a></h1>
-<p><strong>scikit-eo</strong> is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.</p>
-<p><strong>scikit-eo</strong> is intended for students, professionals, researchers, and organizations involved in satellite images processing and analysis.</p>
-<p>Some available functions in this version:</p>
+<p><a href=""><img alt="Google Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0"><img alt="License: MIT" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
+<a href=""><img alt="PythonVersion" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green" /></a>
+<a href="https://badge.fury.io/py/scikeo"><img alt="PyPI version" src="https://badge.fury.io/py/scikeo.svg" /></a>
+<a href=""><img alt="Youtube" src="https://img.shields.io/badge/YouTube-Channel-red" /></a>   <br />
+<a href="https://twitter.com/GeoYons"><img alt="Twitter" src="https://img.shields.io/twitter/url?label=Follow%20%40GeoYons&amp;style=social&amp;url=https%3A%2F%2Ftwitter.com%2FGeoYons" /></a></p>
+<!-- #region -->
+<h3 id="links-of-interest">Links of interest:<a class="headerlink" href="#links-of-interest" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GitHub repo: https://github.com/ytarazona/scikit-eo</li>
+<li>Documentation: https://ytarazona.github.io/scikit-eo/</li>
+<li>PyPI: https://pypi.org/project/scikeo/</li>
+<li>Notebooks examples: https://github.com/ytarazona/scikit-eo/tree/main/examples</li>
+<li>Google Colab examples: https://github.com/ytarazona/scikit-eo/tree/main/examples</li>
+<li>Free software: Apache 2.0</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/></p>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices (Tarazona and Miyasiro, 2021), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.</p>
+<p>Therefore, <strong>scikit-eo</strong> is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.</p>
+<h1 id="tools-for-remote-sensing">Tools for Remote Sensing<a class="headerlink" href="#tools-for-remote-sensing" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
@@ -201,175 +219,21 @@
 </tbody>
 </table>
 <p>You will find more algorithms!.</p>
+<!-- #endregion -->
+
+<!-- #region -->
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
 <p>To use <strong>scikit-eo</strong> it is necessary to install it. There are two options:</p>
 <h2 id="1-from-pypi">1. From PyPI<a class="headerlink" href="#1-from-pypi" title="Permanent link">&para;</a></h2>
-<p>It is not available yet.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">scikeo</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="2-installing-from-source">2. Installing from source<a class="headerlink" href="#2-installing-from-source" title="Permanent link">&para;</a></h2>
 <p>It is also possible to install the latest development version directly from the GitHub repository with:</p>
-<!-- #endregion -->
-
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ytarazona</span><span class="o">/</span><span class="n">scikit</span><span class="o">-</span><span class="n">eo</span>
 </code></pre></div>
 </td></tr></table>
-<h1 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h1>
-<h2 id="1-applying-machine-learning">1. Applying Machine Learning<a class="headerlink" href="#1-applying-machine-learning" title="Permanent link">&para;</a></h2>
-<p>Libraries to be used:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rasterio</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scikeo.mla</span> <span class="kn">import</span> <span class="n">MLA</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">dbfread</span> <span class="kn">import</span> <span class="n">DBF</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-</td></tr></table>
-<h2 id="20-optical-image">2.0 Optical image<a class="headerlink" href="#20-optical-image" title="Permanent link">&para;</a></h2>
-<p>Landsat-8 OLI (Operational Land Imager) will be used to obtain in order to classify using Random Forest (RF). This image, which is in surface reflectance with bands:
-- Blue -&gt; B2
-- Green -&gt; B3 
-- Red -&gt; B4
-- Nir -&gt; B5
-- Swir1 -&gt; B6
-- Swir2 -&gt; B7</p>
-<p>The image and signatures to be used can be downloaded <a href="https://drive.google.com/drive/folders/193RhNpACu9THcOZu8OzMh-btnFCOgHrU?usp=sharing">here</a>:</p>
-<h2 id="30-supervised-classification-using-random-forest">3.0 Supervised Classification using Random Forest<a class="headerlink" href="#30-supervised-classification-using-random-forest" title="Permanent link">&para;</a></h2>
-<p>Image and endmembers</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">path_raster</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\LC08_232066_20190727_SR.tif&quot;</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path_raster</span><span class="p">)</span>
-
-<span class="n">path_endm</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\endmembers.dbf&quot;</span>
-<span class="n">endm</span> <span class="o">=</span> <span class="n">DBF</span><span class="p">(</span><span class="n">path_endm</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># endmembers</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">endm</span><span class="p">))</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-<p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/endembers.png" alt ="header" width = 75%>
-</a>
-</p>
-
-<p>Instance of <code>mla()</code>:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">inst</span> <span class="o">=</span> <span class="n">MLA</span><span class="p">(</span><span class="n">image</span> <span class="o">=</span> <span class="n">img</span><span class="p">,</span> <span class="n">endmembers</span> <span class="o">=</span> <span class="n">endm</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p>Applying Random Forest:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">warnings</span> 
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
-
-<span class="n">rf_class</span> <span class="o">=</span> <span class="n">inst</span><span class="o">.</span><span class="n">SVM</span><span class="p">(</span><span class="n">training_split</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<h2 id="40-results">4.0 Results<a class="headerlink" href="#40-results" title="Permanent link">&para;</a></h2>
-<p>Dictionary of results</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">rf_class</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-<p>Overall accuracy</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">rf_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Overall_Accuracy&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p>Kappa index</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">rf_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Kappa_Index&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p>Confusion matrix or error matrix</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">rf_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Confusion_Matrix&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/confusion_matrix.png" alt ="header" width = 80%>
-</a>
-</p>
-
-<p>Preparing the image before plotting</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># convert to array</span>
-<span class="n">arr_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="c1"># stacking the image</span>
-<span class="n">rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">arr_img</span><span class="p">[</span><span class="mi">4</span><span class="p">,:,:],</span> <span class="n">arr_img</span><span class="p">[</span><span class="mi">3</span><span class="p">,:,:],</span> <span class="n">arr_img</span><span class="p">[</span><span class="mi">2</span><span class="p">,:,:]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Normalizing bands</span>
-<span class="k">def</span> <span class="nf">stretch_std</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">std_val</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Returns the data with a standard deviation contrast applied &quot;&quot;&quot;</span>
-    <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">*</span><span class="n">std_val</span>
-    <span class="n">min_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">mean</span> <span class="o">-</span> <span class="n">std</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">arr</span><span class="p">)])</span>
-    <span class="n">max_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">mean</span> <span class="o">+</span> <span class="n">std</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)])</span>
-    <span class="n">clipped_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="n">clipped_arr</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">max_val</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">img</span>
-
-<span class="n">rgb_norm</span> <span class="o">=</span> <span class="n">stretch_std</span><span class="p">(</span><span class="n">rgb</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Let&#39;s define the color palette</span>
-<span class="n">palette</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s2">&quot;#2232F9&quot;</span><span class="p">,</span><span class="s2">&quot;#F922AE&quot;</span><span class="p">,</span><span class="s2">&quot;#229954&quot;</span><span class="p">,</span><span class="s2">&quot;#7CED5E&quot;</span><span class="p">])</span>
-
-<span class="c1"># Let´s plot</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_norm</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Image in Surface Reflectance&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rf_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Classification_Map&#39;</span><span class="p">),</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">palette</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Classification Map&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p align="left">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/classification.png" alt ="header" width = "750">
-</a>
-</p>
-
-<ul>
-<li>Free software: Apache Software License 2.0</li>
-<li>Documentation: </li>
-</ul>
+<!-- #endregion -->
               
             </div>
           </div>
@@ -424,5 +288,5 @@
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2022-08-03 21:45:52.683246+00:00
+Build Date UTC : 2022-10-27 22:54:19.347097+00:00
 -->
