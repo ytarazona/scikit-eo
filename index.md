@@ -12,11 +12,16 @@
 <!-- #region -->
 ### Links of interest:
 
-- GitHub repo: https://github.com/ytarazona/scikit-eo
-- Documentation: https://ytarazona.github.io/scikit-eo/
-- PyPI: https://pypi.org/project/scikeo/
-- Notebooks examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
-- Google Colab examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
+- GitHub repo: <https://github.com/ytarazona/scikit-eo>
+- Documentation: <https://ytarazona.github.io/scikit-eo/>
+- PyPI: <https://pypi.org/project/scikeo/>
+- Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- GitHub repo: <https://github.com/ytarazona/scikit-eo>
+- Documentation: <https://ytarazona.github.io/scikit-eo/>
+- PyPI: <https://pypi.org/project/scikeo/>
+- Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - Free software: Apache 2.0
 
 
@@ -24,7 +29,7 @@
 
 # Introduction
 
-Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices (Tarazona and Miyasiro, 2021), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
@@ -56,6 +61,13 @@ To use **scikit-eo** it is necessary to install it. There are two options:
 
 ```python
 pip install scikeo
+```
+
+```python
+dem = ee.Image('USGS/SRTMGL1_003')
+landcover = ee.Image("ESA/GLOBCOVER_L4_200901_200912_V2_3").select('landcover')
+landsat7 = ee.Image('LANDSAT/LE7_TOA_5YEAR/1999_2003')
+states = ee.FeatureCollection("TIGER/2018/States")
 ```
 
 ## 2. Installing from source
