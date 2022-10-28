@@ -12,16 +12,16 @@
 <!-- #region -->
 ### Links of interest:
 
-- GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
-- Documentation: https://ytarazona.github.io/scikit-eo/
-- PyPI: https://pypi.org/project/scikeo/
-- Notebooks examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
-- Google Colab examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
-- GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
-- Documentation: [https://ytarazona.github.io/scikit-eo/](https://ytarazona.github.io/scikit-eo/)
-- PyPI: [https://pypi.org/project/scikeo/](https://pypi.org/project/scikeo/)
-- Notebooks examples: [https://github.com/ytarazona/scikit-eo/tree/main/examples](https://github.com/ytarazona/scikit-eo/tree/main/examples)
-- Google Colab examples: [https://github.com/ytarazona/scikit-eo/tree/main/examples](https://github.com/ytarazona/scikit-eo/tree/main/examples)
+- GitHub repo: <https://github.com/ytarazona/scikit-eo>
+- Documentation: <https://ytarazona.github.io/scikit-eo/>
+- PyPI: <https://pypi.org/project/scikeo/>
+- Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- GitHub repo: <https://github.com/ytarazona/scikit-eo>
+- Documentation: <https://ytarazona.github.io/scikit-eo/>
+- PyPI: <https://pypi.org/project/scikeo/>
+- Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
+- Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - Free software: Apache 2.0
 
 
@@ -61,6 +61,13 @@ To use **scikit-eo** it is necessary to install it. There are two options:
 
 ```python
 pip install scikeo
+```
+
+```python
+dem = ee.Image('USGS/SRTMGL1_003')
+landcover = ee.Image("ESA/GLOBCOVER_L4_200901_200912_V2_3").select('landcover')
+landsat7 = ee.Image('LANDSAT/LE7_TOA_5YEAR/1999_2003')
+states = ee.FeatureCollection("TIGER/2018/States")
 ```
 
 ## 2. Installing from source
