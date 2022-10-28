@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -144,6 +145,8 @@
               
                 <h1 id="welcome-to">Welcome to<a class="headerlink" href="#welcome-to" title="Permanent link">&para;</a></h1>
 =======
+=======
+>>>>>>> Stashed changes
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -727,6 +730,9 @@
                 
 
 <h1 id="welcome-to">Welcome to<a class="headerlink" href="#welcome-to" title="Permanent link">&para;</a></h1>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 <h1 id="scikit-eo-a-python-package-for-remote-sensing-tools">scikit-eo: A Python package for Remote Sensing Tools<a class="headerlink" href="#scikit-eo-a-python-package-for-remote-sensing-tools" title="Permanent link">&para;</a></h1>
 <p><a href=""><img alt="Google Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
@@ -738,6 +744,7 @@
 <!-- #region -->
 <h3 id="links-of-interest">Links of interest:<a class="headerlink" href="#links-of-interest" title="Permanent link">&para;</a></h3>
 <ul>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -766,6 +773,13 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+<li>GitHub repo: <a href="https://github.com/ytarazona/scikit-eo">https://github.com/ytarazona/scikit-eo</a></li>
+<li>Documentation: <a href="https://ytarazona.github.io/scikit-eo/">https://ytarazona.github.io/scikit-eo/</a></li>
+<li>PyPI: <a href="https://pypi.org/project/scikeo/">https://pypi.org/project/scikeo/</a></li>
+<li>Notebooks examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
+<li>Google Colab examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
+>>>>>>> Stashed changes
 <li>GitHub repo: <a href="https://github.com/ytarazona/scikit-eo">https://github.com/ytarazona/scikit-eo</a></li>
 <li>Documentation: <a href="https://ytarazona.github.io/scikit-eo/">https://ytarazona.github.io/scikit-eo/</a></li>
 <li>PyPI: <a href="https://pypi.org/project/scikeo/">https://pypi.org/project/scikeo/</a></li>
@@ -774,6 +788,9 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -852,12 +869,25 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">scikeo</span>
 </code></pre></div>
 </td></tr></table>
+<<<<<<< Updated upstream
+=======
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
+<span class="n">landcover</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;ESA/GLOBCOVER_L4_200901_200912_V2_3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
+<span class="n">landsat7</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_TOA_5YEAR/1999_2003&#39;</span><span class="p">)</span>
+<span class="n">states</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;TIGER/2018/States&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+>>>>>>> Stashed changes
 <h2 id="2-installing-from-source">2. Installing from source<a class="headerlink" href="#2-installing-from-source" title="Permanent link">&para;</a></h2>
 <p>It is also possible to install the latest development version directly from the GitHub repository with:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ytarazona</span><span class="o">/</span><span class="n">scikit</span><span class="o">-</span><span class="n">eo</span>
 </code></pre></div>
 </td></tr></table>
 <!-- #endregion -->
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               
             </div>
@@ -928,6 +958,8 @@ Build Date UTC : 2022-10-28 00:03:14.447349+00:00
 >>>>>>> Stashed changes
 -->
 =======
+=======
+>>>>>>> Stashed changes
 
   <hr>
 <div class="md-source-file">
@@ -1001,5 +1033,9 @@ Build Date UTC : 2022-10-28 00:03:14.447349+00:00
       
     
   </body>
+<<<<<<< Updated upstream
+</html>
+>>>>>>> Stashed changes
+=======
 </html>
 >>>>>>> Stashed changes
