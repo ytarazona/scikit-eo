@@ -17,6 +17,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - GitHub repo: https://github.com/ytarazona/scikit-eo
 =======
 - GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
@@ -54,6 +55,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 - GitHub repo: <https://github.com/ytarazona/scikit-eo>
 - Documentation: <https://ytarazona.github.io/scikit-eo/>
 - PyPI: <https://pypi.org/project/scikeo/>
@@ -65,6 +68,9 @@
 - Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -76,7 +82,11 @@
 # Introduction
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices (Tarazona and Miyasiro, 2021), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+=======
+Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+>>>>>>> Stashed changes
 =======
 Now a day, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 >>>>>>> Stashed changes
@@ -115,7 +125,10 @@ pip install scikeo
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ```python
@@ -126,6 +139,9 @@ states = ee.FeatureCollection("TIGER/2018/States")
 ```
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
