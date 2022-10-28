@@ -13,7 +13,11 @@
 ### Links of interest:
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - GitHub repo: https://github.com/ytarazona/scikit-eo
+=======
+- GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
+>>>>>>> Stashed changes
 =======
 - GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
 >>>>>>> Stashed changes
@@ -22,12 +26,18 @@
 - Notebooks examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
 - Google Colab examples: https://github.com/ytarazona/scikit-eo/tree/main/examples
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 - GitHub repo: [https://github.com/ytarazona/scikit-eo](https://github.com/ytarazona/scikit-eo)
 - Documentation: [https://ytarazona.github.io/scikit-eo/](https://ytarazona.github.io/scikit-eo/)
 - PyPI: [https://pypi.org/project/scikeo/](https://pypi.org/project/scikeo/)
 - Notebooks examples: [https://github.com/ytarazona/scikit-eo/tree/main/examples](https://github.com/ytarazona/scikit-eo/tree/main/examples)
 - Google Colab examples: [https://github.com/ytarazona/scikit-eo/tree/main/examples](https://github.com/ytarazona/scikit-eo/tree/main/examples)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 - Free software: Apache 2.0
 
