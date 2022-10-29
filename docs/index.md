@@ -17,7 +17,6 @@
 - PyPI: <https://pypi.org/project/scikeo/>
 - Notebooks examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - Google Colab examples: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
-- GitHub repo: <https://github.com/ytarazona/scikit-eo>
 - Free software: Apache 2.0
 
 
