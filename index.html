@@ -596,11 +596,6 @@
 <li>PyPI: <a href="https://pypi.org/project/scikeo/">https://pypi.org/project/scikeo/</a></li>
 <li>Notebooks examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
 <li>Google Colab examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
-<li>GitHub repo: <a href="https://github.com/ytarazona/scikit-eo">https://github.com/ytarazona/scikit-eo</a></li>
-<li>Documentation: <a href="https://ytarazona.github.io/scikit-eo/">https://ytarazona.github.io/scikit-eo/</a></li>
-<li>PyPI: <a href="https://pypi.org/project/scikeo/">https://pypi.org/project/scikeo/</a></li>
-<li>Notebooks examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
-<li>Google Colab examples: <a href="https://github.com/ytarazona/scikit-eo/tree/main/examples">https://github.com/ytarazona/scikit-eo/tree/main/examples</a></li>
 <li>Free software: Apache 2.0</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/></p>
@@ -670,15 +665,6 @@
 <p>To use <strong>scikit-eo</strong> it is necessary to install it. There are two options:</p>
 <h2 id="1-from-pypi">1. From PyPI<a class="headerlink" href="#1-from-pypi" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">scikeo</span>
-</code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
-<span class="n">landcover</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;ESA/GLOBCOVER_L4_200901_200912_V2_3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
-<span class="n">landsat7</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_TOA_5YEAR/1999_2003&#39;</span><span class="p">)</span>
-<span class="n">states</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;TIGER/2018/States&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="2-installing-from-source">2. Installing from source<a class="headerlink" href="#2-installing-from-source" title="Permanent link">&para;</a></h2>
