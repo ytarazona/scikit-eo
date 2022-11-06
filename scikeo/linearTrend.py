@@ -2,6 +2,8 @@
 import numpy as np
 from scipy import stats
 import rasterio
+import pandas as pd
+import statsmodels.api as sm
 
 class linearTrend(object):
     
@@ -36,19 +38,6 @@ class linearTrend(object):
         Return:
             a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray 
             with 2d.
-    
-    
-        References:
-        - Crist, E.P., R. Laurin, and R.C. Cicone. 1986. Vegetation and soils information 
-          contained in transformed Thematic Mapper data. Pages 1465-1470 Ref. ESA SP-254. 
-          European Space Agency, Paris, France. http://www.ciesin.org/docs/005-419/005-419.html.
-    
-        - Baig, M.H.A., Shuai, T., Tong, Q., 2014. Derivation of a tasseled cap transformation 
-          based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431. 
-    
-        - Li, B., Ti, C., Zhao, Y., Yan, X., 2016. Estimating Soil Moisture with Landsat Data 
-          and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies. 
-          Remote Sensing, 8(1), 38.
     
         Note:
         Linear regression is widely used to analyze forest degradation or land degradation.
@@ -103,7 +92,6 @@ class linearTrend(object):
         
         pvalue = lr_coef[:,3].reshape((rows, cols))
         
-        
         result = {'slope': slope,
                  'intercept': intercept,
                  'pvalue': pvalue
@@ -111,7 +99,79 @@ class linearTrend(object):
         
         return result
     
-    def MLN(**kwargs):
+    def LR(self, col_pos = 0, **kwargs):
         
-        pass
+        '''
+        Logistic Regression is a statistical analysis technique that can measure 
+        statistically the relative influence of several factors and explain objectively how values 
+        depend on predictor variables. This method is applied to remotely sensed data.
+    
+        Parameters:
+        
+            **kwargs: These will be passed to MLN, please see full lists at:
+                  https://www.statsmodels.org/dev/generated/statsmodels.discrete.discrete_model.Logit.html
+                  
+        Return:
+            a dictionary with the summary of logistic regression and an array of probability with 2d.
+            
+        Note:
+        Logistic regression allows obtaining a degradation risk map (for instance), in other words, 
+        it is a probability map.
+        
+        References:
+        - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
+          remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
+          Sensing Applications: Society and Environment, 19, 100337.
+        
+        - Chambers, J.M., 1992. Statistical Models in S. CRS Press.
+        '''
+        
+        if not isinstance(self.image, (rasterio.io.DatasetReader)):
+            raise TypeError(f'"image" must be raster read by rasterio.open(). {type(self.image)}')
+        
+        if not self.image.count >= 2:
+            raise ValueError(f'The number of bands must be greater than 2. shape = {self.image.count}')
+            
+        bands = self.image.count
+        
+        rows = self.image.height
+        
+        cols = self.image.width
+        
+        st = self.image.read()
+        
+        st_reorder = np.moveaxis(st, 0, -1)  # rows, cols and bands
+        
+        arr = st_reorder.reshape((rows*cols, bands))
+        
+        # nodata
+        if np.isnan(np.sum(arr)):
+            arr[np.isnan(arr)] = self.nodata
+        
+        st_reorder = np.moveaxis(st, 0, -1)  # rows, cols and bands
+        
+        arr = st_reorder.reshape((rows*cols, bands))
 
+        DF = pd.DataFrame(arr, columns = [f'var{i}' for i in range(1, bands + 1)])
+
+        list_ind = [i for i in range(bands)]
+
+        list_ind.remove(col_pos)
+
+        Xtrain = DF.iloc[:, list_ind]
+
+        ytrain = DF.iloc[:, col_pos]
+
+        log_reg = sm.Logit(ytrain, Xtrain).fit()
+
+        summary_logit = log_reg.summary()
+
+        pred_prob = log_reg.predict(Xtrain)
+
+        pred_prob = pred_prob.to_numpy().reshape((rows, cols))
+
+        result = {'summary_logit': summary_logit,
+                  'arr_prob': pred_prob,
+                 }
+        
+        return result
