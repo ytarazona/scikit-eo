@@ -11,12 +11,12 @@
 
 ---
 
-<a href="..\scikeo\linearTrend.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `linearTrend`
 Linear Trend in Remote Sensing 
 
-<a href="..\scikeo\linearTrend.py#L10"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -42,7 +42,7 @@ __init__(image, nodata=-99999)
 
 ---
 
-<a href="..\scikeo\linearTrend.py#L24"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LN`
 
@@ -50,7 +50,7 @@ __init__(image, nodata=-99999)
 LN(**kwargs)
 ```
 
-Linear trend is useful for mapping forest degradation, land degradation, etc. This algorithm is capable of obtaining the slope of an ordinary least-squares  linear regression and its reliability (p-value). 
+ Linear trend is useful for mapping forest degradation, land degradation, etc.  This algorithm is capable of obtaining the slope of an ordinary least-squares   linear regression and its reliability (p-value).  
 
 
 
@@ -58,45 +58,65 @@ Linear trend is useful for mapping forest degradation, land degradation, etc. Th
  
 
 
- - <b>`**kwargs`</b>:  These will be passed to LN, please see full lists at: 
- - <b>`https`</b>: //docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html 
+         - <b>`**kwargs`</b>:  These will be passed to LN, please see full lists at: 
+         - <b>`https`</b>: //docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html 
 
 Return: a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray  with 2d. 
 
+<<<<<<< HEAD 
+
+**Note:**
+
+> Linear regression is widely used to analyze forest degradation or land degradation. Specifically, the slope and its reliability are used as main parameters and they can be obtained with this function. On the other hand, logistic regression allows obtaining a degradation risk map, in other words, it is a probability map. 
+>======= ``````> d31f0686c9e7bea0e98058fd5040aef9c51b3594```
+References:
+- Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
+remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
+Sensing Applications: Society and Environment, 19, 100337.
+
+- Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for
+analysis of variance. Appl. Stat. 22, 392-399.
+
+- Chambers, J.M., 1992. Statistical Models in S. CRS Press.
+
+Note:
+Linear regression is widely used to analyze forest degradation or land degradation.
+Specifically, the slope and its reliability are used as main parameters and they
+can be obtained with this function. On the other hand, logistic regression allows
+obtaining a degradation risk map, in other words, it is a probability map.
 
 
-References: 
-- Crist, E.P., R. Laurin, and R.C. Cicone. 1986. Vegetation and soils information  contained in transformed Thematic Mapper data. Pages 1465-1470 Ref. ESA SP-254.  
- - <b>`European Space Agency, Paris, France. http`</b>: //www.ciesin.org/docs/005-419/005-419.html. 
+
+---
+
+<a href="..\scikeo\linearTrend.py#L111"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+### <kbd>method</kbd> `LR`
+
+```python
+LR(col_pos=0, **kwargs)
+```
+
+Logistic Regression is a statistical analysis technique that can measure  statistically the relative influence of several factors and explain objectively how values  depend on predictor variables. This method is applied to remotely sensed data. 
 
 
-- Baig, M.H.A., Shuai, T., Tong, Q., 2014. Derivation of a tasseled cap transformation  based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431.  
+
+**Parameters:**
+ 
 
 
-- Li, B., Ti, C., Zhao, Y., Yan, X., 2016. Estimating Soil Moisture with Landsat Data  and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies.  Remote Sensing, 8(1), 38. 
+ - <b>`**kwargs`</b>:  These will be passed to MLN, please see full lists at: 
+ - <b>`https`</b>: //www.statsmodels.org/dev/generated/statsmodels.discrete.discrete_model.Logit.html 
+
+Return: a dictionary with the summary of logistic regression and an array of probability with 2d. 
 
 
 
 **Note:**
 
-> Linear regression is widely used to analyze forest degradation or land degradation. Specifically, the slope and its reliability are used as main parameters and they can be obtained with this function. On the other hand, logistic regression allows obtaining a degradation risk map, in other words, it is a probability map. 
+> Logistic regression allows obtaining a degradation risk map (for instance), in other words, it is a probability map. 
 >References: - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote Sensing Applications: Society and Environment, 19, 100337. 
->- Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for analysis of variance. Appl. Stat. 22, 392-399. 
 >- Chambers, J.M., 1992. Statistical Models in S. CRS Press. 
-
----
-
-<a href="..\scikeo\linearTrend.py#L114"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
-### <kbd>method</kbd> `MLN`
-
-```python
-MLN(**kwargs)
-```
-
-
-
-
 
 
 
