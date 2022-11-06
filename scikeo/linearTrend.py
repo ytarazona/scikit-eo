@@ -38,16 +38,13 @@ class linearTrend(object):
         Return:
             a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray 
             with 2d.
-    
-<<<<<<< HEAD
+            
         Note:
         Linear regression is widely used to analyze forest degradation or land degradation.
         Specifically, the slope and its reliability are used as main parameters and they
         can be obtained with this function. On the other hand, logistic regression allows
         obtaining a degradation risk map, in other words, it is a probability map.
         
-=======
->>>>>>> d31f0686c9e7bea0e98058fd5040aef9c51b3594
         References:
         - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
           remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
