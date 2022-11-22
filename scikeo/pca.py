@@ -135,7 +135,7 @@ def PCA(image, stand_varb = True, nodata = -99999, **kwargs):
     
     contri_mat = contributions(corr_mat)
     
-    results = {'Fused_images':pc,
+    results = {'PCA_image':pc,
               'Variance':var,
               'Proportion_of_variance':pro_var,
               'Cumulative_variance':cum_var,
