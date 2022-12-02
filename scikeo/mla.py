@@ -143,6 +143,7 @@ class MLA(object):
         mt_svm = inst_svm.fit(Xtrain, ytrain)
         
         labels_svm = mt_svm.predict(self.arr)
+        
         classSVM = labels_svm.reshape((self.rows, self.cols))
         
         # Confusion matrix
