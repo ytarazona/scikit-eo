@@ -28,7 +28,7 @@ setup(
     author_email='geoyons@gmail.com',
     python_requires='>=3.5',
     classifiers=[
-        'Development Status ::  2 - Pre-Alpha',
+        #'Development Status ::  2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
