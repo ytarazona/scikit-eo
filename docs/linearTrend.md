@@ -50,7 +50,7 @@ __init__(image, nodata=-99999)
 LN(**kwargs)
 ```
 
- Linear trend is useful for mapping forest degradation, land degradation, etc.  This algorithm is capable of obtaining the slope of an ordinary least-squares   linear regression and its reliability (p-value).  
+Linear trend is useful for mapping forest degradation, land degradation, etc. This algorithm is capable of obtaining the slope of an ordinary least-squares  linear regression and its reliability (p-value). 
 
 
 
@@ -58,38 +58,28 @@ LN(**kwargs)
  
 
 
-         - <b>`**kwargs`</b>:  These will be passed to LN, please see full lists at: 
-         - <b>`https`</b>: //docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html 
+ - <b>`**kwargs`</b>:  These will be passed to LN, please see full lists at: 
+ - <b>`https`</b>: //docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html 
 
 Return: a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray  with 2d. 
 
-<<<<<<< HEAD 
+
 
 **Note:**
 
 > Linear regression is widely used to analyze forest degradation or land degradation. Specifically, the slope and its reliability are used as main parameters and they can be obtained with this function. On the other hand, logistic regression allows obtaining a degradation risk map, in other words, it is a probability map. 
->======= ``````> d31f0686c9e7bea0e98058fd5040aef9c51b3594```
-References:
-- Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
-remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
-Sensing Applications: Society and Environment, 19, 100337.
+>References: - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote Sensing Applications: Society and Environment, 19, 100337. 
+>- Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for analysis of variance. Appl. Stat. 22, 392-399. 
+>- Chambers, J.M., 1992. Statistical Models in S. CRS Press. 
+>
 
-- Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for
-analysis of variance. Appl. Stat. 22, 392-399.
+**Note:**
 
-- Chambers, J.M., 1992. Statistical Models in S. CRS Press.
-
-Note:
-Linear regression is widely used to analyze forest degradation or land degradation.
-Specifically, the slope and its reliability are used as main parameters and they
-can be obtained with this function. On the other hand, logistic regression allows
-obtaining a degradation risk map, in other words, it is a probability map.
-
-
+> Linear regression is widely used to analyze forest degradation or land degradation. Specifically, the slope and its reliability are used as main parameters and they can be obtained with this function. On the other hand, logistic regression allows obtaining a degradation risk map, in other words, it is a probability map. 
 
 ---
 
-<a href="..\scikeo\linearTrend.py#L111"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\linearTrend.py#L108"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LR`
 

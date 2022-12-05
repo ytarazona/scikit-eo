@@ -17,7 +17,7 @@
 ```python
 plotRGB(
     image,
-    bands=[4, 3, 2],
+    bands=[3, 2, 1],
     stretch='std',
     title=None,
     xlabel=None,
