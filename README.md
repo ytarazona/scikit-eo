@@ -120,7 +120,7 @@ inst = MLA(image = img, endmembers = endm)
 Applying Random Forest:
 
 ```python
-rf_class = inst.SVM(training_split = 0.7)
+svm_class = inst.SVM(training_split = 0.7)
 ```
 
 ## 4.0 Results
@@ -128,25 +128,25 @@ rf_class = inst.SVM(training_split = 0.7)
 Dictionary of results
 
 ```python
-rf_class.keys()
+svm_class.keys()
 ```
 
 Overall accuracy
 
 ```python
-rf_class.get('Overall_Accuracy')
+svm_class.get('Overall_Accuracy')
 ```
 
 Kappa index
 
 ```python
-rf_class.get('Kappa_Index')
+svm_class.get('Kappa_Index')
 ```
 
 Confusion matrix or error matrix
 
 ```python
-rf_class.get('Confusion_Matrix')
+svm_class.get('Confusion_Matrix')
 ```
 
 <p align="left">
