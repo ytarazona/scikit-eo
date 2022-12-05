@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import cohen_kappa_score
 from sklearn.metrics import confusion_matrix
+import warnings
 
 class MLA(object):
     
@@ -57,7 +58,10 @@ class MLA(object):
         st_reorder = np.moveaxis(st, 0, -1) 
         # data in [rows*cols, bands]
         arr = st_reorder.reshape((rows*cols, bands))
-
+        
+        # extra
+        arr_two = st_reorder.reshape((rows*cols, bands))
+        
         # nodata
         if np.isnan(np.sum(arr)):
             arr[np.isnan(arr)] = self.nodata
@@ -67,7 +71,7 @@ class MLA(object):
             
             for i in np.arange(self.endm.shape[1]):
                 
-                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 1): indx = i; break
+                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 0): indx = i; break
         
         # if the file is .dbf    
         elif isinstance(self.endm, (DBF)): # isinstance() function With Inheritance
@@ -76,7 +80,7 @@ class MLA(object):
             
             for i in np.arange(self.endm.shape[1]):
                 
-                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 1): indx = i; break
+                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 0): indx = i; break
         
         else:
             raise TypeError('"endm" must be .csv (pandas.core.frame.DataFrame).')
@@ -88,6 +92,8 @@ class MLA(object):
         self.indx = indx
         
         self.arr = arr
+        
+        self.arr_two = arr_two
         
         self.rows = rows
         
@@ -144,6 +150,12 @@ class MLA(object):
         
         labels_svm = mt_svm.predict(self.arr)
         
+        # image border like 0 or nan
+        warnings.simplefilter(action='ignore', category=RuntimeWarning)
+        #labels_svm[self.arr_two[:,0] == 0] = 0
+        labels_svm = labels_svm.astype(float)
+        labels_svm[self.arr_two[:,0] == 0] = np.nan
+    
         classSVM = labels_svm.reshape((self.rows, self.cols))
         
         # Confusion matrix
@@ -173,15 +185,18 @@ class MLA(object):
         cm = np.concatenate([cm, total_cols.reshape((1,n+3)), pa.reshape((1,n+3)), 
                              om.reshape((1,n+3))])
 
+        min_class = np.nanmin(labels_svm)
+        max_class = np.nanmax(labels_svm)
+        
         namesCol = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesCol.append(stri)
 
         namesCol.extend(['Total', 'Users_Accuracy', 'Commission'])
 
         namesRow = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesRow.append(stri)
 
@@ -248,6 +263,13 @@ class MLA(object):
         mt_dt = inst_dt.fit(Xtrain, ytrain)
         
         labels_dt = mt_dt.predict(self.arr)
+        
+        # image border like 0 or nan
+        warnings.simplefilter(action='ignore', category=RuntimeWarning)
+        #labels_dt[self.arr_two[:,0] == 0] = 0
+        labels_dt = labels_dt.astype(float)
+        labels_dt[self.arr_two[:,0] == 0] = np.nan
+        
         classDT = labels_dt.reshape((self.rows, self.cols))
         
         # Confusion matrix
@@ -277,15 +299,18 @@ class MLA(object):
         cm = np.concatenate([cm, total_cols.reshape((1,n+3)), pa.reshape((1,n+3)), 
                              om.reshape((1,n+3))])
 
+        min_class = np.nanmin(labels_dt)
+        max_class = np.nanmax(labels_dt)
+        
         namesCol = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesCol.append(stri)
 
         namesCol.extend(['Total', 'Users_Accuracy', 'Commission'])
 
         namesRow = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesRow.append(stri)
 
@@ -351,6 +376,13 @@ class MLA(object):
         mt_rf = inst_rf.fit(Xtrain, ytrain)
         
         labels_rf = mt_rf.predict(self.arr)
+        
+        # image border like 0 or nan
+        warnings.simplefilter(action='ignore', category=RuntimeWarning)
+        #labels_rf[self.arr_two[:,0] == 0] = 0
+        labels_rf = labels_rf.astype(float)
+        labels_rf[self.arr_two[:,0] == 0] = np.nan
+        
         classRF = labels_rf.reshape((self.rows, self.cols))
         
         # Confusion matrix
@@ -380,15 +412,18 @@ class MLA(object):
         cm = np.concatenate([cm, total_cols.reshape((1,n+3)), pa.reshape((1,n+3)), 
                              om.reshape((1,n+3))])
 
+        min_class = np.nanmin(labels_rf)
+        max_class = np.nanmax(labels_rf)
+        
         namesCol = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesCol.append(stri)
 
         namesCol.extend(['Total', 'Users_Accuracy', 'Commission'])
 
         namesRow = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesRow.append(stri)
 
@@ -455,6 +490,13 @@ class MLA(object):
         mt_nb = inst_nb.fit(Xtrain, ytrain)
         
         labels_nb = mt_nb.predict(self.arr)
+        
+        # image border like 0 or nan
+        warnings.simplefilter(action='ignore', category=RuntimeWarning)
+        #labels_nb[self.arr_two[:,0] == 0] = 0
+        labels_nb = labels_nb.astype(float)
+        labels_nb[self.arr_two[:,0] == 0] = np.nan
+        
         classNB = labels_nb.reshape((self.rows, self.cols))
         
         # Confusion matrix
@@ -484,15 +526,18 @@ class MLA(object):
         cm = np.concatenate([cm, total_cols.reshape((1,n+3)), pa.reshape((1,n+3)), 
                              om.reshape((1,n+3))])
 
+        min_class = np.nanmin(labels_nb)
+        max_class = np.nanmax(labels_nb)
+        
         namesCol = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesCol.append(stri)
 
         namesCol.extend(['Total', 'Users_Accuracy', 'Commission'])
 
         namesRow = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesRow.append(stri)
 
@@ -558,6 +603,13 @@ class MLA(object):
         mt_nn = inst_nn.fit(Xtrain, ytrain)
         
         labels_nn = mt_nn.predict(self.arr)
+        
+        # image border like 0 or nan
+        warnings.simplefilter(action='ignore', category=RuntimeWarning)
+        #labels_nn[self.arr_two[:,0] == 0] = 0
+        labels_nn = labels_nn.astype(float)
+        labels_nn[self.arr_two[:,0] == 0] = np.nan
+        
         classNN = labels_nn.reshape((self.rows, self.cols))
         
         # Confusion matrix
@@ -587,15 +639,18 @@ class MLA(object):
         cm = np.concatenate([cm, total_cols.reshape((1,n+3)), pa.reshape((1,n+3)), 
                              om.reshape((1,n+3))])
 
+        min_class = np.nanmin(labels_nn)
+        max_class = np.nanmax(labels_nn)
+        
         namesCol = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesCol.append(stri)
 
         namesCol.extend(['Total', 'Users_Accuracy', 'Commission'])
 
         namesRow = []
-        for i in np.arange(0, n):
+        for i in np.arange(min_class, max_class + 1):
             stri = str(i)
             namesRow.append(stri)
 
