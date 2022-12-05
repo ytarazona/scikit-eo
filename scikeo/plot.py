@@ -3,7 +3,7 @@ import rasterio
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plotRGB(image, bands = [4,3,2], stretch = 'std', title = None, xlabel = None, ylabel = None, ax = None, **kwargs):
+def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None, ylabel = None, ax = None, **kwargs):
     
     '''
     Plotting an image in RGB
@@ -45,12 +45,15 @@ def plotRGB(image, bands = [4,3,2], stretch = 'std', title = None, xlabel = None
         
     st = image.read()
     
+    if st.shape[0] < 3:
+        raise TypeError('"image" must be a raster with at least three bands.')
+    
     # data in [rows, cols, bands]
     st = np.moveaxis(st, 0, -1) 
     
     bands = bands
     
-    arr_rgb = np.dstack([st[:, :, bands[0]], st[:, :, bands[1]], st[:, :, bands[2]]])
+    arr_rgb = np.dstack([st[:, :, (bands[0]-1)], st[:, :, (bands[1]-1)], st[:, :, (bands[2]-1)]])
     
     if stretch == 'std':
         
