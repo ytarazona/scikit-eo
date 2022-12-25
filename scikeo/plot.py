@@ -1,12 +1,99 @@
+# -*- coding: utf-8 -*-
 # +
 import rasterio
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None, ylabel = None, ax = None, **kwargs):
+def plotHist(image, bands = 1, bins = 128, alpha = 0.8, title = None, xlabel = None, ylabel = None,
+             label = None, ax = None, density = True, **kwargs):
     
     '''
-    Plotting an image in RGB
+    This function allows to plot satellite images histogram.
+    
+        Parameters:
+            
+            image: Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.
+            
+            bands: Must be specified as a number of a list.
+            
+            bins: By default is 128. 
+            
+            alpha: Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates
+            100%. By default is 80%.
+            
+            title: Assigned title.
+        
+            xlabel: X axis title.
+        
+            ylabel: Y axis title.
+            
+            label: Labeling the histogram.
+        
+            ax: current axes
+        
+            **kwargs: These will be passed to the matplotlib imshow(), please see full lists at:
+                https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html
+    
+        Return:
+        
+            ax : A histogram of an image.
+        
+    '''
+    
+    if not isinstance(image, (rasterio.io.DatasetReader)):
+        raise TypeError('"image" must be raster read by rasterio.open().')
+    
+    st = image.read()
+    
+    # data in [rows, cols, bands]
+    arr = np.moveaxis(st, 0, -1)
+    
+    if ax is None:
+        ax = plt.gca() # get current axes
+    
+    nbands = np.array([bands]).flatten()
+            
+    # xlabel
+    if label is None:
+        label = {i:f'band {i}' for i in nbands}
+    else:
+        nlabel = np.array([label]).flatten()
+        
+        if not len(nbands) == len(nlabel):
+            raise TypeError('Length of "bands" must be equal to "label".')
+        
+        label = {b:l for b,l in zip(nbands, nlabel)}
+        
+    for i in nbands:
+        
+        # Draw the plot
+        arr_1d = arr[:, :, i].flatten()
+        
+        ax.hist(arr_1d, bins = bins, alpha = alpha, label = label[i], density = density, **kwargs)
+    
+    # title
+    if title is None: title = "Histogram"
+    
+    # ylabel
+    if ylabel is None: ylabel = "Frequency"
+    
+    # xlabel
+    if xlabel is None: xlabel = "Band values"
+        
+    # Title and labels
+    ax.set(title = title, xlabel = xlabel, ylabel = ylabel)
+
+    plt.legend()
+    plt.tight_layout()
+    
+    return ax
+
+
+def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None, ylabel = None, 
+            ax = None, **kwargs):
+    
+    '''
+    Plotting an image in RGB.
     
     This function allows to plot an satellite image in RGB channels.
         
@@ -36,7 +123,7 @@ def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None
     
         Return:
         
-            ax : Graphic of change detection using the matplotlib plot function.
+            ax : Graphic of an image in RGB.
         
     '''
     
