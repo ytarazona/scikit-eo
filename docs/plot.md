@@ -10,7 +10,75 @@
 
 ---
 
-<a href="..\scikeo\plot.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\plot.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `plotHist`
+
+```python
+plotHist(
+    image,
+    bands=1,
+    bins=128,
+    alpha=0.8,
+    title=None,
+    xlabel=None,
+    ylabel=None,
+    label=None,
+    ax=None,
+    density=True,
+    **kwargs
+)
+```
+
+This function allows to plot satellite images histogram. 
+
+
+
+**Parameters:**
+  
+
+
+     - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d. 
+
+
+     - <b>`bands`</b>:  Must be specified as a number of a list. 
+
+
+     - <b>`bins`</b>:  By default is 128.  
+
+
+     - <b>`alpha`</b>:  Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates 100%. By default is 80%. 
+
+
+     - <b>`title`</b>:  Assigned title. 
+
+
+     - <b>`xlabel`</b>:  X axis title. 
+
+
+     - <b>`ylabel`</b>:  Y axis title. 
+
+
+     - <b>`label`</b>:  Labeling the histogram. 
+
+
+     - <b>`ax`</b>:  current axes 
+
+
+     - <b>`**kwargs`</b>:  These will be passed to the matplotlib imshow(), please see full lists at: 
+     - <b>`https`</b>: //matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html 
+
+Return: 
+
+
+     - <b>`ax `</b>:  A histogram of an image. 
+
+
+
+
+---
+
+<a href="..\scikeo\plot.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `plotRGB`
 
@@ -27,7 +95,7 @@ plotRGB(
 )
 ```
 
-Plotting an image in RGB 
+Plotting an image in RGB. 
 
 This function allows to plot an satellite image in RGB channels.  
 
@@ -64,7 +132,7 @@ This function allows to plot an satellite image in RGB channels.
 Return: 
 
 
-     - <b>`ax `</b>:  Graphic of change detection using the matplotlib plot function. 
+     - <b>`ax `</b>:  Graphic of an image in RGB. 
 
 
 
