@@ -5,6 +5,7 @@ import fiona
 import rasterio
 import rasterio.mask
 import numpy as np
+import pandas as pd
 import geopandas as gpd
 
 def crop(image, shp, filename = None, filepath = None):
