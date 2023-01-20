@@ -137,7 +137,7 @@ def extract(image, shp):
     
     coords = [(x,y) for x, y in zip(gdf['geometry'].x, gdf['geometry'].y)]
     
-    gdf['values'] = [x for x in img.sample(coords)]
+    gdf['values'] = [x for x in image.sample(coords)]
     
     bands_total = gdf['values'][0].shape[0]
     
