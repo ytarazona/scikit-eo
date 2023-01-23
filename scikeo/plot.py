@@ -144,13 +144,13 @@ def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None
     
     if stretch == 'std':
         
-        mean = np.mean(arr_rgb)
+        mean = np.nanmean(arr_rgb)
         
-        std = np.std(arr_rgb)*1.5
+        std = np.nanstd(arr_rgb)*1.5
         
-        min_val = np.max([mean - std, np.min(arr_rgb)])
+        min_val = np.nanmax([mean - std, np.nanmin(arr_rgb)])
         
-        max_val = np.min([mean + std, np.max(arr_rgb)])
+        max_val = np.nanmin([mean + std, np.nanmax(arr_rgb)])
         
         clipped_arr = np.clip(arr_rgb, min_val, max_val)
         
@@ -158,9 +158,9 @@ def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None
 
     elif stretch == 'per':
         
-        p10 = np.percentile(arr_rgb, 10) # percentile10
+        p10 = np.nanpercentile(arr_rgb, 10) # percentile10
         
-        p90 = np.percentile(arr_rgb, 90) # percentile90
+        p90 = np.nanpercentile(arr_rgb, 90) # percentile90
         
         clipped_arr = np.clip(arr_rgb, p10, p90)
         
