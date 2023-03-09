@@ -8,7 +8,7 @@
 [![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()     
 [![Twitter](https://img.shields.io/twitter/url?label=Follow%20%40GeoYons&style=social&url=https%3A%2F%2Ftwitter.com%2FGeoYons)](https://twitter.com/GeoYons)
 [![Downloads](https://pepy.tech/badge/scikeo)](https://pepy.tech/project/scikeo)
-[![docs](https://img.shields.io/badge/docs-passing-brightgreen)]()
+[![docs]([https://img.shields.io/badge/docs-passing-brightgreen](https://raw.githubusercontent.com/ytarazona/scikit-eo/c1e0759302d517f620716588da8a7946421b5064/docs/images/docs-passing-brightgreen.svg))]()
 
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
