@@ -7,6 +7,7 @@
 [![PyPI version](https://badge.fury.io/py/scikeo.svg)](https://badge.fury.io/py/scikeo)
 [![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()     
 [![Twitter](https://img.shields.io/twitter/url?label=Follow%20%40GeoYons&style=social&url=https%3A%2F%2Ftwitter.com%2FGeoYons)](https://twitter.com/GeoYons)
+[![Downloads](https://pepy.tech/badge/scikeo)](https://pepy.tech/project/scikeo)
 
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
