@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # +
+import copy
 import rasterio
 import numpy as np
 import pandas as pd
@@ -63,8 +64,24 @@ class MLA(object):
         arr_two = st_reorder.reshape((rows*cols, bands))
         
         # nodata
+        #if np.isnan(np.sum(arr)):
+            #arr[np.isnan(arr)] = self.nodata
+        
+        # replace np.nan -> 0
         if np.isnan(np.sum(arr)):
-            arr[np.isnan(arr)] = self.nodata
+            arr[np.isnan(arr)] = 0
+        
+        # replace np.nan if all row has 0
+        for i in range(arr.shape[0]):
+            if np.sum(arr[i,:], axis = 0) == 0: arr[i,:] = np.nan
+        
+        # drop rows with nan
+        arrT = pd.DataFrame(arr)
+        arr = arrT.dropna(axis = 0)
+        
+        # saving un array for predicted classes
+        class_final = arrT.iloc[:,0].to_numpy()
+        posIndx = np.argwhere(~np.isnan(class_final)).flatten()
         
         # if it is read by pandas.read_csv()
         if isinstance(self.endm, (pd.core.frame.DataFrame)):
@@ -93,11 +110,13 @@ class MLA(object):
         
         self.arr = arr
         
-        self.arr_two = arr_two
-        
         self.rows = rows
         
         self.cols = cols
+        
+        self.posIndx = posIndx
+        
+        self.class_final = class_final
         
     def SVM(self, training_split = 0.8, random_state = None, kernel = 'linear', **kwargs):
         
@@ -150,13 +169,10 @@ class MLA(object):
         
         labels_svm = mt_svm.predict(self.arr)
         
-        # image border like 0 or nan
-        warnings.simplefilter(action='ignore', category=RuntimeWarning)
-        #labels_svm[self.arr_two[:,0] == 0] = 0
-        labels_svm = labels_svm.astype(float)
-        labels_svm[self.arr_two[:,0] == 0] = np.nan
-    
-        classSVM = labels_svm.reshape((self.rows, self.cols))
+        # image border like nan
+        self.class_final[self.posIndx] = labels_svm
+        
+        classSVM = self.class_final.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_svm.predict(Xtest)
@@ -264,13 +280,10 @@ class MLA(object):
         
         labels_dt = mt_dt.predict(self.arr)
         
-        # image border like 0 or nan
-        warnings.simplefilter(action='ignore', category=RuntimeWarning)
-        #labels_dt[self.arr_two[:,0] == 0] = 0
-        labels_dt = labels_dt.astype(float)
-        labels_dt[self.arr_two[:,0] == 0] = np.nan
+        # image border like nan
+        self.class_final[self.posIndx] = labels_dt
         
-        classDT = labels_dt.reshape((self.rows, self.cols))
+        classDT = self.class_final.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_dt.predict(Xtest)
@@ -377,13 +390,10 @@ class MLA(object):
         
         labels_rf = mt_rf.predict(self.arr)
         
-        # image border like 0 or nan
-        warnings.simplefilter(action='ignore', category=RuntimeWarning)
-        #labels_rf[self.arr_two[:,0] == 0] = 0
-        labels_rf = labels_rf.astype(float)
-        labels_rf[self.arr_two[:,0] == 0] = np.nan
+        # image border like nan
+        self.class_final[self.posIndx] = labels_rf
         
-        classRF = labels_rf.reshape((self.rows, self.cols))
+        classRF = self.class_final.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_rf.predict(Xtest)
@@ -491,13 +501,10 @@ class MLA(object):
         
         labels_nb = mt_nb.predict(self.arr)
         
-        # image border like 0 or nan
-        warnings.simplefilter(action='ignore', category=RuntimeWarning)
-        #labels_nb[self.arr_two[:,0] == 0] = 0
-        labels_nb = labels_nb.astype(float)
-        labels_nb[self.arr_two[:,0] == 0] = np.nan
+        # image border like nan
+        self.class_final[self.posIndx] = labels_nb
         
-        classNB = labels_nb.reshape((self.rows, self.cols))
+        classNB = self.class_final.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_nb.predict(Xtest)
@@ -604,13 +611,10 @@ class MLA(object):
         
         labels_nn = mt_nn.predict(self.arr)
         
-        # image border like 0 or nan
-        warnings.simplefilter(action='ignore', category=RuntimeWarning)
-        #labels_nn[self.arr_two[:,0] == 0] = 0
-        labels_nn = labels_nn.astype(float)
-        labels_nn[self.arr_two[:,0] == 0] = np.nan
+        # image border like nan
+        self.class_final[self.posIndx] = labels_nn
         
-        classNN = labels_nn.reshape((self.rows, self.cols))
+        classNN = self.class_final.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_nn.predict(Xtest)
