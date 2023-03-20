@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikeo\pca.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 # <kbd>module</kbd> `pca`
 
 
@@ -9,8 +7,6 @@
 
 
 ---
-
-<a href="..\scikeo\pca.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `PCA`
 

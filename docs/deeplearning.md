@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikeo\deeplearning.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 # <kbd>module</kbd> `deeplearning`
 
 
@@ -11,12 +9,8 @@
 
 ---
 
-<a href="..\scikeo\deeplearning.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 ## <kbd>class</kbd> `DL`
 Deep Learning classification in Remote Sensing 
-
-<a href="..\scikeo\deeplearning.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -39,8 +33,6 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\deeplearning.py#L235"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 ### <kbd>method</kbd> `CNN`
 
 ```python
@@ -52,8 +44,6 @@ CNN()
 
 
 ---
-
-<a href="..\scikeo\deeplearning.py#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `FullyConnected`
 

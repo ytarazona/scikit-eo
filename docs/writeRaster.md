@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikeo\writeRaster.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 # <kbd>module</kbd> `writeRaster`
 
 
@@ -9,8 +7,6 @@
 
 
 ---
-
-<a href="..\scikeo\writeRaster.py#L6"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `writeRaster`
 

@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikeo\plot.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 # <kbd>module</kbd> `plot`
 
 
@@ -9,8 +7,6 @@
 
 
 ---
-
-<a href="..\scikeo\plot.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `plotHist`
 
@@ -77,8 +73,6 @@ Return:
 
 
 ---
-
-<a href="..\scikeo\plot.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `plotRGB`
 

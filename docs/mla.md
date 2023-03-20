@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-<a href="..\scikeo\mla.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 # <kbd>module</kbd> `mla`
 
 
@@ -11,12 +9,8 @@
 
 ---
 
-<a href="..\scikeo\mla.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 ## <kbd>class</kbd> `MLA`
 Supervised classification in Remote Sensing 
-
-<a href="..\scikeo\mla.py#L22"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -38,8 +32,6 @@ Parameter:
 
 
 ---
-
-<a href="..\scikeo\mla.py#L222"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DT`
 
@@ -71,8 +63,6 @@ A dictionary containing labels of classification as numpy object, overall accura
 
 ---
 
-<a href="..\scikeo\mla.py#L449"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 ### <kbd>method</kbd> `NB`
 
 ```python
@@ -102,8 +92,6 @@ Return:
 A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
-
-<a href="..\scikeo\mla.py#L563"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `NN`
 
@@ -135,8 +123,6 @@ A dictionary containing labels of classification as numpy object, overall accura
 
 ---
 
-<a href="..\scikeo\mla.py#L336"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
 ### <kbd>method</kbd> `RF`
 
 ```python
@@ -166,8 +152,6 @@ Return:
 A dictionary containing labels of classification as numpy object, overall accuracy, kappa index, confusion matrix. 
 
 ---
-
-<a href="..\scikeo\mla.py#L102"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `SVM`
 
