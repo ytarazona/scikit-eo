@@ -52,6 +52,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/ytarazona/scikit-eo',
-    version='0.1.98',
+    version='0.1.99',
     zip_safe=False,
 )
