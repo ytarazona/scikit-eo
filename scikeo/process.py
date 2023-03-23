@@ -155,9 +155,14 @@ def extract(image, shp):
     return join_df
 
 
+import copy
+import numpy as np
+import pandas as pd
+
 def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     
-    '''The error matrix is a simple cross-tabulation of the class labels allocated by the classification of the remotely 
+    '''
+    The error matrix is a simple cross-tabulation of the class labels allocated by the classification of the remotely 
     sensed data against the reference data for the sample sites. The error matrix organizes the acquired sample data 
     in a way that summarizes key results and aids the quantification of accuracy and area. The main diagonal of the error 
     matrix highlights correct classifications while the off-diagonal elements show omission and commission errors. 
@@ -165,38 +170,35 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     estimation. The cell entries of the population error matrix and the parameters derived from it must be estimated 
     from a sample. This function shows how to obtain a confusion matrix by estimated proportions of area with a confidence
     interval at 95% (1.96).
-        
-    This function supports DataFrame (as a confusion matrix) and an image classified in array as input.
      
-        
-        Parameters:
+    Parameters:
     
-            matrix: confusion matrix or error matrix in DataFrame
+        matrix: confusion matrix or error matrix in numpy.ndarray.
             
-            image_predicted: Array with 2d. This array should be the image classified with classes.
+        image_predicted: Array with 2d. This array should be the image classified with classes.
             
-            pixel_size: Pixel size of the image classified. By default is 10m of Sentinel-2.
+        pixel_size: Pixel size of the image classified. By default is 10m of Sentinel-2.
             
-            conf: Confidence interval. By default is 95%.
+        conf: Confidence interval. By default is 95%.
     
-        Return:
+    Return:
         
-            Information of confusion matrix by proportions of area, user's accuracy with confidence interval and 
-            estimated area with confidence interval as well.
+        Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval 
+        and estimated area with confidence interval as well.
+        
+    Note:
+        Columns and rows in a confusion matrix indicate reference and prediction respectively. 
+    
     '''
     
-    matConf = matrix.drop(['Total','Producer_Accuracy','Omission'], axis = 0)
-    
     # classes
-    iclass = matConf.index.to_numpy().astype(int)
+    iclass = np.unique(image_predicted[~np.isnan(image_predicted)])
     
     # ni
-    ni = matConf['Total'].to_numpy()
-    
-    matConf = matConf.drop(['Total','Users_Accuracy','Commission'], axis = 1).to_numpy()
+    ni = np.sum(matrix, axis = 1)
     
     # number of classes
-    n = matConf.shape[0]
+    n = matrix.shape[0]
     
     pixels = []
     
@@ -206,6 +208,9 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     wi = (np.array([pixels])/np.array([pixels]).sum()).flatten()
     
     pixels = np.array(pixels)
+    
+    # copy of matrix
+    matConf = matrix.copy()
     
     for i in range(n):
         matConf[i,:] = (matConf[i,:]/ni[i])*wi[i]
@@ -237,6 +242,9 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     # error matrix (DataFrame) in proportions of area
     cm_prop_area = pd.DataFrame(np.round(mat_conf, 4), columns = namesCol, index = namesRow)
     
+    # overall accuracy
+    oa = np.diag(matConf).sum()/np.sum(matConf)
+    
     # confidence interval for Overall accuracy at 95% 1.96
     conf_int_oa = list(map(lambda Wi, UA, Ni: (Wi)**2*UA*(1-UA)/(Ni-1), wi, ua, ni))
     conf_int_oa = conf*(np.array(conf_int_oa).sum())
@@ -262,7 +270,7 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
         print('***** Confusion Matrix by Estimated Proportions of area *****')
         print('')
         print('Overall accuracy')
-        print(conf_int_oa)
+        print(f'{oa:.4f} ± {conf_int_oa:.4f}')
         print('')
         print('Confusion matrix')
         print(matrixCEA)
@@ -275,7 +283,6 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
         for i in range(b.shape[0]):
             print(f'{iclass[i]}: {c[i]:.4f} ± {d[i]:.4f}')
             
-        
     return print_info(cm_prop_area, 
                       ua, 
                       conf_int_ua, 
