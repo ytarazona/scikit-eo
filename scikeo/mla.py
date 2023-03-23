@@ -60,28 +60,20 @@ class MLA(object):
         # data in [rows*cols, bands]
         arr = st_reorder.reshape((rows*cols, bands))
         
-        # extra
-        arr_two = st_reorder.reshape((rows*cols, bands))
-        
         # nodata
         #if np.isnan(np.sum(arr)):
             #arr[np.isnan(arr)] = self.nodata
         
-        # replace np.nan -> 0
-        if np.isnan(np.sum(arr)):
+        # dealing with nan
+        key_nan = np.isnan(np.sum(arr[:,0]))
+        
+        if key_nan:
+            # saving un array for predicted classes
+            class_final = arr[:, 0].copy()
+            # positions with nan
+            posIndx = np.argwhere(~np.isnan(class_final)).flatten()
+            # replace np.nan -> 0
             arr[np.isnan(arr)] = 0
-        
-        # replace np.nan if all row has 0
-        for i in range(arr.shape[0]):
-            if np.sum(arr[i,:], axis = 0) == 0: arr[i,:] = np.nan
-        
-        # drop rows with nan
-        arrT = pd.DataFrame(arr)
-        arr = arrT.dropna(axis = 0)
-        
-        # saving un array for predicted classes
-        class_final = arrT.iloc[:,0].to_numpy()
-        posIndx = np.argwhere(~np.isnan(class_final)).flatten()
         
         # if it is read by pandas.read_csv()
         if isinstance(self.endm, (pd.core.frame.DataFrame)):
@@ -114,9 +106,13 @@ class MLA(object):
         
         self.cols = cols
         
-        self.posIndx = posIndx
-        
-        self.class_final = class_final
+        if key_nan:
+            self.key_nan = key_nan
+            self.posIndx = posIndx
+            self.class_final = class_final
+        else:
+            self.key_nan = not(key_nan)
+            
         
     def SVM(self, training_split = 0.8, random_state = None, kernel = 'linear', **kwargs):
         
@@ -169,10 +165,14 @@ class MLA(object):
         
         labels_svm = mt_svm.predict(self.arr)
         
-        # image border like nan
-        self.class_final[self.posIndx] = labels_svm
-        
-        classSVM = self.class_final.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels_svm = labels_svm[self.posIndx]
+            self.class_final[self.posIndx] = labels_svm
+            classSVM = self.class_final.reshape((self.rows, self.cols))
+        else:
+            classSVM = labels_svm.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_svm.predict(Xtest)
@@ -280,10 +280,14 @@ class MLA(object):
         
         labels_dt = mt_dt.predict(self.arr)
         
-        # image border like nan
-        self.class_final[self.posIndx] = labels_dt
-        
-        classDT = self.class_final.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels_dt = labels_dt[self.posIndx]
+            self.class_final[self.posIndx] = labels_dt
+            classDT = self.class_final.reshape((self.rows, self.cols))
+        else:
+            classDT = labels_dt.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_dt.predict(Xtest)
@@ -390,10 +394,14 @@ class MLA(object):
         
         labels_rf = mt_rf.predict(self.arr)
         
-        # image border like nan
-        self.class_final[self.posIndx] = labels_rf
-        
-        classRF = self.class_final.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels_rf = labels_rf[self.posIndx]
+            self.class_final[self.posIndx] = labels_rf
+            classRF = self.class_final.reshape((self.rows, self.cols))
+        else:
+            classRF = labels_rf.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_rf.predict(Xtest)
@@ -501,10 +509,14 @@ class MLA(object):
         
         labels_nb = mt_nb.predict(self.arr)
         
-        # image border like nan
-        self.class_final[self.posIndx] = labels_nb
-        
-        classNB = self.class_final.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels_nb = labels_nb[self.posIndx]
+            self.class_final[self.posIndx] = labels_nb
+            classNB = self.class_final.reshape((self.rows, self.cols))
+        else:
+            classNB = labels_nb.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_nb.predict(Xtest)
@@ -611,10 +623,14 @@ class MLA(object):
         
         labels_nn = mt_nn.predict(self.arr)
         
-        # image border like nan
-        self.class_final[self.posIndx] = labels_nn
-        
-        classNN = self.class_final.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels_nn = labels_nn[self.posIndx]
+            self.class_final[self.posIndx] = labels_nn
+            classNN = self.class_final.reshape((self.rows, self.cols))
+        else:
+            classNN = labels_nn.reshape((self.rows, self.cols))
         
         # Confusion matrix
         predic_Xtest = mt_nn.predict(Xtest)
