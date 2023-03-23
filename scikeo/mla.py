@@ -111,7 +111,7 @@ class MLA(object):
             self.posIndx = posIndx
             self.class_final = class_final
         else:
-            self.key_nan = not(key_nan)
+            self.key_nan = key_nan
             
         
     def SVM(self, training_split = 0.8, random_state = None, kernel = 'linear', **kwargs):
