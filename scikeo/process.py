@@ -159,7 +159,7 @@ import copy
 import numpy as np
 import pandas as pd
 
-def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
+def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = None):
     
     '''
     The error matrix is a simple cross-tabulation of the class labels allocated by the classification of the remotely 
@@ -175,7 +175,7 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     
         matrix: confusion matrix or error matrix in numpy.ndarray.
             
-        image_predicted: Array with 2d. This array should be the image classified with classes.
+        image_pred: Array with 2d (rows, cols). This array should be the image classified with predicted classes.
             
         pixel_size: Pixel size of the image classified. By default is 10m of Sentinel-2.
             
@@ -191,8 +191,20 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     
     '''
     
+    if not isinstance(matrix, (np.ndarray)):
+        raise TypeError('"matrix" must be numpy.ndarray with rows and cols.')
+        
+    if not isinstance(image_pred, (np.ndarray)):
+        raise TypeError('"image" must be numpy.ndarray with rows and cols.')
+    
+    # xlabel
+    if nodata is None:
+        image_pred = image_pred
+    else:
+        image_pred[image_pred == nodata] = np.nan
+        
     # classes
-    iclass = np.unique(image_predicted[~np.isnan(image_predicted)])
+    iclass = np.unique(image_pred[~np.isnan(image_pred)])
     
     # ni
     ni = np.sum(matrix, axis = 1)
@@ -203,7 +215,7 @@ def confintervalML(matrix, image_predicted, pixel_size = 10, conf = 1.96):
     pixels = []
     
     for i in iclass:
-        pixels.append((image_predicted == i).sum()) #((30**2)/10000) # ha    
+        pixels.append((image_pred == i).sum()) #((30**2)/10000) # ha    
     
     wi = (np.array([pixels])/np.array([pixels]).sum()).flatten()
     
