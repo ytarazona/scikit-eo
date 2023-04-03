@@ -26,6 +26,7 @@ Therefore, **scikit-eo** is a Python package that provides tools for remote sens
 | -------------------| --------------------------------------------------------------------------|
 | **`mla`**          | Machine Learning                                                          |
 | **`calmla`**       | Calibrating supervised classification in Remote Sensing                   |
+| **`confintervalML`**       | Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval and estimated area with confidence interval as well.                                    |
 | **`rkmeans`**      | K-means classification                                                    |
 | **`calkmeans`**    | This function allows to calibrate the kmeans algorithm. It is possible to obtain the best k value and the best embedded algorithm in kmeans.                               |
 | **`pca`**          | Principal Components Analysis                                             |
