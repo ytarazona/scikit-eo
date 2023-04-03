@@ -188,6 +188,11 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
         
     Note:
         Columns and rows in a confusion matrix indicate reference and prediction respectively. 
+        
+    Reference:
+    - Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices 
+      for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148: 42–57. 
+      doi:https://doi.org/10.1016/j.rse.2014.02.015.
     
     '''
     
@@ -259,16 +264,17 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     
     # confidence interval for Overall accuracy at 95% 1.96
     conf_int_oa = list(map(lambda Wi, UA, Ni: (Wi)**2*UA*(1-UA)/(Ni-1), wi, ua, ni))
-    conf_int_oa = conf*(np.array(conf_int_oa).sum())
+    conf_int_oa = np.nansum(conf*(np.array(conf_int_oa)))
         
     # confidence interval for user's accuracy at 95% 1.96
     conf_int_ua = conf*np.array(list(map(lambda UA, Ni: UA*(1-UA)/(Ni-1), ua, ni)))
+    conf_int_ua[np.isnan(conf_int_ua)] = 0
     
     # confidence interval for the area at 95%
     sp = []
     for i in np.arange(n):
         s_pi = list(map(lambda Wi, Pik, Ni: (Wi*Pik - Pik**2)/(Ni-1), wi, matConf[:,i], ni))
-        s_pi = np.sqrt(np.array(s_pi).sum())
+        s_pi = np.sqrt(np.nansum(np.array(s_pi)))
         sp.append(s_pi)
     
     # S(A)=1.96*s(p)*A(total) in ha
