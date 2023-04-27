@@ -155,10 +155,6 @@ def extract(image, shp):
     return join_df
 
 
-import copy
-import numpy as np
-import pandas as pd
-
 def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = None):
     
     '''
@@ -227,7 +223,7 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     pixels = np.array(pixels)
     
     # copy of matrix
-    matConf = matrix.copy()
+    matConf = matrix.astype(float).copy()
     
     for i in range(n):
         matConf[i,:] = (matConf[i,:]/ni[i])*wi[i]
@@ -264,10 +260,10 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     
     # confidence interval for Overall accuracy at 95% 1.96
     conf_int_oa = list(map(lambda Wi, UA, Ni: (Wi)**2*UA*(1-UA)/(Ni-1), wi, ua, ni))
-    conf_int_oa = np.nansum(conf*(np.array(conf_int_oa)))
+    conf_int_oa = conf*np.sqrt(np.nansum((np.array(conf_int_oa))))
         
     # confidence interval for user's accuracy at 95% 1.96
-    conf_int_ua = conf*np.array(list(map(lambda UA, Ni: UA*(1-UA)/(Ni-1), ua, ni)))
+    conf_int_ua = conf*np.sqrt(np.array(list(map(lambda UA, Ni: UA*(1-UA)/(Ni-1), ua, ni))))
     conf_int_ua[np.isnan(conf_int_ua)] = 0
     
     # confidence interval for the area at 95%
@@ -285,19 +281,19 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     
     # print info
     def print_info(matrixCEA, a, b, c, d):
-        print('***** Confusion Matrix by Estimated Proportions of area *****')
+        print('***** Confusion Matrix by Estimated Proportions of area an uncertainty*****')
         print('')
-        print('Overall accuracy')
+        print('Overall accuracy with 95%')
         print(f'{oa:.4f} ± {conf_int_oa:.4f}')
         print('')
         print('Confusion matrix')
         print(matrixCEA)
         print('')
-        print('User´s accuracy at 95%')
+        print('User´s accuracy with 95%')
         for i in range(b.shape[0]):
             print(f'{iclass[i]}: {a[i]:.4f} ± {b[i]:.4f}')
         print('')
-        print('Estimating area (Ha) and uncertainty at 95%')
+        print('Estimating area (Ha) and uncertainty with 95%')
         for i in range(b.shape[0]):
             print(f'{iclass[i]}: {c[i]:.4f} ± {d[i]:.4f}')
             
