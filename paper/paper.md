@@ -17,7 +17,7 @@ authors:
 affiliations:
   - name: Pontifical Catholic University of Peru
     index: 1
-  - name: Adam Mickiewicz University in Poznań
+  - name: Adam Mickiewicz University in Poznan
     index: 2
 date: 19 May 2023
 bibliography: paper.bib
