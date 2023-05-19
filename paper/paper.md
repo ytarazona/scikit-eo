@@ -18,43 +18,42 @@ authors:
     affiliation: 3
     orcid: 0000-0001-5921-2858
 affiliations:
-  - name: Pontifical Catholic University of Peru, Polytechnic University of Catalonia, Autonomous University of Barcelona
+  - name: Pontifical Catholic University of Peru
     index: 1
-  - name: Department of Geography, University of California, USA
-    index: 2
-  - name: Universidad Peruana Cayetano Heredia, Lima, Peru
-    index: 3
 date: 07 Dec 2022
 bibliography: paper.bib
 ---
 
 <!-- #region -->
 # Summary
-Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation [@Tarazona2018], [@Tarazona2021], land degradation, crop classifications, among other . Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices (Tarazona and Miyasiro, 2020), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+
+Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation [@TARAZONA2018367], [@9656901], land degradation, crop classifications, among other . Although there are efforts (i.e., python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices ([@TARAZONA2020100337]), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
+
 # Highlights
 
-
+Through Object-Oriented Programming and Structured Programming, **scikit-eo** provides a useful variety of remote sensing tools. For instance, something basic but essential in the land cover characterization mapping with artificial intelligence thecniques (machine learning or deep learning) is to obtain together the confusion matrix and metrics such as user's accuracy, producer's accuracy, omissions and commissions. This metrics combination can be obtained with **scikit-eo** on a pandas ```DataFrame``` object. On the other hand, a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm (machine learning) or the output of the segmentation algorithm (deep learning), must be accompanied by its uncertainties with a confidence interval ($95$% or $90$%), and additionally, any metric obtained from the confusion matrix must be represented with a confidence level as well. All these metrics can be obtained with **scikit-eo**. Other useful tools for remote sensing can be found in this python package.
 
 # Audience
 
-**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite images processing and analysis. **scikit-eo** puede ser usado para enseñanza universitaria y de posgrado de Teledetección. Determinar 
+**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite images processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
 
 # Funtionalities
 
 
 ## Main tools
 
-Scikit-eo comes with several algorithms in order to process satelitte images. Atmospheric Correction, Machine Learning (ML), linear trend, combining optical and radar images, among others are some main functions listed below:
+**Scikit-eo** comes with several algorithms to process satelitte images in order to study different environmental issues. Atmospheric correction, machine learning and deep learning, estimating area and uncertainty, linear trend, combining optical and radar images, among others, are some main functions listed below:
 
 | Name of functions  | Description|
 | -------------------| --------------------------------------------------------------------------|
-| **`mla`**          | Supervised classification in Remote Sensing                               |
-| **`calmla`**       | Calibrating supervised classification in Remote Sensing                   |
+| **`mla`**          | Supervised Classification in Remote Sensing                               |
+| **`calmla`**       | Calibrating Supervised Classification in Remote Sensing                   |
+| **`confintervalML`**       | Information of Confusion Matrix by proportions of area, overall accuracy, user's accuracy with confidence interval and estimated area with confidence interval as well.                         |
 | **`deepLearning`** | Deep Learning algorithms                                                  |
-| **`atmosCorr`**    | Radiometric and atmospheric correction                              |
+| **`atmosCorr`**    | Radiometric and Atmospheric Correction                              |
 | **`rkmeans`**      | K-means classification                                                    |
 | **`calkmeans`**    | This function allows to calibrate the kmeans algorithm. It is possible to obtain the best k value and the best embedded algorithm in kmeans.                               |
 | **`pca`**          | Principal Components Analysis                                             |
@@ -89,10 +88,9 @@ sns.set()
 
 # 02. Image and endmembers
 path_raster = r"C:\data\ml\LC08_232066_20190727_SR.tif"
-path_raster = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\LC08_232066_20190727_SR.tif"
 img = rasterio.open(path_raster)
 
-path_endm = r"F:\RepositoriosGitHub\scikit-eo-tutorials\data\02_ml\endmembers.dbf"
+path_endm = r"C:\data\ml\endmembers.dbf"
 endm = DBF(path_endm)
 
 # 03. Instance of mla()
@@ -104,7 +102,7 @@ rf_class = inst.RF(training_split = 0.7)
 
 Classification results:
 
-![Original image and Image classified in the left and right panel respectively. \label{fig:AIM}](scikit_eo_00.png){ width=50% }
+![Original image and Image classified in the left and right panel respectively. \label{fig:AIM}](scikit_eo_00.png){ width=70% }
 
 
 ### Example 02
@@ -145,9 +143,7 @@ Calibration results:
 ### Example 03
 
 
-
-
-In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum (Tarazona et al., 2021). The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
+In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum ([@Tarazona2021]). The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
 
 - *Fused_images*: The fusion of both images into a 3d array
 - *Variance*: The variance obtained
@@ -226,6 +222,36 @@ axes.grid(False)
 ```
 
 ![Fusion of optical and radar images. \label{fig:AIM}](scikit_eo_04.png){ width=50% }
+
+
+### Example 04
+
+In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [OLOFSSON201442]. All that we need is both the confusion matrix and a previously obtained predicted class map.
+
+Paramaters:
+
+- *matrix*: confusion matrix or error matrix in numpy.ndarray.
+- *image_pred*: Array with 2d (rows, cols). This array should be the image classified with predicted classes.
+- *pixel_size*: Pixel size of the image classified. By default is 10m of Sentinel-2. In this case is 30m (Landsat).
+- *conf*: Confidence interval. By default is 95% (1.96).
+- *nodata*: Nodata must be specified as 0, NaN or other any value. Keep in mind with this parameter.
+
+```python
+# 01 load raster data
+path_raster = r"C:\data\ml\predicted_map.tif"
+img = rasterio.open(path_optical).read(1)
+
+# 02 load confusion matrix as .csv
+path_cm = r"C:\data\ml\confusion_matrix.csv"
+values = pd.read_csv(path_radar)
+
+# 03 Applying the confintervalML:
+confintervalML(matrix = values, image_pred = img, pixel_size = 30, conf = 1.96, nodata = -9999)
+```
+
+Results:
+
+![Contributions. \label{fig:AIM}](scikit_eo_05.png){ width=30%}
 
 <!-- #region -->
 # Acknowledgments
