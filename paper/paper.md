@@ -11,23 +11,22 @@ authors:
   - name: Yonatan Tarazona
     orcid: 0000-0002-5208-1004
     affiliation: 1
-  - name: Pratyush Tripathy
+  - name: Jakub Nowosad
     affiliation: 2
-    orcid: 0000-0000-0000-0000
-  - name: Antony Barja
-    affiliation: 3
-    orcid: 0000-0001-5921-2858
+    orcid: 0000-0002-1057-3721
 affiliations:
   - name: Pontifical Catholic University of Peru
     index: 1
-date: 07 Dec 2022
+  - name: Adam Mickiewicz University in Poznań
+    index: 2
+date: 19 May 2023
 bibliography: paper.bib
 ---
 
 <!-- #region -->
 # Summary
 
-Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation [@TARAZONA2018367], [@9656901], land degradation, crop classifications, among other . Although there are efforts (i.e., python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices ([@TARAZONA2020100337]), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation [@TARAZONA2018367], [@Tarazona2022], land degradation, crop classifications, among other . Although there are efforts (i.e., python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices ([@TARAZONA2020100337]), fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
@@ -143,7 +142,7 @@ Calibration results:
 ### Example 03
 
 
-In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum ([@Tarazona2021]). The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
+In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum [@Tarazona2021]. The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
 
 - *Fused_images*: The fusion of both images into a 3d array
 - *Variance*: The variance obtained
@@ -226,7 +225,7 @@ axes.grid(False)
 
 ### Example 04
 
-In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [OLOFSSON201442]. All that we need is both the confusion matrix and a previously obtained predicted class map.
+In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that we need is both the confusion matrix and a previously obtained predicted class map.
 
 Paramaters:
 
