@@ -196,10 +196,6 @@ Special thanks to:
 
 - [Qiusheng Wu](https://github.com/giswqs) for the suggestions that helped to improve the package.
 
-## Dedication and inspiration
-
-Yonatan Tarazona dedicates this package to [María Griselda Miyasiro López](https://github.com/geolomera), the person who inspired to develop it. In fact, the logo of the package is inspired by fog oasis known as "Lomas", an ecosystem that she loves deeply.
-
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
