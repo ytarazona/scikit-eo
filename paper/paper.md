@@ -1,5 +1,5 @@
 ---
-title: 'A Python package for Remote Sensing Tools'
+title: 'scikit-eo: A Python package for Remote Sensing Data Analysis'
 tags:
   - Python
   - Remote Sensing
@@ -22,11 +22,22 @@ affiliations:
 date: 19 May 2023
 bibliography: paper.bib
 ---
+<!-- #TODO -->
+
+1. Fix the data paths and make a folder to refer a sample data for testing and review.
+2. Add more recent and diverse references.
+3. Finish the writing - Add examples related to data fusion and RS Trends.
+4. Link Documentation 
 
 <!-- #region -->
-# Summary
+# Summary & Propose
 
-Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation [@TARAZONA2018367], [@Tarazona2022], land degradation, crop classifications, among other . Although there are efforts (i.e., python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+Remote sensing and, more importantly, the growing accessibility of remotely sensed data has revolutionised our ability to understand, classify and monitor the complex earth’s environmental conditions. With new methods, tools, and data at multiple scales, researchers can get a better understanding of the underlying conditions that can lead from local to global issues. 
+
+As more accessible the data is, the bigger the need for open-source tools to read, process and execute analysis that underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are currently used for several purposes, such as monitoring and assessment land cover changes, deforestation, impact on urbanization level, climate change impacts, water quality, air pollution, biodiversity conservation, and natural disaster management, to name a few. By collecting data over large periods of time researchers can identify or measure the impact of human activities on ecosystems and support the data-driven decision-making process for more sustainable resource management {REFJensen (2007)}.
+
+
+Nowadays, remotely sensed data has seen a dramatically increase not only the number of available missions but its multidisciplinary use. Microwaves and optical images with different spatial and temporal resolutions are available and being used to monitor a variety of environmental issues such as deforestation [@TARAZONA2018367], [@Tarazona2022], land degradation, crop classifications, among many other. Although there are current tools to support multiple levels of the pre-and post processing aspects of using the remote sensing data (i.e., python packages, forums, communities, etc.) there is still a gap  to be filled in terms of the reusability and the . In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
@@ -37,14 +48,16 @@ Through Object-Oriented Programming and Structured Programming, **scikit-eo** pr
 
 # Audience
 
-**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite images processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
+**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite image processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
+
+
 
 # Funtionalities
 
 
 ## Main tools
 
-**Scikit-eo** comes with several algorithms to process satelitte images in order to study different environmental issues. Atmospheric correction, machine learning and deep learning, estimating area and uncertainty, linear trend, combining optical and radar images, among others, are some main functions listed below:
+**Scikit-eo** comes with several algorithms to process satellite images in order to study different environmental issues. Atmospheric correction, machine learning and deep learning, estimating area and uncertainty, linear trend, combining optical and radar images, among others, are some main functions listed below:
 
 | Name of functions  | Description|
 | -------------------| --------------------------------------------------------------------------|
@@ -63,7 +76,7 @@ Through Object-Oriented Programming and Structured Programming, **scikit-eo** pr
 
 : Main tools available for **scikit-eo** package. \label{table:1}
 
-Of course, some others functions Will be found in the package.
+Of course, there are others functions will be found in the package. 
 <!-- #endregion -->
 
 ## Brief examples
