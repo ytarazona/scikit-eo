@@ -28,7 +28,9 @@ bibliography: paper.bib
 2. Add more recent and diverse references.
 3. Finish the writing - Add examples related to data fusion and RS Trends.
 4. Link Documentation 
-
+5. References to included if possible:
+   1. 
+<!-- #TODO -->
 <!-- #region -->
 # Summary & Propose
 
@@ -36,6 +38,7 @@ Remote sensing and, more importantly, the growing accessibility of remotely sens
 
 As more accessible the data is, the bigger the need for open-source tools to read, process and execute analysis that underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are currently used for several purposes, such as monitoring and assessment land cover changes, deforestation, impact on urbanization level, climate change impacts, water quality, air pollution, biodiversity conservation, and natural disaster management, to name a few. By collecting data over large periods of time researchers can identify or measure the impact of human activities on ecosystems and support the data-driven decision-making process for more sustainable resource management {REFJensen (2007)}.
 
+----
 
 Nowadays, remotely sensed data has seen a dramatically increase not only the number of available missions but its multidisciplinary use. Microwaves and optical images with different spatial and temporal resolutions are available and being used to monitor a variety of environmental issues such as deforestation [@TARAZONA2018367], [@Tarazona2022], land degradation, crop classifications, among many other. Although there are current tools to support multiple levels of the pre-and post processing aspects of using the remote sensing data (i.e., python packages, forums, communities, etc.) there is still a gap  to be filled in terms of the reusability and the . In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
@@ -50,7 +53,9 @@ Through Object-Oriented Programming and Structured Programming, **scikit-eo** pr
 
 **scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite image processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
 
-
+## **scikit-eo** as Reseach tool:
+## **scikit-eo** in the lecture room: 
+## **scikit-eo** as open source tool:
 
 # Funtionalities
 
