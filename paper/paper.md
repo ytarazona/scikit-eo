@@ -29,21 +29,18 @@ bibliography: paper.bib
 3. Finish the writing - Add examples related to data fusion and RS Trends.
 4. Link Documentation 
 5. References to included if possible:
-   1. 
 <!-- #TODO -->
+
 <!-- #region -->
 # Summary & Propose
 
-Remote sensing and, more importantly, the growing accessibility of remotely sensed data has revolutionised our ability to understand, classify and monitor the complex earth’s environmental conditions. With new methods, tools, and data at multiple scales, researchers can get a better understanding of the underlying conditions that can lead from local to global issues. 
+Remote sensing and, more importantly, the growing accessibility of remotely sensed data, has fundamentally transformed our capacity to comprehend, classify, and monitor the connected environmental conditions of our planet. This enhanced understanding has enables researchers to address and tackle a broader range of challenges effectively, by using novel tools and data at multiple scales that help to shed new light into the underlying factors that contribute to both local and global issues. 
 
-As more accessible the data is, the bigger the need for open-source tools to read, process and execute analysis that underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are currently used for several purposes, such as monitoring and assessment land cover changes, deforestation, impact on urbanization level, climate change impacts, water quality, air pollution, biodiversity conservation, and natural disaster management, to name a few. By collecting data over large periods of time researchers can identify or measure the impact of human activities on ecosystems and support the data-driven decision-making process for more sustainable resource management {REFJensen (2007)}.
+As more accessible the data is, the bigger the need is for open-source tools to read, process and execute analysis that contribute to underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are currently used for several purposes, such as monitoring and assessment land cover changes, deforestation, impact on urbanization level, climate change impacts, water quality, air pollution, biodiversity conservation, and natural disaster management, to name a few. By collecting data over large periods of time researchers can identify or measure the impact of human activities on ecosystems and support the data-driven decision-making process for more sustainable resource management {REFJensen (2007)}.
 
-----
+But more availability of data, does not necessary more easy ways to process the data. Analysts spend an important among of time time finding the correct libraries that allow them to read and process the data.  Tools for mapping land degradation through linear trend of vegetation indices [@TARAZONA2018367], [@Tarazona2022], data fusion process for optical and radar images to quickly classify the vegetation cover, and the integration of machine learning techniques are still separate in multiple libraries, along with diffuse documentation that limits the analysis where the main concerns of the causes or patterns of the environmental conditions should be the main focus.
 
-Nowadays, remotely sensed data has seen a dramatically increase not only the number of available missions but its multidisciplinary use. Microwaves and optical images with different spatial and temporal resolutions are available and being used to monitor a variety of environmental issues such as deforestation [@TARAZONA2018367], [@Tarazona2022], land degradation, crop classifications, among many other. Although there are current tools to support multiple levels of the pre-and post processing aspects of using the remote sensing data (i.e., python packages, forums, communities, etc.) there is still a gap  to be filled in terms of the reusability and the . In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
-
-Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
-
+Therefore, **scikit-eo** is a Python package that provides the necessary tools for remote sensing analysis. It is a centralized, scalable and open source toolkit, developed to fill the gaps in remotely sensed data processing tools. This toolkit can be use in multiple venues from a lecturer room as a toolkit for introduction of programming skills using python and remote sensing for environmental studies, or can be use as part of any Python setting in a research project. The majority of the tools including in **scikit-eo** are derived from scientific publications, while others are valuable algorithms that streamline data processing into just a few lines of code. By integrating this set of diverse tools, users can focus their time and energy on analyzing the results of their data, rather than getting bogged down in the intricacies lines of code. By centralizing, integrating use cases and example of data, **scikit-eo** serves as a way to allow researchers to optimize their resources and dedicate their focus to the meaningful interpretation of their findings with greater efficiency, rather to stress out with coding task. 
 
 # Highlights
 
@@ -53,11 +50,11 @@ Through Object-Oriented Programming and Structured Programming, **scikit-eo** pr
 
 **scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite image processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
 
-## **scikit-eo** as Reseach tool:
+## **scikit-eo** as Research tool:
 ## **scikit-eo** in the lecture room: 
 ## **scikit-eo** as open source tool:
 
-# Funtionalities
+# Functionalities
 
 
 ## Main tools
