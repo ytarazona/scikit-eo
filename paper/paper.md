@@ -41,12 +41,11 @@ Therefore, **scikit-eo** is a Python package that provides the necessary tools f
 
 # Highlights
 
-<!-- NEEDS TO GET UPDATED-->
-**scikit-eo** is a toolkit that provides a variety of remote sensing tools. Initially users can start with one of the most popular and yet useful techniques like Principal Components Analysis - PCA, then is the land cover characterization by using deep learning algorithms to obtain the confusion matrix and metrics such as user's accuracy, producer's accuracy, omissions and commissions. This metrics combination can be obtained with **scikit-eo** on a pandas ```DataFrame``` object. On the other hand, a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm (machine learning) or the output of the segmentation algorithm (deep learning), must be accompanied by its uncertainties with a confidence interval ($95$% or $90$%), and additionally, any metric obtained from the confusion matrix must be represented with a confidence level as well. All these metrics can be obtained with **scikit-eo**. Other useful tools for remote sensing can be found in this python package.
+**scikit-eo** is an open-source toolkit built entirely in Python that provides a variety of remote sensing tools, from basic and exploratory functions to more advanced methods to classify, calibrate, or fusion satellite imagery. Depending on users' needs **scikit-eo** can provide the basic but essential land cover characterization mapping including the confusion matrix and the required metrics. User's accuracy, producer's accuracy, omissions and commissions are required metrics that users can get in a form of a pandas ```DataFrame``` object. Using **scikit-eo** users can produce a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm or the output of the segmentation algorithm. These two outcomes must be generated along with the uncertainties with a confidence interval ($95$% or $90$%). All required metrics can be obtained with **scikit-eo**. There are other useful tools for remote sensing analysis that can be found in this package, for more information about the full list of the supported function as well how to install and execute the package within a python setting visit (scikit-eo website)[https://ytarazona.github.io/scikit-eo/]
 
 # Audience
 
-**scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite image processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
+**scikit-eo** is a versatile Python package designed to cover to a wide range of users, including students, professionals on remote sensing, researchers on environmental analysis, and organizations looking for satellite image processing and analysis. Its comprehensive features make it well-suited for various applications, such as university teaching, lectures that include technical and practical sessions, and cutting-edge research using the most recent machine learning and deep learning techniques applied in the field of remote sensing. Whether the users is a student seeking to get insights from a satellite image analysis or a experienced researcher looking for advanced tools, **scikit-eo** offers a valuable resource to support the most valuable methods for environmental studies.
 
 ## **scikit-eo** as Research tool:
 advance techniques for research proposes. 
@@ -102,10 +101,10 @@ import seaborn as sns
 sns.set()
 
 # 02. Image and endmembers
-path_raster = r"C:\data\ml\LC08_232066_20190727_SR.tif"
+path_raster = "\data\LC08_232066_20190727_SR.tif"
 img = rasterio.open(path_raster)
 
-path_endm = r"C:\data\ml\endmembers.dbf"
+path_endm = "\data\endmembers\endmembers.dbf"
 endm = DBF(path_endm)
 
 # 03. Instance of mla()
@@ -127,7 +126,7 @@ In this second example, MCCV will be used in order to calibrate a supervised cla
 
 ```python
 # 01. Endmembers
-path_endm = r"C:\data\ml\endmembers.dbf"
+path_endm = "\data\endmembers\endmembers.dbf"
 endm = DBF(path_endm)
 
 # 02. Instance of calmla()
@@ -156,7 +155,6 @@ Calibration results:
 
 
 ### Example 03
-
 
 In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum [@Tarazona2021]. The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
 

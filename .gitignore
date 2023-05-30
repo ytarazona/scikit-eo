@@ -104,3 +104,6 @@ ENV/
 # IDE settings
 .vscode/
 "site/" 
+
+# quarto files
+*/paper_files
