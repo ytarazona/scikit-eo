@@ -25,11 +25,8 @@ bibliography: paper.bib
 <!-- #TODO -->
 
 1. Fix the data paths and make a folder to refer a sample data for testing and review.
-2. Add more recent and diverse references.
 3. Finish the writing - Add examples related to data fusion and RS Trends.
 4. Link Documentation 
-5. References to included if possible:
-<!-- #TODO -->
 
 <!-- #region -->
 # Summary & Propose
@@ -44,15 +41,19 @@ Therefore, **scikit-eo** is a Python package that provides the necessary tools f
 
 # Highlights
 
-Through Object-Oriented Programming and Structured Programming, **scikit-eo** provides a useful variety of remote sensing tools. For instance, something basic but essential in the land cover characterization mapping with artificial intelligence thecniques (machine learning or deep learning) is to obtain together the confusion matrix and metrics such as user's accuracy, producer's accuracy, omissions and commissions. This metrics combination can be obtained with **scikit-eo** on a pandas ```DataFrame``` object. On the other hand, a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm (machine learning) or the output of the segmentation algorithm (deep learning), must be accompanied by its uncertainties with a confidence interval ($95$% or $90$%), and additionally, any metric obtained from the confusion matrix must be represented with a confidence level as well. All these metrics can be obtained with **scikit-eo**. Other useful tools for remote sensing can be found in this python package.
+<!-- NEEDS TO GET UPDATED-->
+**scikit-eo** is a toolkit that provides a variety of remote sensing tools. Initially users can start with one of the most popular and yet useful techniques like Principal Components Analysis - PCA, then is the land cover characterization by using deep learning algorithms to obtain the confusion matrix and metrics such as user's accuracy, producer's accuracy, omissions and commissions. This metrics combination can be obtained with **scikit-eo** on a pandas ```DataFrame``` object. On the other hand, a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm (machine learning) or the output of the segmentation algorithm (deep learning), must be accompanied by its uncertainties with a confidence interval ($95$% or $90$%), and additionally, any metric obtained from the confusion matrix must be represented with a confidence level as well. All these metrics can be obtained with **scikit-eo**. Other useful tools for remote sensing can be found in this python package.
 
 # Audience
 
 **scikit-eo** is intended for students, professionals, researchers, and organizations involved in satellite image processing and analysis. **scikit-eo** can be used for university teaching, lectures, research and so on.
 
 ## **scikit-eo** as Research tool:
-## **scikit-eo** in the lecture room: 
+advance techniques for research proposes. 
+## **scikit-eo** in the lecture room:
+Simple methods for intro and RS practice, as well programming skills
 ## **scikit-eo** as open source tool:
+Scalable, open and well documented tool.
 
 # Functionalities
 
