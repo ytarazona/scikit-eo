@@ -48,9 +48,13 @@ Therefore, **scikit-eo** is a Python package that provides the necessary tools f
 **scikit-eo** is a versatile Python package designed to cover to a wide range of users, including students, professionals on remote sensing, researchers on environmental analysis, and organizations looking for satellite image processing and analysis. Its comprehensive features make it well-suited for various applications, such as university teaching, lectures that include technical and practical sessions, and cutting-edge research using the most recent machine learning and deep learning techniques applied in the field of remote sensing. Whether the users is a student seeking to get insights from a satellite image analysis or a experienced researcher looking for advanced tools, **scikit-eo** offers a valuable resource to support the most valuable methods for environmental studies.
 
 ### **scikit-eo** as Research tool:
-advance techniques for research proposes. 
+
+**scikit-eo** started and was created essentially a research tool for environmental studies. Integrates a comprehensive set functions that help researchers to quickly execute complex analysis, while only input the required dataset and get the metrics included with the outcomes to allow calibration and validation assessment.
+
+**scikit-eo** integrates most of the popular python libraries from the so-called geo-python stack for remote sensing (e.g,. (numpy)[https://numpy.org/], (pandas)[https://pandas.pydata.org/], (rasterio)[https://rasterio.readthedocs.io/en/stable/] and few more) to that extent this python package stand as a scalable solution to other researchers integrate and contribute the current function list.
 
 ### **scikit-eo** in the lecture room:
+
 Simple methods for intro and RS practice, as well programming skills.
 
 ### **scikit-eo** as open source tool:
