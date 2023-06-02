@@ -62,7 +62,7 @@ pip install git+https://github.com/ytarazona/scikit-eo
 
 # Example
 
-## 1. Applying Machine Learning
+## 1.0 Applying Machine Learning
 
 Libraries to be used:
 
