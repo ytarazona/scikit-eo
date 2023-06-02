@@ -27,10 +27,6 @@ affiliations:
 date: 19 May 2023
 bibliography: paper.bib
 ---
-<!-- #TODO -->
-
-1. Fix the data paths and make a folder to refer a sample data for testing and review.
-3. Finish the writing - Add examples related to data fusion and RS Trends.
 
 <!-- #region -->
 # Summary & Propose
@@ -96,7 +92,8 @@ Of course, there are others functions will be found in the package.
 
 ### Example 01: Random Forest (RF) classifier
 
-An example of ML will be obtain. For this, Landsat-8 OLI (Operational Land Imager) will be used to classify using the Random Forest (RF) classifier. The datasets to be used in these examples can be downloaded [here](https://drive.google.com/drive/folders/193RhNpACu9THcOZu8OzMh-btnFCOgHrU?usp=sharing):
+In this first example a Landsat-8 OLI (Operational Land Imager) will be used to classify using the Random Forest (RF) classifier. 
+[Here we need a clearer description, like the context, the issue and how the package provide the outcome]
 
 ```python
 # 01. Libraries to used in these examples
@@ -132,9 +129,8 @@ Classification results:
 
 ### Example 02: Calibration methods for supervised classification
 
-On the other hand, calibration methods [@Tarazona2021] such as Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlos Cross-Validation (MCCV) are embedded in this python package. 
-
-In this second example, MCCV will be used in order to calibrate a supervised classification with different algorithms.
+In this second example, users can apply the calibrations methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlos Cross-Validation (MCCV) [@Tarazona2021] in order to calibrate a supervised classification with different algorithms.
+[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
 
 ```python
 # 01. Endmembers
@@ -162,13 +158,16 @@ error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'), n_
 
 Calibration results:
 
-
 ![Original image and Image classified in the left and right panel respectively. \label{fig:AIM}](scikit_eo_01.png){ width=50% }
 
 
 ### Example 03: Imagery Fusion.
 
-In this example we cover the topic of fusion of images with different observation geometry and that record information in different ranges of the electromagnetic spectrum [@Tarazona2021]. The fusion of radar and optical images, although well used to improve land cover mapping, has so far not been developed tools to discuss the contributions of both images in data fusion. In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
+This is an area where **scikit-eo** package provide the more innovated approach, the fusion of radar and optical images, despite of its  well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021].
+[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
+
+
+In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
 
 - *Fused_images*: The fusion of both images into a 3d array
 - *Variance*: The variance obtained
@@ -251,7 +250,8 @@ axes.grid(False)
 
 ### Example 04: Accuracy assessment    
 
-In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that we need is both the confusion matrix and a previously obtained predicted class map.
+In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that the users needs is the confusion matrix and a previously obtained predicted class map.
+[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
 
 Paramaters:
 
