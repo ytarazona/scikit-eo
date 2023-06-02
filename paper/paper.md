@@ -14,11 +14,16 @@ authors:
   - name: Jakub Nowosad
     affiliation: 2
     orcid: 0000-0002-1057-3721
+  - name: Fernando Benitez-Paez
+    affiliation: 3
+    orcid: 0000-0002-9884-6471
 affiliations:
   - name: Pontifical Catholic University of Peru
     index: 1
   - name: Adam Mickiewicz University in Poznan
     index: 2
+  - name: The school of geography and sustainable development, University of St Andrews
+    index: 3
 date: 19 May 2023
 bibliography: paper.bib
 ---
@@ -58,7 +63,7 @@ One of the key strengths of **scikit-eo** lies in its advanced analysis capabili
 
 ### **scikit-eo** as open source tool:
 
-**scikit-eo** integrates most of the popular open source python libraries from the so-called geo-python stack for remote sensing (e.g,. (numpy)[https://numpy.org/], (pandas)[https://pandas.pydata.org/], (rasterio)[https://rasterio.readthedocs.io/en/stable/] and few more) to extent and create a centralise package for advanced spatial analysis of remotely sensed data. As open source software keep transforming the landscape of scientific research, enabling collaboration, reproducibility, transparency **scikit-eo** was specifically developed as an open source tool. The package provides researchers and developers with a free, scalable, and community-driven platform to process, analyze, and visualize satellite imagery, built upon the most popular python libraries, but centralizes the use of multiple functions for classification and mapping land cover 
+As open source software keep transforming the landscape of scientific research [@Community2019], enabling collaboration, reproducibility, transparency **scikit-eo** was specifically developed as an open source tool. **scikit-eo** integrates most of the popular open source python libraries from the so-called geo-python stack for remote sensing (e.g,. (numpy)[https://numpy.org/], (pandas)[https://pandas.pydata.org/], (rasterio)[https://rasterio.readthedocs.io/en/stable/] and few more) to extent and create a centralise package for advanced spatial analysis of remotely sensed data. The package provides researchers and developers with a free, scalable, and community-driven platform to process, analyze, and visualize satellite imagery more specifically , built upon the most popular python libraries, but centralizes the use of multiple functions for classification and mapping land cover.
 
 # Functionalities
 
@@ -244,7 +249,7 @@ axes.grid(False)
 ![Fusion of optical and radar images. \label{fig:AIM}](scikit_eo_04.png){ width=50% }
 
 
-### Example 04: Accuary assesment 
+### Example 04: Accuracy assessment    
 
 In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that we need is both the confusion matrix and a previously obtained predicted class map.
 
@@ -277,7 +282,6 @@ Results:
 # Acknowledgments
 
 The authors would like to thank to David Montero Loaiza for the idea of the package name and Qiusheng Wu for the suggestions that helped to improve the package.
-
 
 # References
 <!-- #endregion -->
