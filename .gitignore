@@ -108,3 +108,6 @@ ENV/
 # quarto files
 */paper_files
 paper.html
+
+#Mac Files
+*.DS_Store
