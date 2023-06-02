@@ -41,7 +41,7 @@ Therefore, **scikit-eo** is a Python package that provides the necessary tools f
 
 # Highlights
 
-**scikit-eo** is an open-source toolkit built entirely in Python that provides a variety of remote sensing tools, from basic and exploratory functions to more advanced methods to classify, calibrate, or fusion satellite imagery. Depending on users' needs **scikit-eo** can provide the basic but essential land cover characterization mapping including the confusion matrix and the required metrics. User's accuracy, producer's accuracy, omissions and commissions are required metrics that users can get in a form of a pandas ```DataFrame``` object. Using **scikit-eo** users can produce a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm or the output of the segmentation algorithm. These two outcomes must be generated along with the uncertainties with a confidence interval ($95$% or $90$%). All required metrics can be obtained with **scikit-eo**. There are other useful tools for remote sensing analysis that can be found in this package, for more information about the full list of the supported function as well how to install and execute the package within a python setting visit [scikit-eo website](https://ytarazona.github.io/scikit-eo/)
+**scikit-eo** is an open-source package built entirely in Python that provides a variety of remote sensing tools, from basic and exploratory functions to more advanced methods to classify, calibrate, or fusion satellite imagery. Depending on users' needs **scikit-eo** can provide the basic but essential land cover characterization mapping including the confusion matrix and the required metrics. User's accuracy, producer's accuracy, omissions and commissions are required metrics that users can get in a form of a pandas ```DataFrame``` object. Using **scikit-eo** users can produce a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm or the output of the segmentation algorithm. These two outcomes must be generated along with the uncertainties with a confidence interval ($95$% or $90$%). All required metrics can be obtained with **scikit-eo**. There are other useful tools for remote sensing analysis that can be found in this package, for more information about the full list of the supported function as well how to install and execute the package within a python setting visit [scikit-eo website](https://ytarazona.github.io/scikit-eo/)
 
 # Audience
 
@@ -163,7 +163,7 @@ Calibration results:
 
 ### Example 03: Imagery Fusion.
 
-This is an area where **scikit-eo** package provide the more innovated approach, the fusion of radar and optical images, despite of its  well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021].
+This is an area where **scikit-eo** package provide the more innovated approach, the fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021].
 [Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
 
 
