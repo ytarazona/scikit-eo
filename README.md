@@ -5,8 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PythonVersion]( https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-green)]()
 [![PyPI version](https://badge.fury.io/py/scikeo.svg)](https://badge.fury.io/py/scikeo)
-[![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()     
-[![Twitter](https://img.shields.io/twitter/url?label=Follow%20%40GeoYons&style=social&url=https%3A%2F%2Ftwitter.com%2FGeoYons)](https://twitter.com/GeoYons)
+[![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()
 [![Downloads](https://pepy.tech/badge/scikeo)](https://pepy.tech/project/scikeo)
 [![Downloads](https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/docs-passing-brightgreen.svg)]()
 
@@ -16,7 +15,7 @@
 <!-- #region -->
 # Introduction
 
-Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variaty of environmental issues such as deforestation, land degradation, crop classifications, among other. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
+Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are using to monitor a variety of environmental issues such as deforestation, land degradation, land use and land cover change, among others. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users in developing Python lines of code. Algorithms for mapping land degradation through linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, calibration of machine learning lagorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
@@ -24,8 +23,8 @@ Therefore, **scikit-eo** is a Python package that provides tools for remote sens
 
 | Name of functions  | Description|
 | -------------------| --------------------------------------------------------------------------|
-| **`mla`**          | Machine Learning                                                          |
-| **`calmla`**       | Calibrating supervised classification in Remote Sensing                   |
+| **`mla`**          | Machine Learning (Random Forest, Support Vector Machine, Decition Tree, Naive Bayes, Neural Network, etc.)                                                          |
+| **`calmla`**       | Calibrating supervised classification in Remote Sensing (e.g., Monte Carlo Cross-Validation, Leave-One-Out Cross-Validation, etc.)                   |
 | **`confintervalML`**       | Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval and estimated area with confidence interval as well.                                    |
 | **`rkmeans`**      | K-means classification                                                    |
 | **`calkmeans`**    | This function allows to calibrate the kmeans algorithm. It is possible to obtain the best k value and the best embedded algorithm in kmeans.                               |
@@ -63,7 +62,7 @@ pip install git+https://github.com/ytarazona/scikit-eo
 
 # Example
 
-## 1. Applying Machine Learning
+## 1.0 Applying Machine Learning
 
 Libraries to be used:
 
@@ -195,10 +194,6 @@ Special thanks to:
 - [David Montero Loaiza](https://github.com/davemlz) for the idea of the package name **scikit-eo**.
 
 - [Qiusheng Wu](https://github.com/giswqs) for the suggestions that helped to improve the package.
-
-## Dedication and inspiration
-
-Yonatan Tarazona dedicates this package to [María Griselda Miyasiro López](https://github.com/geolomera), the person who inspired to develop it. In fact, the logo of the package is inspired by fog oasis known as "Lomas", an ecosystem that she loves deeply.
 
 ## Credits
 
