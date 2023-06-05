@@ -57,7 +57,7 @@ This algorithm allows to extract raster values using a shapefile.
  - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d. 
 
 
- - <b>`shp`</b>:  Vector file, tipically shapefile. 
+ - <b>`shp`</b>:  Vector file, typically shapefile. 
 
 Return: 
 
