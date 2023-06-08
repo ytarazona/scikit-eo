@@ -1,5 +1,5 @@
 <!-- #region -->
-# scikit-eo: A Python package for Remote Sensing Tools
+# scikit-eo: A Python package for Remote Sensing Data Analysis
 
 [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
