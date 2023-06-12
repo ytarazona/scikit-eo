@@ -17,8 +17,14 @@ authors:
   - name: Fernando Benitez-Paez
     affiliation: 3
     orcid: 0000-0002-9884-6471
+  - name: Fabian Drenkhan
+    orcid: 0000-0002-9443-9596
+    affiliation: 1
+  - name: Martín E. Timaná
+    orcid: 0000-0003-1559-4449
+    affiliation: 1
 affiliations:
-  - name: Pontifical Catholic University of Peru
+  - name: Pontifical Catholic University of Peru, Department of Humanities, Geography and the Environment
     index: 1
   - name: Adam Mickiewicz University in Poznań
     index: 2
@@ -33,7 +39,7 @@ bibliography: paper.bib
 
 In recent years the availability of remote sensing data has increased substantially. A growing body of spaceborne and drone imagery including optical and radar imagery with increasing spatial (i.e. sub-metric) and temporal resolutions is now available. This remotely sensed data has enables researchers to address and tackle a broader range of challenges effectively, by using novel tools and data at multiple scales that help to shed new light into the underlying factors that contribute to both local and global issues. 
 
-As more accessible the data is, the bigger the need is for open-source tools to read, process and execute analysis that contribute to underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are used to map, analyze and monitor a variety of complex environmental processes and impacts, such as monitoring and assessment land cover changes [@Chaves2020], crop classifications [@], deforestation [@Tarazona2021], impact on urbanization level [@Trinder2020], climate change impacts [@Yang2013], biodiversity conservation [@Jeannine2022], and natural disaster management [@Kucharczyk2021], to name a few.
+As more accessible the data is, the bigger the need is for open-source tools to read, process and execute analysis that contribute to underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are used to map, analyze and monitor a variety of complex environmental processes and impacts, such as monitoring and assessment land cover changes [@Chaves2020], crop classifications [@], deforestation [@TARAZONA2018367], impact on urbanization level [@Trinder2020], climate change impacts [@Yang2013], biodiversity conservation [@Jeannine2022], and natural disaster management [@Kucharczyk2021], to name a few.
 
 But more availability of data, does not necessary more easy ways to process the data. Analysts spend an important among of time finding the correct libraries that allow them to read and process the data.  Although there are multiple efforts to make available command line tools for selecting, processing and analysis of satellite imagery, tools for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], data fusion process for optical and radar images to quickly classify the vegetation cover, and the integration of machine learning techniques are still separate in multiple libraries, along with diffuse documentation that limits the analysis where the main concerns of the causes or patterns of the environmental conditions should be the main focus.
 
@@ -92,7 +98,7 @@ Of course, there are others functions will be found in the package.
 
 ### Example 01: Random Forest (RF) classifier
 
-In this example, in a small region of southern Brazil, optical imagery from Landsat-8 OLI (Operational Land Imager) will be used to classify land cover using the machine learning algorithm Random Forest (RF) ([@Breiman2001]). Four types of land cover will be mapped, i.e., agriculture, forest, bare soil and water. The input data needed is the satellite image and the spectral signatures collected. The output as a dictionary will provide: i) confusion matrix, ii) overall accuracy, iii) kappa index and iv) a classes map.
+In this example, in a small region of southern Brazil, optical imagery from Landsat-8 OLI (Operational Land Imager) will be used to classify land cover using the machine learning algorithm Random Forest (RF) [@Breiman2001]. Four types of land cover will be mapped, i.e., agriculture, forest, bare soil and water. The input data needed is the satellite image and the spectral signatures collected. The output as a dictionary will provide: i) confusion matrix, ii) overall accuracy, iii) kappa index and iv) a classes map.
 
 ```python
 # 01. Libraries to used in these examples
