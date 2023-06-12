@@ -20,7 +20,7 @@ authors:
 affiliations:
   - name: Pontifical Catholic University of Peru
     index: 1
-  - name: Adam Mickiewicz University in Poznan
+  - name: Adam Mickiewicz University in Poznań
     index: 2
   - name: The school of geography and sustainable development, University of St Andrews
     index: 3
@@ -31,17 +31,17 @@ bibliography: paper.bib
 <!-- #region -->
 # Summary & Propose
 
-Remote sensing and, more importantly, the growing accessibility of remotely sensed data, has fundamentally transformed our capacity to comprehend, classify, and monitor the connected environmental conditions of our planet. This enhanced understanding has enables researchers to address and tackle a broader range of challenges effectively, by using novel tools and data at multiple scales that help to shed new light into the underlying factors that contribute to both local and global issues. 
+In recent years the availability of remote sensing data has increased substantially. A growing body of spaceborne and drone imagery including optical and radar imagery with increasing spatial (i.e. sub-metric) and temporal resolutions is now available. This remotely sensed data has enables researchers to address and tackle a broader range of challenges effectively, by using novel tools and data at multiple scales that help to shed new light into the underlying factors that contribute to both local and global issues. 
 
-As more accessible the data is, the bigger the need is for open-source tools to read, process and execute analysis that contribute to underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are currently used for several purposes, such as monitoring and assessment land cover changes [@Liping2018], deforestation [@Blanc2016], impact on urbanization level [@Trinder2020], climate change impacts [@Yang2013], water quality [@Wang2019], air pollution [@Seham2022], biodiversity conservation [@Jeannine2022], and natural disaster management [@Kucharczyk2021], to name a few. By collecting data over large periods of time researchers can identify or measure the impact of human activities on ecosystems and support the data-driven decision-making process for more sustainable resource management [@Jensen2000].
+As more accessible the data is, the bigger the need is for open-source tools to read, process and execute analysis that contribute to underpin patterns, changes and trends that are critical for environmental studies. Applications that integrate spatial-temporal data are used to map, analyze and monitor a variety of complex environmental processes and impacts, such as monitoring and assessment land cover changes [@Chaves2020], crop classifications [@], deforestation [@Tarazona2021], impact on urbanization level [@Trinder2020], climate change impacts [@Yang2013], biodiversity conservation [@Jeannine2022], and natural disaster management [@Kucharczyk2021], to name a few.
 
-But more availability of data, does not necessary more easy ways to process the data. Analysts spend an important among of time time finding the correct libraries that allow them to read and process the data.  Tools for mapping land degradation through linear trend of vegetation indices [@TARAZONA2018367], [@Tarazona2022], data fusion process for optical and radar images to quickly classify the vegetation cover, and the integration of machine learning techniques are still separate in multiple libraries, along with diffuse documentation that limits the analysis where the main concerns of the causes or patterns of the environmental conditions should be the main focus.
+But more availability of data, does not necessary more easy ways to process the data. Analysts spend an important among of time finding the correct libraries that allow them to read and process the data.  Although there are multiple efforts to make available command line tools for selecting, processing and analysis of satellite imagery, tools for mapping land degradation through linear trend of vegetation indices [@TARAZONA2020100337], data fusion process for optical and radar images to quickly classify the vegetation cover, and the integration of machine learning techniques are still separate in multiple libraries, along with diffuse documentation that limits the analysis where the main concerns of the causes or patterns of the environmental conditions should be the main focus.
 
-Therefore, **scikit-eo** is a Python package that provides the necessary tools for remote sensing analysis. It is a centralized, scalable and open source toolkit, developed to fill the gaps in remotely sensed data processing tools. This toolkit can be use in multiple venues from a lecturer room as a toolkit for introduction of programming skills using python and remote sensing for environmental studies, or can be use as part of any Python setting in a research project. The majority of the tools including in **scikit-eo** are derived from scientific publications, while others are valuable algorithms that streamline data processing into just a few lines of code. By integrating this set of diverse tools, users can focus their time and energy on analyzing the results of their data, rather than getting bogged down in the intricacies lines of code. By centralizing, integrating use cases and example of data, **scikit-eo** serves as a way to allow researchers to optimize their resources and dedicate their focus to the meaningful interpretation of their findings with greater efficiency, rather to stress out with coding task. 
+Therefore, here we present **scikit-eo**, a new Python package that provides the necessary tools for remote sensing analysis. It is a centralized, scalable and open source toolkit, developed to fill the gaps in remotely sensed data processing tools. This toolkit can be use in multiple venues from a lecturer room as a toolkit for introduction of programming skills using python and remote sensing for environmental studies, or can be use as part of any Python setting in a research project. The majority of the tools including in **scikit-eo** are derived from scientific publications, while others are valuable algorithms that streamline data processing into just a few lines of code. By integrating this set of diverse tools, users can focus their time and energy on analyzing the results of their data, rather than getting bogged down in the intricacies lines of code. By centralizing, integrating use cases and example of data, **scikit-eo** serves as a way to allow researchers to optimize their resources and dedicate their focus to the meaningful interpretation of their findings with greater efficiency, rather to stress out with coding task. 
 
 # Highlights
 
-**scikit-eo** is an open-source package built entirely in Python that provides a variety of remote sensing tools, from basic and exploratory functions to more advanced methods to classify, calibrate, or fusion satellite imagery. Depending on users' needs **scikit-eo** can provide the basic but essential land cover characterization mapping including the confusion matrix and the required metrics. User's accuracy, producer's accuracy, omissions and commissions are required metrics that users can get in a form of a pandas ```DataFrame``` object. Using **scikit-eo** users can produce a predicted classes map, i.e., a land cover map which represents the output of the classification algorithm or the output of the segmentation algorithm. These two outcomes must be generated along with the uncertainties with a confidence interval ($95$% or $90$%). All required metrics can be obtained with **scikit-eo**. There are other useful tools for remote sensing analysis that can be found in this package, for more information about the full list of the supported function as well how to install and execute the package within a python setting visit [scikit-eo website](https://ytarazona.github.io/scikit-eo/)
+**scikit-eo** is an open-source package built entirely in Python, through Object-Oriented Programming and Structured Programming, that provides a useful variety of remote sensing tools, from basic and exploratory functions to more advanced methods to classify, calibrate, or fusion satellite imagery. Depending on users' needs, **scikit-eo** can provide the basic but essential land cover characterization mapping including the confusion matrix and the required metricss such as user's accuracy, producer's accuracy, omissions and commissions errors. The combination of these required metrics can be obtained in a form of a pandas ```DataFrame``` object. Furthermore, a class prediction map, i.e., a land cover map which represents the output of the classification algorithm or the output of the segmentation algorithm. These two outcomes must include uncertainties with a confidence levels (e.g., at $95$% or $90$%). All required metrics from the confusion matrix can be easily computed and include confidence levels with **scikit-eo**. There are other useful tools for remote sensing analysis that can be found in this package, for more information about the full list of the supported function as well how to install and execute the package within a python setting visit [scikit-eo website](https://ytarazona.github.io/scikit-eo/)
 
 # Audience
 
@@ -55,18 +55,18 @@ One of the key strengths of **scikit-eo** lies in its advanced analysis capabili
 
 ### **scikit-eo** in the lecture room:
 
- **scikit-eo** can be part of a lecturer room as part of the set of tools for environmental studies where a quantitative approach and computer labs are required. After the appropriate introduction of Python, basics of remote sensing, and the relevance of environmental studies to address climate change challenges or impact of anthropomorphic activity. Lectures can take advance of the simplicity of **scikit-eo** routines to execute Supervised Classification methods, Principal Components Analysis, Mapping forest or land degradation and more types of analysis. By reducing the number of required coding students can focus on the analysis and how the methods works rather of dealing with complex, and unnecessary programming tasks. Lecturers can structure their computer labs using open data sources and integrate **scikit-eo** to allow students understand the importance of the calibration and assessment metrics, get insights about the classification mapping suing satellite imagery as well as providing an introduction to more advances methods that include machine learning techniques.
+ **scikit-eo** can be part of a lecturer room as part of the set of tools for environmental studies where a quantitative approach and computer labs are required. After the appropriate introduction of Python, basics of remote sensing, and the relevance of environmental studies to address climate change challenges or impact of anthropogenic activity. Lectures can take advance of the simplicity of **scikit-eo** routines to execute Supervised Classification methods, Principal Components Analysis, Spectral Mixture Analysisi, Mapping forest or land degradation and more types of analysis. By reducing the number of required coding students can focus on the analysis and how the methods works rather of dealing with complex, and unnecessary programming tasks. Lecturers can structure their computer labs using open data sources and integrate **scikit-eo** to allow students understand the importance of the calibration and assessment metrics, get insights about the classification mapping suing satellite imagery as well as providing an introduction to more advances methods that include machine learning techniques.
 
 ### **scikit-eo** as open source tool:
 
-As open source software keep transforming the landscape of scientific research [@Community2019], enabling collaboration, reproducibility, transparency **scikit-eo** was specifically developed as an open source tool. **scikit-eo** integrates most of the popular open source python libraries from the so-called geo-python stack for remote sensing (e.g,. (numpy)[https://numpy.org/], (pandas)[https://pandas.pydata.org/], (rasterio)[https://rasterio.readthedocs.io/en/stable/] and few more) to extent and create a centralise package for advanced spatial analysis of remotely sensed data. The package provides researchers and developers with a free, scalable, and community-driven platform to process, analyze, and visualize satellite imagery more specifically , built upon the most popular python libraries, but centralizes the use of multiple functions for classification and mapping land cover.
+As open source software keep transforming the landscape of scientific research [@Community2019], enabling collaboration, reproducibility, transparency **scikit-eo** was specifically developed as an open source tool. **scikit-eo** integrates most of the popular open source python libraries from the so-called geo-python stack for remote sensing (e.g,. [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/), [rasterio](https://rasterio.readthedocs.io/en/stable/) and few more) to extent and create a centralise package for advanced spatial analysis of remotely sensed data. The package provides researchers and developers with a free, scalable, and community-driven platform to process, analyze, and visualize satellite imagery more specifically , built upon the most popular python libraries, but centralizes the use of multiple functions for classification and mapping land cover.
 
 # Functionalities
 
 
 ## Main tools
 
-**Scikit-eo** comes with several algorithms to process satellite images in order to study different environmental issues. Atmospheric correction, machine learning and deep learning, estimating area and uncertainty, linear trend, combining optical and radar images, among others, are some main functions listed below:
+**Scikit-eo** includes several algorithms to process satellite images to assess complex environmental processes and impacts. These include major functions, such as atmospheric correction, machine learning and deep learning, estimating area and uncertainty, linear trend, combination of optical and radar images, classification sub-pixel, among others. Some main functions are listed below:
 
 | Name of functions  | Description|
 | -------------------| --------------------------------------------------------------------------|
@@ -92,8 +92,7 @@ Of course, there are others functions will be found in the package.
 
 ### Example 01: Random Forest (RF) classifier
 
-In this first example a Landsat-8 OLI (Operational Land Imager) will be used to classify using the Random Forest (RF) classifier. 
-[Here we need a clearer description, like the context, the issue and how the package provide the outcome]
+In this example, in a small region of southern Brazil, optical imagery from Landsat-8 OLI (Operational Land Imager) will be used to classify land cover using the machine learning algorithm Random Forest (RF) ([@Breiman2001]). Four types of land cover will be mapped, i.e., agriculture, forest, bare soil and water. The input data needed is the satellite image and the spectral signatures collected. The output as a dictionary will provide: i) confusion matrix, ii) overall accuracy, iii) kappa index and iv) a classes map.
 
 ```python
 # 01. Libraries to used in these examples
@@ -129,8 +128,8 @@ Classification results:
 
 ### Example 02: Calibration methods for supervised classification
 
-In this second example, users can apply the calibrations methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlos Cross-Validation (MCCV) [@Tarazona2021] in order to calibrate a supervised classification with different algorithms.
-[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
+Given a large number of machine learning algorithms, it is necessary to select the one with the best performance in the classification, i.e., the algorithm in which the training and testing data used converge the learning iteratively to a solution that appears to be satisfactory [@Tarazona2021].
+To deal with this, users can apply the calibrations methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlos Cross-Validation (MCCV) in order to calibrate a supervised classification with different algorithms. The input data needed is the spectral signatures collected as a *.dbf* or *.csv*. The output will provide a graph with the errors of each classifier obtained.
 
 ```python
 # 01. Endmembers
@@ -163,8 +162,7 @@ Calibration results:
 
 ### Example 03: Imagery Fusion.
 
-This is an area where **scikit-eo** package provide the more innovated approach, the fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021].
-[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
+This is an area where **scikit-eo** package provide the more innovated approach. We are in a case where, after combining different variables into a single output, we want to know the contributions of the different original variables in the data fusion. The fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021]. The input data needed are the optical satellite image and the radar satellite image, for instance.
 
 
 In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
@@ -177,7 +175,7 @@ In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us 
 - *Contributions_in_%*: The contributions of each optical and radar band in the fusion
 
 ```python
-# 01 
+# 01 Loagind dataset
 path_optical = "data/Ex_03/LC08_003069_20180906.tif"
 optical = rasterio.open(path_optical)
 
@@ -250,16 +248,15 @@ axes.grid(False)
 
 ### Example 04: Accuracy assessment    
 
-In this final example, the assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that the users needs is the confusion matrix and a previously obtained predicted class map.
-[Same here we need a clearer description, like the context, the issue and how the package provide the outcome]
+In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that the users needs is the confusion matrix and a previously obtained predicted class map.
 
-Paramaters:
+```confintervalML``` requires the following paramaters:
 
 - *matrix*: confusion matrix or error matrix in numpy.ndarray.
-- *image_pred*: Array with 2d (rows, cols). This array should be the image classified with predicted classes.
-- *pixel_size*: Pixel size of the image classified. By default is 10m of Sentinel-2. In this case is 30m (Landsat).
+- *image_pred*: a 2-dimensional array (rows, cols). This array should be the classified image with predicted classes.
+- *pixel_size*: Pixel size of the classified image. Set by default as 10 meters. In this example is 30 meters (Landsat).
 - *conf*: Confidence interval. By default is 95% (1.96).
-- *nodata*: Nodata must be specified as 0, NaN or other any value. Keep in mind with this parameter.
+- *nodata*: No data must be specified as 0, NaN or any other value. Keep in mind with this parameter.
 
 ```python
 # 01 load raster data
@@ -278,10 +275,9 @@ Results:
 
 ![Estimating area and uncertainty with 95%. \label{fig:AIM}](scikit_eo_05.png){ width=30%}
 
-<!-- #region -->
+
 # Acknowledgments
 
 The authors would like to thank to David Montero Loaiza for the idea of the package name and Qiusheng Wu for the suggestions that helped to improve the package.
 
 # References
-<!-- #endregion -->
