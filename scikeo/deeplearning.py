@@ -1,4 +1,5 @@
 # +
+import copy
 import rasterio
 import numpy as np
 import pandas as pd
@@ -56,9 +57,17 @@ class DL(object):
         arr = st_reorder.reshape((rows*cols, bands))
 
         # nodata
-        if np.isnan(np.sum(arr)):
-            arr[np.isnan(arr)] = self.nodata
+        #if np.isnan(np.sum(arr)):
+            #arr[np.isnan(arr)] = self.nodata
         
+        if key_nan:
+            # saving un array for predicted classes
+            class_final = arr[:, 0].copy()
+            # positions with nan
+            posIndx = np.argwhere(~np.isnan(class_final)).flatten()
+            # replace np.nan -> 0
+            arr[np.isnan(arr)] = 0
+            
         # if it is read by pandas.read_csv()
         if isinstance(self.endm, (pd.core.frame.DataFrame)):
             
@@ -89,6 +98,13 @@ class DL(object):
         self.rows = rows
         
         self.cols = cols
+        
+        if key_nan:
+            self.key_nan = key_nan
+            self.posIndx = posIndx
+            self.class_final = class_final
+        else:
+            self.key_nan = key_nan
         
     def FullyConnected(self, hidden_layers = 3, hidden_units = [64, 32, 16], output_units = 10,
                        input_shape = (6,), epochs = 300, batch_size = 32, training_split = 0.8, 
@@ -168,7 +184,14 @@ class DL(object):
         
         labels = np.array(labels)
         
-        class_fullyconnected = labels.reshape((self.rows, self.cols))
+        # dealing with nan
+        if self.key_nan:
+            # image border like nan
+            labels = labels[self.posIndx]
+            self.class_final[self.posIndx] = labels
+            class_fullyconnected = self.class_final.reshape((self.rows, self.cols))
+        else:
+            class_fullyconnected = labels.reshape((self.rows, self.cols))
   
         # Confusion matrix
         predict_prob = model.predict(Xtest)
