@@ -24,13 +24,13 @@ authors:
     orcid: 0000-0003-1559-4449
     affiliation: 4
 affiliations:
-  - name: Geography and the Environment, Department of Humanities, Pontificia Universidad Católica del Perú, Lima, Peru
+  - name: Applied Geography Research Center, Department of Humanities, Pontificia Universidad Católica del Perú, Lima, Peru
     index: 1
   - name: Adam Mickiewicz University in Poznań
     index: 2
   - name: The school of geography and sustainable development, University of St Andrews
     index: 3
-  - name: Applied Geography Research Center, Department of Humanities, Pontificia Universidad Católica del Perú, Lima, Peru
+  - name: Geography and the Environment, Department of Humanities, Pontificia Universidad Católica del Perú, Lima, Peru
     index: 4
 date: 19 May 2023
 bibliography: paper.bib
