@@ -133,7 +133,7 @@ rf_class = inst.RF(training_split = 0.7)
 
 Classification results:
 
-![Original image and Image classified in the left and right panel respectively.](scikit_eo_00.png){ width=70% }
+![Original image and Image classified in the left and right panel respectively.](scikit_eo_00.png){ width=100% }
 
 
 ### Example 02: Calibration methods for supervised classification
