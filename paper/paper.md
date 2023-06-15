@@ -169,7 +169,7 @@ error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'),
 
 Calibration results:
 
-![Result of the calibration methods using SVM, DT, RF and NB. \label{fig:AIM}](scikit_eo_01.png){ width=50% }
+![Result of the calibration methods using SVM, DT, RF and NB.](scikit_eo_01.png){ width=100% }
 
 
 ### Example 03: Imagery Fusion.
@@ -228,14 +228,14 @@ axes2.grid(False)
 plt.show()
 ```
 
-![Proportion of Variance and accumulative. \label{fig:AIM}](scikit_eo_02.png){ width=50% }
+![Proportion of Variance and accumulative.](scikit_eo_02.png){ width=100% }
 
 ```python
 # 07 Contributions of each variable in %:
 fusion.get('Contributions_in_%')
 ```
 
-![Contributions. \label{fig:AIM}](scikit_eo_03.png){ width=50% }
+![Contributions in %.](scikit_eo_03.png){ width=100% }
 
 ```python
 # 08 Preparing the image:
@@ -257,7 +257,7 @@ axes.set_title("Fusion of optical and radar images")
 axes.grid(False)
 ```
 
-![Fusion of optical and radar images. \label{fig:AIM}](scikit_eo_04.png){ width=50% }
+![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=100% }
 
 
 ### Example 04: Accuracy assessment    
