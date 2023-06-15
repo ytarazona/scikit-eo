@@ -169,7 +169,7 @@ error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'),
 
 Calibration results:
 
-![Result of the calibration methods using SVM, DT, RF and NB.](scikit_eo_01.png){ width=100% }
+![Result of the calibration methods using svm, dt, rf and nb.](scikit_eo_01.png){ width=100% }
 
 
 ### Example 03: Imagery Fusion.
@@ -228,14 +228,14 @@ axes2.grid(False)
 plt.show()
 ```
 
-![Proportion of Variance and accumulative.](scikit_eo_02.png){ width=100% }
+![Proportion of Variance and accumulative.](scikit_eo_02.png){ width=90% }
 
 ```python
 # 07 Contributions of each variable in %:
 fusion.get('Contributions_in_%')
 ```
 
-![Contributions in %.](scikit_eo_03.png){ width=100% }
+![Contributions of each variable in %.](scikit_eo_03.png){ width=100% }
 
 ```python
 # 08 Preparing the image:
@@ -257,7 +257,7 @@ axes.set_title("Fusion of optical and radar images")
 axes.grid(False)
 ```
 
-![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=100% }
+![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=60% }
 
 
 ### Example 04: Accuracy assessment    
@@ -288,7 +288,7 @@ confintervalML(matrix = values, image_pred = img, pixel_size = 30, conf = 1.96,
 
 Results:
 
-![Estimating area and uncertainty with 95%. \label{fig:AIM}](scikit_eo_05.png){ width=30%}
+![Estimating area and uncertainty with 95%.](scikit_eo_05.png){ width=60%}
 
 
 # Acknowledgments
