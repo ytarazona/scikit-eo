@@ -19,10 +19,10 @@ authors:
     orcid: 0000-0002-9884-6471
   - name: Fabian Drenkhan
     orcid: 0000-0002-9443-9596
-    affiliation: 1
+    affiliation: 4
   - name: Martín E. Timaná
     orcid: 0000-0003-1559-4449
-    affiliation: 4
+    affiliation: 1
 affiliations:
   - name: Applied Geography Research Center, Department of Humanities, Pontificia Universidad Católica del Perú, Lima, Peru
     index: 1
@@ -133,20 +133,20 @@ rf_class = inst.RF(training_split = 0.7)
 
 Classification results:
 
-![Original image and Image classified in the left and right panel respectively. \label{fig:AIM}](scikit_eo_00.png){ width=70% }
+![Original image and Image classified in the left and right panel respectively.](scikit_eo_00.png){ width=70% }
 
 
 ### Example 02: Calibration methods for supervised classification
 
 Given a large number of machine learning algorithms, it is necessary to select the one with the best performance in the classification, i.e., the algorithm in which the training and testing data used converge the learning iteratively to a solution that appears to be satisfactory [@Tarazona2021].
-To deal with this, users can apply the calibrations methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlos Cross-Validation (MCCV) in order to calibrate a supervised classification with different algorithms. The input data needed are the spectral signatures collected as a *.dbf* or *.csv*. The output will provide a graph with the errors of each classifier obtained.
+To deal with this, users can apply the calibration methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlo Cross-Validation (MCCV) in order to calibrate a supervised classification with different algorithms. The input data needed are the spectral signatures collected as a *.dbf* or *.csv*. The output will provide a graph with the errors of each classifier obtained.
 
 ```python
 # 01. Endmembers
 path_endm = "\data\ex_O2\\endmembers\endmembers.dbf"
 endm = DBF(path_endm)
 
-# 02. Instance of calmla()
+# 02. An instance of calmla()
 inst = calmla(endmembers = endm)
 
 # 03. Applying the splitData() method
@@ -156,23 +156,25 @@ data = inst.splitData()
 **Calibrating with *Monte Carlo Cross-Validation Calibration* (MCCV)**
 
 **Parameters**:
-- ```split_data```: A instance obtaind with ```splitData()```.
+
+- ```split_data```: An instance obtaind with ```splitData()```.
 - ```models```: Support Vector Machine (svm), Decision Tree (dt), Random Forest (rf) and Naive Bayes (nb).
 - ```n_iter```: Number of iterations.
 
 ```python
 # 04. Running MCCV
-error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'), n_iter = 10)
+error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'), 
+                       n_iter = 10)
 ```
 
 Calibration results:
 
-![Original image and Image classified in the left and right panel respectively. \label{fig:AIM}](scikit_eo_01.png){ width=50% }
+![Result of the calibration methods using SVM, DT, RF and NB. \label{fig:AIM}](scikit_eo_01.png){ width=50% }
 
 
 ### Example 03: Imagery Fusion.
 
-This is an area where **scikit-eo** package provide the more innovated approach. We are in a case where, after combining different variables into a single output, we want to know the contributions of the different original variables in the data fusion. The fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that helps researcher to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021]. The input data needed are the optical satellite image and the radar satellite image, for instance.
+This is an area where **scikit-eo** provides a novel approach to merge different types of satellite imagery. We are in a case where, after combining different variables into a single output, we want to know the contributions of the different original variables in the data fusion. The fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that help researchers to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [@Tarazona2021]. The input data needed are the optical satellite image and the radar satellite image, for instance.
 
 
 In ```scikit-eo``` we developed the function ```fusionrs()``` which provides us with a dictionary with the following image fusion interpretation features:
@@ -208,10 +210,12 @@ cum_var = fusion.get('Cumulative_variance')*100
 x_labels = ['PC{}'.format(i+1) for i in range(len(prop_var))]
 
 fig, axes = plt.subplots(figsize = (6,5))
-ln1 = axes.plot(x_labels, prop_var, marker ='o', markersize = 6,  label = 'Proportion of variance')
+ln1 = axes.plot(x_labels, prop_var, marker ='o', markersize = 6,  
+                label = 'Proportion of variance')
 
 axes2 = axes.twinx()
-ln2 = axes2.plot(x_labels, cum_var, marker = 'o', color = 'r', label = "Cumulative variance")
+ln2 = axes2.plot(x_labels, cum_var, marker = 'o', color = 'r', 
+                 label = "Cumulative variance")
 
 ln = ln1 + ln2
 labs = [l.get_label() for l in ln]
@@ -258,7 +262,7 @@ axes.grid(False)
 
 ### Example 04: Accuracy assessment    
 
-In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by [@OLOFSSON201442]. All that users need are the confusion matrix and a previously obtained predicted class map.
+In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by `@OLOFSSON201442`. All that users need are the confusion matrix and a previously obtained predicted class map.
 
 ```confintervalML``` requires the following parameters:
 
@@ -278,7 +282,8 @@ path_cm = r"\data\ex_O4\ml\confusion_matrix.csv"
 values = pd.read_csv(path_radar)
 
 # 03 Applying the confintervalML:
-confintervalML(matrix = values, image_pred = img, pixel_size = 30, conf = 1.96, nodata = -9999)
+confintervalML(matrix = values, image_pred = img, pixel_size = 30, conf = 1.96, 
+               nodata = -9999)
 ```
 
 Results:
