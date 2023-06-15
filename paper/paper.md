@@ -235,7 +235,7 @@ plt.show()
 fusion.get('Contributions_in_%')
 ```
 
-![Contributions of each variable in %.](scikit_eo_03.png){ width=100% }
+![Contributions of each variable in %.](scikit_eo_03.png){ width=90% }
 
 ```python
 # 08 Preparing the image:
@@ -257,7 +257,7 @@ axes.set_title("Fusion of optical and radar images")
 axes.grid(False)
 ```
 
-![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=50% }
+![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=40% }
 
 
 ### Example 04: Accuracy assessment    
