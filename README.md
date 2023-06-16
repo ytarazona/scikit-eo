@@ -21,7 +21,7 @@ Therefore, **scikit-eo** is a Python package that provides tools for remote sens
 
 # Tools for Remote Sensing
 
-| Name of functions  | Description|
+| Name of functions/classes  | Description|
 | -------------------| --------------------------------------------------------------------------|
 | **`mla`**          | Machine Learning (Random Forest, Support Vector Machine, Decition Tree, Naive Bayes, Neural Network, etc.)                                                          |
 | **`calmla`**       | Calibrating supervised classification in Remote Sensing (e.g., Monte Carlo Cross-Validation, Leave-One-Out Cross-Validation, etc.)                   |
@@ -32,7 +32,7 @@ Therefore, **scikit-eo** is a Python package that provides tools for remote sens
 | **`atmosCorr`**    | Atmospheric Correction of satellite imagery                               |
 | **`deepLearning`** | Deep Learning algorithms                                                  |
 | **`linearTrend`**  | Linear trend is useful for mapping forest degradation or land degradation |
-| **`fusionrs`**     | This algorithm allows to fusion images coming from different spectral sensors (e.g., optical-optical, optical and SAR or SAR-SAR). Among many of the qualities of this function, it is possible to obtain the contribution (%) of each variable in the fused image |
+| **`fusionrs`**     | This algorithm allows to fuse images coming from different spectral sensors (e.g., optical-optical, optical and SAR or SAR-SAR). Among many of the qualities of this function, it is possible to obtain the contribution (%) of each variable in the fused image |
 | **`sma`**          | Spectral Mixture Analysis - Classification sup-pixel                      |
 | **`tassCap`**      | The Tasseled-Cap Transformation                                           |
 
