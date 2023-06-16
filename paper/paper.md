@@ -253,7 +253,7 @@ plt.show()
 
 ### Example 04: Accuracy assessment    
 
-In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by `@OLOFSSON201442`. All that users need are the confusion matrix and a previously obtained predicted class map.
+In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by @OLOFSSON201442. All that users need are the confusion matrix and a previously obtained predicted class map.
 
 ```confintervalML``` requires the following parameters:
 
