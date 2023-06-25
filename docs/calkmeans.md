@@ -1,5 +1,7 @@
 <!-- markdownlint-disable -->
 
+<a href="..\scikeo\calkmeans.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 # <kbd>module</kbd> `calkmeans`
 
 
@@ -7,6 +9,8 @@
 
 
 ---
+
+<a href="..\scikeo\calkmeans.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `calkmeans`
 
