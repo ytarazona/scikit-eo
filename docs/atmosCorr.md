@@ -1,5 +1,7 @@
 <!-- markdownlint-disable -->
 
+<a href="..\scikeo\atmosCorr.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 # <kbd>module</kbd> `atmosCorr`
 
 
@@ -9,8 +11,12 @@
 
 ---
 
+<a href="..\scikeo\atmosCorr.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ## <kbd>class</kbd> `atmosCorr`
 Atmospheric Correction in Optical domain 
+
+<a href="..\scikeo\atmosCorr.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -28,6 +34,8 @@ Parameter:
 
 
 ---
+
+<a href="..\scikeo\atmosCorr.py#L200"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -55,6 +63,8 @@ References:
 
 ---
 
+<a href="..\scikeo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ### <kbd>method</kbd> `RAD`
 
 ```python
@@ -78,6 +88,8 @@ Lλ = TOA spectral radiance (Watts/(m2*srad*μm)) ML = Band-specific multiplicat
 Return: An array with radiance values with 3d, i.e. (rows, cols, bands). 
 
 ---
+
+<a href="..\scikeo\atmosCorr.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
