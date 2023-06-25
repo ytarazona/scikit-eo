@@ -34,7 +34,7 @@ rf_class = inst.RF(training_split = 0.7)
 
 Classification results:
 
-![Original image and classified image in the left and right panel respectively.](scikit_eo_00.png){ width=100% }
+![Original image and classified image in the left and right panel respectively.](images/scikit_eo_00.png){ width=100% }
 
 
 ## Example 02: Calibration methods for supervised classification
@@ -70,7 +70,7 @@ error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'),
 
 Calibration results:
 
-![Result of the calibration methods using svm, dt, rf and nb.](scikit_eo_01.png){ width=90% }
+![Result of the calibration methods using svm, dt, rf and nb.](images/scikit_eo_01.png){ width=90% }
 
 
 ## Example 03: Imagery Fusion.
@@ -128,7 +128,7 @@ axes2.grid(False)
 plt.show()
 ```
 
-![Proportion of Variance and accumulative.](scikit_eo_02.png){ width=70% }
+![Proportion of Variance and accumulative.](images/scikit_eo_02.png){ width=70% }
 
 
 ```
@@ -136,7 +136,7 @@ plt.show()
 fusion.get('Contributions_in_%')
 ```
 
-![Contributions of each variable in %.](scikit_eo_03.png){ width=90% }
+![Contributions of each variable in %.](images/scikit_eo_03.png){ width=90% }
 
 
 ```
@@ -149,7 +149,7 @@ plotRGB(arr, bands = [1,2,3], title = 'Fusion of optical and radar images')
 plt.show()
 ```
 
-![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](scikit_eo_04.png){ width=50% }
+![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](images/scikit_eo_04.png){ width=50% }
 
 ## Example 04: Accuracy assessment    
 
@@ -179,4 +179,8 @@ confintervalML(matrix = values, image_pred = img, pixel_size = 30, conf = 1.96,
 
 Results:
 
-![Estimating area and uncertainty with 95%.](scikit_eo_05.png){ width=80%}
+![Estimating area and uncertainty with 95%.](images/scikit_eo_05.png){ width=80%}
+
+```python
+
+```
