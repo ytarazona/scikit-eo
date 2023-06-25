@@ -1,5 +1,7 @@
 <!-- markdownlint-disable -->
 
+<a href="..\scikeo\linearTrend.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 # <kbd>module</kbd> `linearTrend`
 
 
@@ -9,8 +11,12 @@
 
 ---
 
+<a href="..\scikeo\linearTrend.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ## <kbd>class</kbd> `linearTrend`
 Linear Trend in Remote Sensing 
+
+<a href="..\scikeo\linearTrend.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -35,6 +41,8 @@ __init__(image, nodata=-99999)
 
 
 ---
+
+<a href="..\scikeo\linearTrend.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LN`
 
@@ -70,6 +78,8 @@ Return: a dictionary with slope, intercept and p-value obtained. All of them in 
 > Linear regression is widely used to analyze forest degradation or land degradation. Specifically, the slope and its reliability are used as main parameters and they can be obtained with this function. On the other hand, logistic regression allows obtaining a degradation risk map, in other words, it is a probability map. 
 
 ---
+
+<a href="..\scikeo\linearTrend.py#L108"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LR`
 
