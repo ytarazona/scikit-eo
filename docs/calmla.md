@@ -1,5 +1,7 @@
 <!-- markdownlint-disable -->
 
+<a href="..\scikeo\calmla.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 # <kbd>module</kbd> `calmla`
 
 
@@ -9,10 +11,14 @@
 
 ---
 
+<a href="..\scikeo\calmla.py#L18"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ## <kbd>class</kbd> `calmla`
 **Calibrating supervised classification in Remote Sensing** 
 
 This module allows to calibrate supervised classification in satellite images through various algorithms and using approaches such as Set-Approach,  Leave-One-Out Cross-Validation (LOOCV), Cross-Validation (k-fold) and  Monte Carlo Cross-Validation (MCCV) 
+
+<a href="..\scikeo\calmla.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -30,6 +36,8 @@ Parameter:
 
 
 ---
+
+<a href="..\scikeo\calmla.py#L312"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `CV`
 
@@ -71,6 +79,8 @@ Return:
 
 ---
 
+<a href="..\scikeo\calmla.py#L215"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ### <kbd>method</kbd> `LOOCV`
 
 ```python
@@ -103,6 +113,8 @@ This module allows to calibrate supervised classification in satellite images  t
 Return:  
 
 ---
+
+<a href="..\scikeo\calmla.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `MCCV`
 
@@ -145,6 +157,8 @@ Return:
 
 ---
 
+<a href="..\scikeo\calmla.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
 ### <kbd>method</kbd> `SA`
 
 ```python
@@ -177,6 +191,8 @@ This module allows to calibrate supervised classification in satellite images  t
 Return:   
 
 ---
+
+<a href="..\scikeo\calmla.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `splitData`
 
