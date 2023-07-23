@@ -26,7 +26,7 @@ plugins:
     - git-revision-date
     - mkdocs-jupyter:
           include_source: True
-          ignore_h1_titles: True
+          #ignore_h1_titles: True
           execute: True
         #   execute_ignore: "*.ipynb"
           
@@ -67,4 +67,4 @@ nav:
           - tassCap module: tassCap.md
           - plot module: plot.md
           - writeRaster module: writeRaster.md
-          - crop module: crop.md
+          - process module: process.md
