@@ -171,7 +171,8 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     
         matrix: confusion matrix or error matrix in numpy.ndarray.
             
-        image_pred: Array with 2d (rows, cols). This array should be the image classified with predicted classes.
+        image_pred: Could be an array with 2d (rows, cols). This array should be the image classified 
+                    with predicted classes. Or, could be a list with number of pixels for each class.
             
         pixel_size: Pixel size of the image classified. By default is 10m of Sentinel-2.
             
@@ -195,32 +196,53 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     if not isinstance(matrix, (np.ndarray)):
         raise TypeError('"matrix" must be numpy.ndarray with rows and cols.')
         
-    if not isinstance(image_pred, (np.ndarray)):
-        raise TypeError('"image" must be numpy.ndarray with rows and cols.')
-    
-    # xlabel
-    if nodata is None:
-        image_pred = image_pred
-    else:
-        image_pred[image_pred == nodata] = np.nan
+    if isinstance(image_pred, (np.ndarray)):
         
-    # classes
-    iclass = np.unique(image_pred[~np.isnan(image_pred)])
+        if image_pred.ndim == 2:
+            
+            # xlabel
+            if nodata is None:
+                image_pred = image_pred
+            else:
+                image_pred[image_pred == nodata] = np.nan
+        
+            # classes
+            iclass = np.unique(image_pred[~np.isnan(image_pred)])
     
-    # ni
-    ni = np.sum(matrix, axis = 1)
+            # ni
+            ni = np.sum(matrix, axis = 1)
     
-    # number of classes
-    n = matrix.shape[0]
+            # number of classes
+            n = matrix.shape[0]
     
-    pixels = []
+            pixels = []
     
-    for i in iclass:
-        pixels.append((image_pred == i).sum()) #((30**2)/10000) # ha    
+            for i in iclass:
+                pixels.append((image_pred == i).sum()) #((30**2)/10000) # ha    
     
-    wi = (np.array([pixels])/np.array([pixels]).sum()).flatten()
+            wi = (np.array([pixels])/np.array([pixels]).sum()).flatten()
     
-    pixels = np.array(pixels)
+            pixels = np.array(pixels)
+        
+        elif image_pred.ndim == 1:
+            
+            # ni
+            ni = np.sum(matrix, axis = 1)
+    
+            # number of classes
+            n = matrix.shape[0]
+            
+            # classes
+            iclass = np.arange(len(image_pred))
+            
+            # pixels
+            pixels = np.array(image_pred)
+            
+            # pesos
+            wi = (np.array([pixels])/np.array([pixels]).sum()).flatten()
+    
+        else:
+            raise TypeError('"image" must be numpy.ndarray')
     
     # copy of matrix
     matConf = matrix.astype(float).copy()
@@ -279,26 +301,54 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
     # Area total estimated
     A = total[0:n]*(np.array(pixels).sum())*(pixel_size**2/10000)
     
-    # print info
-    def print_info(matrixCEA, a, b, c, d):
-        print('***** Confusion Matrix by Estimated Proportions of area an uncertainty*****')
-        print('')
-        print('Overall accuracy with 95%')
-        print(f'{oa:.4f} ± {conf_int_oa:.4f}')
-        print('')
-        print('Confusion matrix')
-        print(matrixCEA)
-        print('')
-        print('User´s accuracy with 95%')
-        for i in range(b.shape[0]):
-            print(f'{iclass[i]}: {a[i]:.4f} ± {b[i]:.4f}')
-        print('')
-        print('Estimating area (Ha) and uncertainty with 95%')
-        for i in range(b.shape[0]):
-            print(f'{iclass[i]}: {c[i]:.4f} ± {d[i]:.4f}')
-            
-    return print_info(cm_prop_area, 
-                      ua, 
-                      conf_int_ua, 
-                      A, 
-                      SA)
+    result = {'Overall_accuracy':oa,
+              'CM_estimatedPA':cm_prop_area,
+              'Users_accuracy':ua,
+              'Users_accuracy_95%':conf_int_ua,
+              'Area_total_estimated': A,
+              'Area_at_95%': SA,
+              'conf_int_oa': conf_int_oa}
+    
+    return result
+
+
+def print_info(params):
+    
+    ''' Information: Confusion Matrix by Estimated Proportions of area an uncertainty
+    
+    Parameters:
+    
+        params: ```confintervalML``` result. See the function: https://github.com/ytarazona/scikit-eo/blob/main/scikeo/process.py
+    
+    Return:
+        
+        Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval 
+        and estimated area with confidence interval as well.
+        
+    Note:
+        This function was tested using ground-truth values obtained by Olofsson et al. (2014).
+        
+    '''
+    oa = params.get('Overall_accuracy')
+    matrixCEA = params.get('CM_estimatedPA')
+    a = params.get('Users_accuracy')
+    b = params.get('Users_accuracy_95%')
+    c = params.get('Area_total_estimated')
+    d = params.get('Area_at_95%')
+    e = params.get('conf_int_oa')
+    
+    print('***** Confusion Matrix by Estimated Proportions of area an uncertainty*****')
+    print('')
+    print('Overall accuracy with 95%')
+    print(f'{oa:.4f} ± {e:.4f}')
+    print('')
+    print('Confusion matrix')
+    print(matrixCEA)
+    print('')
+    print('User´s accuracy with 95%')
+    for i in range(b.shape[0]):
+        print(f'{iclass[i]}: {a[i]:.4f} ± {b[i]:.4f}')
+    print('')
+    print('Estimating area (Ha) and uncertainty with 95%')
+    for i in range(b.shape[0]):
+        print(f'{iclass[i]}: {c[i]:.4f} ± {d[i]:.4f}')
