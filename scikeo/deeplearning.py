@@ -255,6 +255,3 @@ class DL(object):
     
         return output
     
-    def CNN():
-        pass
-    
