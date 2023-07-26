@@ -12,6 +12,7 @@ from scikeo.sma import sma
 from scikeo.pca import PCA
 from scikeo.tassCap import tassCap
 from scikeo.fusionrs import fusionrs
+from scikeo.process import crop
 
 
 def test_confintervalML():
@@ -106,9 +107,19 @@ def test_fusionrs():
     cum_var = fusion.get('Cumulative_variance')*100
     assert round(cum_var[8],0) == 100
 
-def test_crop_all_returns_list(in_paths, output_dir, basic_geometry_gdf):
+def test_crop():
     """Test that crop all returns a list."""
-    img_list = es.crop_all(
-        in_paths, output_dir, basic_geometry_gdf, overwrite=True
-    )
-    assert type(img_list) == list
+    # raster to be clipped
+    path_raster = "tests/data/LC08_232066_20190727.tif"
+    # area of Interes -> shapefile
+    path_shp = "tests/data/clip.shp"
+    # Path where the image will be saved
+    output_path_raster = "tests/data"
+    # The raster name
+    output_name = 'LC08_232066_20190727_clip'
+    # Applying the crop() function:
+    crop(image = path_raster, shp = path_shp, 
+         filename = output_name, 
+         filepath = output_path_raster)
+    clip_image = rasterio.open(output_path_raster + '/' + output_name+ '.tif')
+    assert type(clip_image) == rasterio.io.DatasetReader
