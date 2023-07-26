@@ -8,8 +8,9 @@
 [![Youtube](https://img.shields.io/badge/YouTube-Channel-red)]()
 [![Downloads](https://pepy.tech/badge/scikeo)](https://pepy.tech/project/scikeo)
 [![Downloads](https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/docs-passing-brightgreen.svg)]()
+[![tests](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml/badge.svg)](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml)
 
-<img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
+
 
 
 <!-- #region -->
