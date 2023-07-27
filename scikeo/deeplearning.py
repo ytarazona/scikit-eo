@@ -60,6 +60,9 @@ class DL(object):
         #if np.isnan(np.sum(arr)):
             #arr[np.isnan(arr)] = self.nodata
         
+        # dealing with nan
+        key_nan = np.isnan(np.sum(arr[:,0]))
+        
         if key_nan:
             # saving un array for predicted classes
             class_final = arr[:, 0].copy()
