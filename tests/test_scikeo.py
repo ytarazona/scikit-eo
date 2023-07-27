@@ -13,6 +13,12 @@ from scikeo.pca import PCA
 from scikeo.tassCap import tassCap
 from scikeo.fusionrs import fusionrs
 from scikeo.process import crop
+from scikeo.rkmeans import rkmeans
+from scikeo.mla import MLA
+from scikeo.process import extract
+from dbfread import DBF
+from scikeo.calmla import calmla
+from scikeo.deeplearning import DL
 
 
 def test_confintervalML():
@@ -31,11 +37,7 @@ def test_confintervalML():
     assert round(res.get('Overall_accuracy'),3) == 0.947
     
 def test_sma():
-    """Confusion Matrix by Estimated Proportions of area an uncertainty is tested. 
-    
-    To carry out it, this function was tested using ground-truth values obtained by 
-    Olofsson et al. (2014).
-    """
+    """Spectral mixture analysis is tested."""
     # image to be processed
     img = rasterio.open('tests/data/LC08_232066_20190727.tif')
     # endmembers
@@ -49,11 +51,7 @@ def test_sma():
     assert frac.shape[2] == 3
     
 def test_pca():
-    """Confusion Matrix by Estimated Proportions of area an uncertainty is tested. 
-    
-    To carry out it, this function was tested using ground-truth values obtained by 
-    Olofsson et al. (2014).
-    """
+    """Principal Component Analysis is tested."""
     # image to be processed
     img = rasterio.open('tests/data/LC08_232066_20190727.tif')
     # Applying the PCA function:
@@ -62,11 +60,7 @@ def test_pca():
     assert img_pca.shape[2] == 6
 
 def test_tassCap():
-    """Confusion Matrix by Estimated Proportions of area an uncertainty is tested. 
-    
-    To carry out it, this function was tested using ground-truth values obtained by 
-    Olofsson et al. (2014).
-    """
+    """Tasseled-Cap is tested."""
     # image to be processed
     img = rasterio.open('tests/data/LC08_232066_20190727.tif')
     # Applying the tassCap function:
@@ -74,28 +68,7 @@ def test_tassCap():
     assert arr_tct.shape[2] == 3
 
 def test_fusionrs():
-    """Confusion Matrix by Estimated Proportions of area an uncertainty is tested. 
-    
-    To carry out it, this function was tested using ground-truth values obtained by 
-    Olofsson et al. (2014).
-    """
-    # image to be processed
-    # optical
-    optical = rasterio.open('tests/data/LC08_003069_20180906_clip.tif')
-    # radar
-    radar = rasterio.open('tests/data/S1_2018_VV_VH_clip.tif')
-    # Applying the fusionrs function:
-    fusion = fusionrs(optical = optical, radar = radar)
-    # Cumulative variance (%)
-    cum_var = fusion.get('Cumulative_variance')*100
-    assert round(cum_var[8],0) == 100
-
-def test_fusionrs():
-    """Confusion Matrix by Estimated Proportions of area an uncertainty is tested. 
-    
-    To carry out it, this function was tested using ground-truth values obtained by 
-    Olofsson et al. (2014).
-    """
+    """Fusion optical and radar satelite images is tested."""
     # image to be processed
     # optical
     optical = rasterio.open('tests/data/LC08_003069_20180906_clip.tif')
@@ -108,7 +81,7 @@ def test_fusionrs():
     assert round(cum_var[8],0) == 100
 
 def test_crop():
-    """Test that crop all returns a list."""
+    """cliping a satellite images is tested."""
     # raster to be clipped
     path_raster = "tests/data/LC08_232066_20190727.tif"
     # area of Interes -> shapefile
@@ -123,3 +96,66 @@ def test_crop():
          filepath = output_path_raster)
     clip_image = rasterio.open(output_path_raster + '/' + output_name+ '.tif')
     assert type(clip_image) == rasterio.io.DatasetReader
+
+def test_kmeans():
+    """k-means classification is tested."""
+    # image to be processed
+    img = rasterio.open('tests/data/LC08_232066_20190727.tif')
+    # Applying rkmeans() algorithm with four classes:
+    arr_rkmeans = rkmeans(image = img, k = 4, max_iter = 300)
+    assert type(arr_rkmeans) == np.ndarray
+
+def test_machineLearning():
+    """Machine learning algorithms are tested."""
+    # image to be processed
+    path_raster = "tests/data/LC08_232066_20190727.tif"
+    img = rasterio.open(path_raster)
+    # endmembers
+    path_endm = "tests/data/endmembers.dbf"
+    endm = DBF(path_endm)
+    endm = pd.DataFrame(endm)
+    # Instance of mla():
+    inst = MLA(image = img, endmembers = endm)
+    # Applying Random Forest with 60% of data to train
+    rf_class = inst.RF(training_split = 0.6)
+    assert rf_class.get('Overall_Accuracy') >= 0.7
+    
+def test_CalibratingMachineLearning():
+    """Calibrating machine learning algorithms are tested."""
+    # endmembers
+    path_endm = "tests/data/endmembers.dbf"
+    endm = DBF(path_endm)
+    endm = pd.DataFrame(endm)
+    # Instance of Calmla():
+    inst = calmla(endmembers = endm)
+    # Instance of splitData():
+    data = inst.splitData()
+    # Calibrating with Monte Carlo Cross-Validation Calibration (MCCV)
+    error_mccv = inst.MCCV(split_data = data, models = ('svm', 'dt', 'rf', 'nb'), n_iter = 10)
+    # error of Random Forest
+    error_rf = np.mean(np.array(error_mccv.get('rf')))
+    # error of Decision Tree
+    error_dt = np.mean(np.array(error_mccv.get('dt')))
+    assert error_dt > error_rf
+    
+def test_DeepLearning():
+    """Deep Learning is tested."""
+    # image to be processed
+    path_raster = "tests/data/LC08_232066_20190727.tif"
+    img = rasterio.open(path_raster)
+    # endmembers
+    path_endm = "tests/data/endmembers.dbf"
+    endm = DBF(path_endm)
+    endm = pd.DataFrame(endm)
+    # Instance of DL():
+    inst = DL(image = img, endmembers = endm)
+    # Applying the FullyConnected() function of Deep Learning:
+    fc = inst.FullyConnected(hidden_layers = 4, 
+                         hidden_units = [64,16,8,8], 
+                         output_units = 4,
+                         input_shape = (6,), 
+                         epochs = 100, 
+                         batch_size = 32, 
+                         training_split = 0.8)
+    
+    assert fc.get('Overall_Accuracy') >= 0.7
