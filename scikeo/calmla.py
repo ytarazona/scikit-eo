@@ -47,7 +47,7 @@ class calmla(object):
             
             for i in np.arange(self.endm.shape[1]):
                 
-                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 1): indx = i; break
+                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 0): indx = i; break
         
         # if the file is .dbf    
         elif isinstance(self.endm, (DBF)): # isinstance() function With Inheritance
@@ -56,7 +56,7 @@ class calmla(object):
             
             for i in np.arange(self.endm.shape[1]):
                 
-                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 1): indx = i; break
+                if all(self.endm.iloc[:,int(i)] < 100) & all(self.endm.iloc[:,int(i)] >= 0): indx = i; break
         
         else:
             raise TypeError('"endm" must be .csv (pandas.core.frame.DataFrame).')
