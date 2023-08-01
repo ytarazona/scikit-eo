@@ -4,21 +4,30 @@ site_url: https://ytarazona.github.io/scikit-eo
 
 repo_url: https://ytarazona.github.io/scikit-eo
 
-#theme:
-    #palette:
-        #scheme: preference
-    #name: material
-    #icon:
-        #repo: fontawesome/brands/github
-    #features:
-        #- navigation.instant
-        #- navigation.tracking
-        #- navigation.top
-        #- search.highlight
-        #- search.share
-    #custom_dir: "docs/overrides"
+theme:
+    palette:
+        - scheme: preference
+        toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    name: material
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
+        - search.highlight
+        - search.share
+    custom_dir: "docs/overrides"
 
-theme: readthedocs
+#theme: readthedocs
 
 plugins:
     - search
