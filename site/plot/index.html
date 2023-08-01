@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ytarazona.github.io/scikit-eo/plot/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>plot module - scikit-eo</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "plot module";
+        var mkdocs_page_input_path = "plot.md";
+        var mkdocs_page_url = "/scikit-eo/plot/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> scikit-eo
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../get-started/">Get Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/ytarazona/scikit-eo/issues">Report Issues</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mla/">mla module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calmla/">calmla module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rkmeans/">rkmeans module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calkmeans/">calkmeans module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pca/">pca module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../atmosCorr/">atmosCorr module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deeplearning/">deeplearning module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linearTrend/">linearTrend module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fusionrs/">fusionrs module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sma/">sma module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tassCap/">tassCap module</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">plot module</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#function-plothist">function plotHist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#function-plotrgb">function plotRGB</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../writeRaster/">writeRaster module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../process/">process module</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">scikit-eo</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>API Reference &raquo;</li>
+      <li>plot module</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- markdownlint-disable -->
+
+<p><a href="..\scikeo\plot.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h1 id="module-plot"><kbd>module</kbd> <code>plot</code><a class="headerlink" href="#module-plot" title="Permanent link">&para;</a></h1>
+<hr />
+<p><a href="..\scikeo\plot.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-plothist"><kbd>function</kbd> <code>plotHist</code><a class="headerlink" href="#function-plothist" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">plotHist</span><span class="p">(</span>
+    <span class="n">image</span><span class="p">,</span>
+    <span class="n">bands</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>This function allows to plot satellite images histogram. </p>
+<p><strong>Parameters:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`image`&lt;/b&gt;:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.
+
+
+ - &lt;b&gt;`bands`&lt;/b&gt;:  Must be specified as a number of a list.
+
+
+ - &lt;b&gt;`bins`&lt;/b&gt;:  By default is 128.
+
+
+ - &lt;b&gt;`alpha`&lt;/b&gt;:  Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates 100%. By default is 80%.
+
+
+ - &lt;b&gt;`title`&lt;/b&gt;:  Assigned title.
+
+
+ - &lt;b&gt;`xlabel`&lt;/b&gt;:  X axis title.
+
+
+ - &lt;b&gt;`ylabel`&lt;/b&gt;:  Y axis title.
+
+
+ - &lt;b&gt;`label`&lt;/b&gt;:  Labeling the histogram.
+
+
+ - &lt;b&gt;`ax`&lt;/b&gt;:  current axes
+
+
+ - &lt;b&gt;`**kwargs`&lt;/b&gt;:  These will be passed to the matplotlib imshow(), please see full lists at: 
+ - &lt;b&gt;`https`&lt;/b&gt;: //matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html
+</code></pre></div></td></tr></table></div>
+<p>Return: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`ax `&lt;/b&gt;:  A histogram of an image.
+</code></pre></div></td></tr></table></div>
+<hr />
+<p><a href="..\scikeo\plot.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-plotrgb"><kbd>function</kbd> <code>plotRGB</code><a class="headerlink" href="#function-plotrgb" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">plotRGB</span><span class="p">(</span>
+    <span class="n">image</span><span class="p">,</span>
+    <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;std&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Plotting an image in RGB. </p>
+<p>This function allows to plot an satellite image in RGB channels.  </p>
+<p><strong>Parameters:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`image`&lt;/b&gt;:  Optical images. It must be rasterio.io.DatasetReader with 3d.
+
+
+ - &lt;b&gt;`bands`&lt;/b&gt;:  A list contain the order of bands to be used in order to plot in RGB. For example,  for six bands (blue, green, red, nir, swir1 and swir2), number four (4) indicates   the swir1 band, number three (3) indicates the nir band and the number two (2) indicates  the red band.
+
+
+ - &lt;b&gt;`stretch`&lt;/b&gt;:  Contrast enhancement using the histogram. There are two options here: i) using  standard deviation (&#39;std&#39;) and ii) using percentiles (&#39;per&#39;). For default is &#39;std&#39;, which means  standard deviation.
+
+
+ - &lt;b&gt;`title`&lt;/b&gt;:  Assigned title.
+
+
+ - &lt;b&gt;`xlabel`&lt;/b&gt;:  X axis title.
+
+
+ - &lt;b&gt;`ylabel`&lt;/b&gt;:  Y axis title.
+
+
+ - &lt;b&gt;`ax`&lt;/b&gt;:  current axes
+
+
+ - &lt;b&gt;`**kwargs`&lt;/b&gt;:  These will be passed to the matplotlib imshow(), please see full lists at: 
+ - &lt;b&gt;`https`&lt;/b&gt;: //matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
+</code></pre></div></td></tr></table></div>
+<p>Return: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`ax `&lt;/b&gt;:  Graphic of an image in RGB.
+</code></pre></div></td></tr></table></div>
+<hr />
+<p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tassCap/" class="btn btn-neutral float-left" title="tassCap module"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../writeRaster/" class="btn btn-neutral float-right" title="writeRaster module">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tassCap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../writeRaster/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
