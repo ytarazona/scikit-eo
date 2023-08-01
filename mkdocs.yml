@@ -6,8 +6,10 @@ repo_url: https://ytarazona.github.io/scikit-eo
 
 theme:
     palette:
-        - scheme: preference
-        toggle:
+        - scheme: default
+          #   primary: blue
+          #   accent: indigo
+          toggle:
               icon: material/toggle-switch-off-outline
               name: Switch to dark mode
         - scheme: slate
