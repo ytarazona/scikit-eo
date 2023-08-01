@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ytarazona.github.io/scikit-eo/process/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>process module - scikit-eo</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "process module";
+        var mkdocs_page_input_path = "process.md";
+        var mkdocs_page_url = "/scikit-eo/process/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> scikit-eo
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../get-started/">Get Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/ytarazona/scikit-eo/issues">Report Issues</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mla/">mla module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calmla/">calmla module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rkmeans/">rkmeans module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calkmeans/">calkmeans module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pca/">pca module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../atmosCorr/">atmosCorr module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deeplearning/">deeplearning module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linearTrend/">linearTrend module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fusionrs/">fusionrs module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sma/">sma module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tassCap/">tassCap module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plot/">plot module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../writeRaster/">writeRaster module</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">process module</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#function-crop">function crop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#function-extract">function extract</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#function-confintervalml">function confintervalML</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">scikit-eo</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>API Reference &raquo;</li>
+      <li>process module</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- markdownlint-disable -->
+
+<p><a href="..\scikeo\process.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h1 id="module-process"><kbd>module</kbd> <code>process</code><a class="headerlink" href="#module-process" title="Permanent link">&para;</a></h1>
+<hr />
+<p><a href="..\scikeo\process.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-crop"><kbd>function</kbd> <code>crop</code><a class="headerlink" href="#function-crop" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">crop</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">shp</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>This algorithm allows to clip a raster (.tif) including a satellite image using a shapefile. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>
+<p><b><code>image</code></b>:  This parameter can be a string with the raster path (e.g., r'/home/image/b3.tif') or it can be a rasterio.io.DatasetReader type. </p>
+</li>
+<li>
+<p><b><code>shp</code></b>:  Vector file, tipically shapefile. </p>
+</li>
+<li>
+<p><b><code>filename</code></b>:  The image name to be saved. </p>
+</li>
+<li>
+<p><b><code>filepath</code></b>:  The path which the image will be stored. </p>
+</li>
+</ul>
+<p>Return: </p>
+<p>A raster in your filepath. </p>
+<hr />
+<p><a href="..\scikeo\process.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-extract"><kbd>function</kbd> <code>extract</code><a class="headerlink" href="#function-extract" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">extract</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">shp</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>This algorithm allows to extract raster values using a shapefile. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>
+<p><b><code>image</code></b>:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d. </p>
+</li>
+<li>
+<p><b><code>shp</code></b>:  Vector file, tipically shapefile. </p>
+</li>
+</ul>
+<p>Return: </p>
+<p>A dataframe with raster values obtained. </p>
+<p><strong>Note:</strong></p>
+<blockquote>
+<p>This function is usually used to extract raster values to be used on machine learning algorithms. </p>
+</blockquote>
+<hr />
+<p><a href="..\scikeo\process.py#L158"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-confintervalml"><kbd>function</kbd> <code>confintervalML</code><a class="headerlink" href="#function-confintervalml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">confintervalML</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">image_pred</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">conf</span><span class="o">=</span><span class="mf">1.96</span><span class="p">,</span> <span class="n">nodata</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>The error matrix is a simple cross-tabulation of the class labels allocated by the classification of the remotely  sensed data against the reference data for the sample sites. The error matrix organizes the acquired sample data  in a way that summarizes key results and aids the quantification of accuracy and area. The main diagonal of the error  matrix highlights correct classifications while the off-diagonal elements show omission and commission errors.  The cell entries and marginal values of the error matrix are fundamental to both accuracy assessment and area  estimation. The cell entries of the population error matrix and the parameters derived from it must be estimated  from a sample. This function shows how to obtain a confusion matrix by estimated proportions of area with a confidence interval at 95% (1.96). </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>
+<p><b><code>matrix</code></b>:  confusion matrix or error matrix in numpy.ndarray.  </p>
+</li>
+<li>
+<p><b><code>image_pred</code></b>:  Array with 2d (rows, cols). This array should be the image classified with predicted classes.  </p>
+</li>
+<li>
+<p><b><code>pixel_size</code></b>:  Pixel size of the image classified. By default is 10m of Sentinel-2.  </p>
+</li>
+<li>
+<p><b><code>conf</code></b>:  Confidence interval. By default is 95%. </p>
+</li>
+</ul>
+<p>Return: </p>
+<p>Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well. </p>
+<p><strong>Note:</strong></p>
+<blockquote>
+<p>Columns and rows in a confusion matrix indicate reference and prediction respectively. 
+Reference: - Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148: 42–57. doi:https://doi.org/10.1016/j.rse.2014.02.015. </p>
+</blockquote>
+<hr />
+<p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../writeRaster/" class="btn btn-neutral float-left" title="writeRaster module"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../writeRaster/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
