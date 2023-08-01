@@ -11,7 +11,7 @@
 [![tests](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml/badge.svg)](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml)
 
 
-
+<img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
 <!-- #region -->
 # Introduction
@@ -185,7 +185,7 @@ axes[1].grid(False)
 </a>
 </p>
 
-<!-- #region -->
+
 -   Free software: Apache Software License 2.0
 -   Documentation: 
 
@@ -199,4 +199,3 @@ Special thanks to:
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
-<!-- #endregion -->
