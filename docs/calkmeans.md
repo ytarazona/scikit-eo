@@ -33,39 +33,33 @@ This function allows to calibrate the kmeans algorithm. It is possible to obtain
 
 
 **Parameters:**
-  
+ 
+ - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d.  
 
 
-     - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d. 
+ - <b>`k`</b>:  k This argument is None when the objective is to obtain the best 'k' value.   f the objective is to select the best algorithm embedded in kmeans, please specify a 'k' value. 
 
 
-     - <b>`k`</b>:  k This argument is None when the objective is to obtain the best 'k' value.  If the objective is to select the best algorithm embedded in kmeans, please specify a 'k' value. 
+ - <b>`max_iter`</b>:  The maximum number of iterations allowed. Strictly related to KMeans. Please see 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html 
 
 
-     - <b>`max_iter`</b>:  The maximum number of iterations allowed. Strictly related to KMeans. Please see 
-     - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html 
+ - <b>`algo`</b>:  It can be "auto" and 'elkan'. "auto" and "full" are deprecated and they will be   removed in Scikit-Learn 1.3. They are both aliases for "lloyd".  
 
 
-     - <b>`algo`</b>:  It can be "auto" and 'elkan'. "auto" and "full" are deprecated and they will be  removed in Scikit-Learn 1.3. They are both aliases for "lloyd". 
+ - <b>`Changed in version 1.1`</b>:  Renamed “full” to “lloyd”, and deprecated “auto” and “full”.   Changed “auto” to use “lloyd” instead of “elkan”.  
 
 
-     - <b>`Changed in version 1.1`</b>:  Renamed “full” to “lloyd”, and deprecated “auto” and “full”.  Changed “auto” to use “lloyd” instead of “elkan”. 
+ - <b>`n_iter`</b>:  Iterations number to obtain the best 'k' value. 'n_iter' must be greater than the   number of classes expected to be obtained in the classification. Default is 10.  
 
 
-     - <b>`n_iter`</b>:  Iterations number to obtain the best 'k' value. 'n_iter' must be greater than the  number of classes expected to be obtained in the classification. Default is 10. 
+ - <b>`nodata`</b>:  The NoData value to replace with -99999.   
 
 
-     - <b>`nodata`</b>:  The NoData value to replace with -99999.   
+ - <b>`**kwargs`</b>:  These will be passed to scikit-learn KMeans, please see full lists at: 
+ - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html. 
 
-
-     - <b>`**kwargs`</b>:  These will be passed to scikit-learn KMeans, please see full lists at: 
-     - <b>`https`</b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html. 
-
-Return: 
-
-Labels of classification as numpy object with 2d. 
-
-
+Return: Labels of classification as numpy object with 2d. 
 
 
 
