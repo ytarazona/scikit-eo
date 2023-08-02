@@ -13,7 +13,7 @@ def rkmeans(image, k, nodata = -99999, **kwargs):
     the ```calkmeans``` function embedded in this package.
         
     Parameters:
-            
+    
         image: Optical images. It must be rasterio.io.DatasetReader with 3d.
         
         k: The number of clusters to be detected.
