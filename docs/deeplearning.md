@@ -39,21 +39,7 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\deeplearning.py#L258"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
-
-### <kbd>method</kbd> `CNN`
-
-```python
-CNN()
-```
-
-
-
-
-
----
-
-<a href="..\scikeo\deeplearning.py#L109"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\deeplearning.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `FullyConnected`
 
