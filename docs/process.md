@@ -97,7 +97,7 @@ The error matrix is a simple cross-tabulation of the class labels allocated by t
  - <b>`matrix`</b>:  confusion matrix or error matrix in numpy.ndarray.  
 
 
- - <b>`image_pred`</b>:  Array with 2d (rows, cols). This array should be the image classified with predicted classes.  
+ - <b>`image_pred`</b>:  Could be an array with 2d (rows, cols). This array should be the image classified   with predicted classes. Or, could be a list with number of pixels for each class.  
 
 
  - <b>`pixel_size`</b>:  Pixel size of the image classified. By default is 10m of Sentinel-2.  
@@ -107,14 +107,49 @@ The error matrix is a simple cross-tabulation of the class labels allocated by t
 
 Return: 
 
-Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well. 
+Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well.  
+
+Reference: Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices  
+ - <b>`for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148`</b>:  42–57.  
+ - <b>`doi`</b>: https://doi.org/10.1016/j.rse.2014.02.015. 
 
 
 
 **Note:**
 
 > Columns and rows in a confusion matrix indicate reference and prediction respectively. 
->Reference: - Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148: 42–57. doi:https://doi.org/10.1016/j.rse.2014.02.015. 
+
+
+---
+
+<a href="..\scikeo\process.py#L314"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>function</kbd> `print_info`
+
+```python
+print_info(params)
+```
+
+Information: Confusion Matrix by Estimated Proportions of area an uncertainty 
+
+
+
+**Parameters:**
+ 
+
+
+ - <b>`params`</b>:  ```confintervalML``` result. See the function: https://github.com/ytarazona/scikit-eo/blob/main/scikeo/process.py 
+
+Return: 
+
+Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well. 
+
+
+
+**Note:**
+
+> This function was tested using ground-truth values obtained by Olofsson et al. (2014). 
+>
 
 
 
