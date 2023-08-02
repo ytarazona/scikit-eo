@@ -10,33 +10,31 @@ def plotHist(image, bands = 1, bins = 128, alpha = 0.8, title = None, xlabel = N
     '''
     This function allows to plot satellite images histogram.
     
-        Parameters:
+    Parameters:
+        image: Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.
             
-            image: Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.
+        bands: Must be specified as a number of a list.
             
-            bands: Must be specified as a number of a list.
+        bins: By default is 128. 
             
-            bins: By default is 128. 
+        alpha: Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates
+               100%. By default is 80%.
             
-            alpha: Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates
-            100%. By default is 80%.
-            
-            title: Assigned title.
+        title: Assigned title.
         
-            xlabel: X axis title.
+        xlabel: X axis title.
         
-            ylabel: Y axis title.
+        ylabel: Y axis title.
             
-            label: Labeling the histogram.
+        label: Labeling the histogram.
         
-            ax: current axes
+        ax: current axes
         
-            **kwargs: These will be passed to the matplotlib imshow(), please see full lists at:
+        **kwargs: These will be passed to the matplotlib imshow(), please see full lists at:
                 https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html
     
-        Return:
-        
-            ax : A histogram of an image.
+    Return:
+        ax : A histogram of an image.
         
     '''
     
@@ -97,33 +95,32 @@ def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None
     
     This function allows to plot an satellite image in RGB channels.
         
-        Parameters:
+    Parameters:
             
-            image: Optical images. It must be rasterio.io.DatasetReader with 3d.
+        image: Optical images. It must be rasterio.io.DatasetReader with 3d.
             
-            bands: A list contain the order of bands to be used in order to plot in RGB. For example,
+        bands: A list contain the order of bands to be used in order to plot in RGB. For example,
                    for six bands (blue, green, red, nir, swir1 and swir2), number four (4) indicates 
                    the swir1 band, number three (3) indicates the nir band and the number two (2) indicates
                    the red band.
                    
-            stretch: Contrast enhancement using the histogram. There are two options here: i) using
+        stretch: Contrast enhancement using the histogram. There are two options here: i) using
                      standard deviation ('std') and ii) using percentiles ('per'). For default is 'std', which means
                      standard deviation.
             
-            title: Assigned title.
+        title: Assigned title.
         
-            xlabel: X axis title.
+        xlabel: X axis title.
         
-            ylabel: Y axis title.
+        ylabel: Y axis title.
         
-            ax: current axes
+        ax: current axes
         
-            **kwargs: These will be passed to the matplotlib imshow(), please see full lists at:
+        **kwargs: These will be passed to the matplotlib imshow(), please see full lists at:
                 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
     
-        Return:
-        
-            ax : Graphic of an image in RGB.
+    Return:
+        ax : Graphic of an image in RGB.
         
     '''
     
