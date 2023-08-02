@@ -47,7 +47,9 @@ Return:
 
 A dictionary. 
 
-References: Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A.  Fusing Landsat and SAR data for mapping tropical deforestation through machine learning  classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote  Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021. 
+References: 
+
+Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A.  Fusing Landsat and SAR data for mapping tropical deforestation through machine learning  classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote  Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021. 
 
 
 
