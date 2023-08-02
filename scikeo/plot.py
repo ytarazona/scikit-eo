@@ -34,7 +34,7 @@ def plotHist(image, bands = 1, bins = 128, alpha = 0.8, title = None, xlabel = N
                 https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html
     
     Return:
-        ax : A histogram of an image.
+        ax: A histogram of an image.
         
     '''
     
@@ -120,7 +120,7 @@ def plotRGB(image, bands = [3,2,1], stretch = 'std', title = None, xlabel = None
                 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
     
     Return:
-        ax : Graphic of an image in RGB.
+        ax: Graphic of an image in RGB.
         
     '''
     
