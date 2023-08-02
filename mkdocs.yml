@@ -63,6 +63,7 @@ nav:
     - Installation: installation.md
     - Get Started: get-started.md
     - Tutorials: tutorials.md
+    - Contributors: contributors.md
     - Contributing: contributing.md
     - FAQ: faq.md
     - Report Issues: https://github.com/ytarazona/scikit-eo/issues
