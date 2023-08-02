@@ -28,16 +28,21 @@ class calmla(object):
         
         '''
         Parameter:
-            
             endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember. 
-                    Rows represent the endmembers and columns represent the spectral bands.
-                    The number of bands must be equal to the number of endmembers.
-                    E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$ 
-                    is rows with the number of endmembers and 6 is the number of bands 
-                    (should be equal).
-                    In addition, Endmembers must have a field (type int or float) with the names 
-                    of classes to be predicted.
-                    
+                        Rows represent the endmembers and columns represent the spectral bands.
+                        The number of bands must be equal to the number of endmembers.
+                        E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$ 
+                        is rows with the number of endmembers and 6 is the number of bands 
+                        (should be equal).
+                        In addition, Endmembers must have a field (type int or float) with the names 
+                        of classes to be predicted.
+        
+        References:
+            Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A. 
+            Fusing Landsat and SAR data for mapping tropical deforestation through machine learning 
+            classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote 
+            Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021.
+      
         '''
         
         self.endm = endmembers
@@ -112,6 +117,7 @@ class calmla(object):
                   https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
         Return:  
+            A graphic with errors for each machine learning algorithms.
         '''
         svm_error_sa = []
         dt_error_sa = []
@@ -234,7 +240,8 @@ class calmla(object):
             **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
                   https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
-        Return: 
+        Return:  
+            A graphic with errors for each machine learning algorithms. 
         '''
         svm_error_loocv = []
         dt_error_loocv = []
@@ -331,7 +338,8 @@ class calmla(object):
             **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
                   https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
-        Return:
+        Return:  
+            A graphic with errors for each machine learning algorithms.
         '''
         
         svm_error_cv = []
@@ -431,7 +439,8 @@ class calmla(object):
             **kwargs: These will be passed to SVM, DT, RF, NB and NN, please see full lists at:
                   https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
             
-        Return: 
+        Return:  
+            A graphic with errors for each machine learning algorithms. 
         '''
         
         svm_error_mccv = []
