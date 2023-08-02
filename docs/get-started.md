@@ -1,9 +1,9 @@
 <!-- #region -->
-# Get Started
+# **Get Started**
 
 This Get Started is intended as a guide to apply several remote sensing tools in order to analyze and process satellite imagery such as Landsat, Sentinel-2, etc. Various methods including ML/DL, Spectral Mixture Analysis, Calibrations methods, Principal Component Analysis, among others are available in this python package. 
 
-# Content
+# **Content**
 
 [Example 01: Random Forest (RF) classifier](#example01)
 
@@ -11,11 +11,11 @@ This Get Started is intended as a guide to apply several remote sensing tools in
 
 [Example 03: Imagery Fusion - optical/radar](#example03)
 
-[Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95% (1.96)](#example04)
+[Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95%](#example04)
 
-# Brief examples
+# **Brief examples**
 
-## <a name = "example01"></a>Example 01: Random Forest (RF) classifier
+## <a name = "example01"></a>**Example 01: Random Forest (RF) classifier**
 
 In this example, in a small region of southern Brazil, optical imagery from Landsat-8 OLI (Operational Land Imager) will be used to classify land cover using the machine learning algorithm Random Forest (RF) [(Breiman, 2001)](https://doi.org/10.1023/A:1010933404324). Four types of land cover will be mapped, i.e., agriculture, forest, bare soil and water. The input data needed is the satellite image and the spectral signatures collected. The output as a dictionary will provide: i) confusion matrix, ii) overall accuracy, iii) kappa index and iv) a classes map.
 
@@ -126,7 +126,7 @@ axes[1].grid(False)
 </a>
 </p>
 
-## <a name = "example02"></a>Example 02: Calibration methods for supervised classification
+## <a name = "example02"></a>**Example 02: Calibration methods for supervised classification**
 
 Given a large number of machine learning algorithms, it is necessary to select the one with the best performance in the classification, i.e., the algorithm in which the training and testing data used converge the learning iteratively to a solution that appears to be satisfactory [(Tarazona et al., 2021)](https://www.tandfonline.com/doi/full/10.1080/07038992.2021.1941823).
 To deal with this, users can apply the calibration methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlo Cross-Validation (MCCV) in order to calibrate a supervised classification with different algorithms. The input data needed are the spectral signatures collected as a *.dbf* or *.csv*. The output will provide a graph with the errors of each classifier obtained.
@@ -169,7 +169,7 @@ Calibration results:
 With this result it can be observed that SVM and RF obtained a higher overall accuracy (less error). Therefore, you can use these algorithms to classify a satellite image.
 <!-- #endregion -->
 
-## <a name = "example03"></a>Example 03: Imagery Fusion - optical/radar
+## <a name = "example03"></a>**Example 03: Imagery Fusion - optical/radar**
 
 This is an area where **scikit-eo** provides a novel approach to merge different types of satellite imagery. We are in a case where, after combining different variables into a single output, we want to know the contributions of the different original variables in the data fusion. The fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that help researchers to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum [(Tarazona et al., 2021)](https://www.tandfonline.com/doi/full/10.1080/07038992.2021.1941823). The input data needed are the optical satellite image and the radar satellite image, for instance.
 
@@ -271,7 +271,7 @@ plt.show()
 ![Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel.](images/scikit_eo_04.png){ width=55% }
 
 
-## <a name = "example04"></a>Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95% (1.96)
+## <a name = "example04"></a>**Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95%**
 
 In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by [(Olofsson et al., 2014)](https://doi.org/10.1016/j.rse.2014.02.015). All that users need are the confusion matrix and a previously obtained predicted class map.
 
