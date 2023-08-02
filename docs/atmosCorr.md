@@ -58,7 +58,9 @@ The Dark Object Subtraction Method was proposed by Chavez (1988). This image-bas
 
 Return:  An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
 
-References: Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. 
+References: 
+
+Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. 
 
 ---
 
