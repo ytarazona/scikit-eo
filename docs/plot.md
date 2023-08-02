@@ -67,7 +67,7 @@ This function allows to plot satellite images histogram.
  - <b>`https`</b>: //matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html 
 
 Return: 
- - <b>`ax `</b>:  A histogram of an image. 
+ - <b>`ax`</b>:  A histogram of an image. 
 
 
 
@@ -126,7 +126,7 @@ This function allows to plot an satellite image in RGB channels.
  - <b>`https`</b>: //matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html 
 
 Return: 
- - <b>`ax `</b>:  Graphic of an image in RGB. 
+ - <b>`ax`</b>:  Graphic of an image in RGB. 
 
 
 
