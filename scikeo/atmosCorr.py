@@ -12,6 +12,7 @@ class atmosCorr(object):
     def __init__(self, path, nodata = -99999):
         
         '''
+        
         Parameter:
         
             path: String. The folder in which the satellite bands are located. This images could be Landsat
@@ -62,7 +63,8 @@ class atmosCorr(object):
         Parameters:
             sat: Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2.
         
-        Return: An array with radiance values with 3d, i.e. (rows, cols, bands).
+        Return: 
+            An array with radiance values with 3d, i.e. (rows, cols, bands).
         '''
         
         if sat == 'LC09':
@@ -136,7 +138,8 @@ class atmosCorr(object):
         Parameters:
             sat: Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2.
         
-        Return: An array with TOA values with 3d, i.e. (rows, cols, bands).
+        Return: 
+            An array with TOA values with 3d, i.e. (rows, cols, bands).
         '''
         
         if sat == 'LC09':
@@ -212,10 +215,11 @@ class atmosCorr(object):
             
             mindn: Min of digital number for each band in a list.
             
-        Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands).
+        Return: 
+            An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands).
         
         References:
-            - Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric 
+            Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric 
             Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479.
         '''
         
