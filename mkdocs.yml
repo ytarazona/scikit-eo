@@ -23,7 +23,7 @@ theme:
         repo: fontawesome/brands/github
     icon:
         repo: fontawesome/brands/github
-    logo: assets/logo.png
+    logo: images/scikit-eo_logo.jpg
     favicon: assets/favicon.png
     features:
         - navigation.instant
