@@ -1,6 +1,6 @@
 # Welcome to
 
-# scikit-eo: A Python package for Remote Sensing Tools
+# **scikit-eo: A Python package for Remote Sensing Tools**
 
 [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -12,7 +12,7 @@
 [![tests](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml/badge.svg)](https://github.com/ytarazona/scikit-eo/actions/workflows/tests.yml)
 
 <p align="center">
-  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" alt="header" width = '140'></a>
+  <a href="https://github.com/ytarazona/scikit-eo"><img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" alt="header" width = '180'></a>
 </p>
 
 
@@ -24,19 +24,19 @@
 - **Notebooks examples**: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - **Google Colab examples**: <https://github.com/ytarazona/scikit-eo/tree/main/examples>
 - **Free software**: [Apache 2.0](https://opensource.org/license/apache-2-0/)
-- **Tutorials**: []()
+- **Tutorials: step by step**: <https://ytarazona.github.io/scikit-eo/tutorials/>
 
-# Introduction
+# **Introduction**
 
 Nowadays, remotely sensed data has increased dramatically. Microwaves and optical images with different spatial and temporal resolutions are available and are used to monitor a variety of environmental issues such as deforestation, land degradation, land use and land cover change, among others. Although there are efforts (i.e., Python packages, forums, communities, etc.) to make available line-of-code tools for pre-processing, processing and analysis of satellite imagery, there is still a gap that needs to be filled. In other words, too much time is still spent by many users developing Python lines of code. Algorithms for mapping land degradation through a linear trend of vegetation indices, fusion optical and radar images to classify vegetation cover, and calibration of machine learning algorithms, among others, are not available yet.
 
 Therefore, **scikit-eo** is a Python package that provides tools for remote sensing. This package was developed to fill the gaps in remotely sensed data processing tools. Most of the tools are based on scientific publications, and others are useful algorithms that will allow processing to be done in a few lines of code. With these tools, the user will be able to invest time in analyzing the results of their data and not spend time on elaborating lines of code, which can sometimes be stressful.
 
-# Audience
+# **Audience**
 
 **Scikit-eo** is a versatile Python package designed to cover a wide range of users, including students, professionals of remote sensing, researchers of environmental analysis, and organizations looking for satellite image analysis. Its comprehensive features make it well-suited for various applications, such as university teaching, that include technical and practical sessions, and cutting-edge research using the most recent machine learning and deep learning techniques applied to the field of remote sensing. Whether the user are students seeking to get insights from a satellite image analysis or a experienced researcher looking for advanced tools, scikit-eo offers a valuable resource to support the most valuable methods for environmental studies.
 
-# Tools for Remote Sensing
+# **Tools for Remote Sensing**
 
 | Name of functions/classes  | Description|
 | -------------------| --------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ Therefore, **scikit-eo** is a Python package that provides tools for remote sens
 You will find more algorithms!.
 
 <!-- #region -->
-# Installation
+# **Installation**
 
 To use **scikit-eo** it is necessary to install it. There are two options:
 
