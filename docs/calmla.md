@@ -26,16 +26,20 @@ This module allows to calibrate supervised classification in satellite images th
 __init__(endmembers)
 ```
 
-Parameter:  endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted. 
+Parameter: 
 
-References:  Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A.   Fusing Landsat and SAR data for mapping tropical deforestation through machine learning   classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote   Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021. 
+ endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted. 
+
+References: 
+
+ Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A.   Fusing Landsat and SAR data for mapping tropical deforestation through machine learning   classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote   Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021. 
 
 
 
 
 ---
 
-<a href="..\scikeo\calmla.py#L319"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L321"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `CV`
 
@@ -77,7 +81,7 @@ Return:   A graphic with errors for each machine learning algorithms.
 
 ---
 
-<a href="..\scikeo\calmla.py#L221"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L223"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `LOOCV`
 
@@ -112,7 +116,7 @@ Return:   A graphic with errors for each machine learning algorithms.
 
 ---
 
-<a href="..\scikeo\calmla.py#L420"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L422"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `MCCV`
 
@@ -155,7 +159,7 @@ Return:   A graphic with errors for each machine learning algorithms.
 
 ---
 
-<a href="..\scikeo\calmla.py#L97"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `SA`
 
@@ -190,7 +194,7 @@ Return:   A graphic with errors for each machine learning algorithms.
 
 ---
 
-<a href="..\scikeo\calmla.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\calmla.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `splitData`
 
