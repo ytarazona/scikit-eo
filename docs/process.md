@@ -109,7 +109,9 @@ Return:
 
 Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well.  
 
-Reference: Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices  
+Reference: 
+
+Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices  
  - <b>`for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148`</b>:  42–57.  
  - <b>`doi`</b>: https://doi.org/10.1016/j.rse.2014.02.015. 
 
@@ -122,7 +124,7 @@ Reference: Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E.,
 
 ---
 
-<a href="..\scikeo\process.py#L314"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\process.py#L315"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `print_info`
 
