@@ -40,6 +40,7 @@ class linearTrend(object):
             with 2d.
         
         References:
+        
             Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
             remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
             Sensing Applications: Society and Environment, 19, 100337.
