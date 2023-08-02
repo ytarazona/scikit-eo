@@ -40,7 +40,11 @@ Return:
 
 numpy.ndarray with 2d. 
 
-References Adams, J. B., Smith, M. O., & Gillespie, A. R. (1993). Imaging spectroscopy: Interpretation based on spectral mixture analysis. In C. M. Pieters & P. Englert (Eds.), Remote geochemical analysis: Elements and mineralogical composition. NY: Cambridge Univ. Press 145-166 pp. 
+References: 
+
+Adams, J. B., Smith, M. O., & Gillespie, A. R. (1993). Imaging spectroscopy: Interpretation based on spectral mixture analysis. In C. M. Pieters & P. 
+ - <b>`Englert (Eds.), Remote geochemical analysis`</b>:  Elements and mineralogical 
+ - <b>`composition. NY`</b>:  Cambridge Univ. Press 145-166 pp. 
 
 Shimabukuro, Y.E. and Smith, J., (1991). The least squares mixing models to generate fraction images derived from remote sensing multispectral data. IEEE Transactions on Geoscience and Remote Sensing, 29, pp. 16-21. 
 
