@@ -16,7 +16,7 @@
       
         <link rel="next" href="../deeplearning/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -221,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -310,6 +308,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -362,17 +375,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -756,7 +769,7 @@
 <p>path: String. The folder in which the satellite bands are located. This images could be Landsat  Collection 2 Level-1. For example: path = r'/folder/image/raster'.  </p>
 <p>nodata: The NoData value to replace with -99999. </p>
 <hr />
-<p><a href="..\scikeo\atmosCorr.py#L200"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\atmosCorr.py#L203"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-dos"><kbd>method</kbd> <code>DOS</code><a class="headerlink" href="#method-dos" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DOS</span><span class="p">(</span><span class="n">sat</span><span class="o">=</span><span class="s1">&#39;LC08&#39;</span><span class="p">,</span> <span class="n">mindn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -770,11 +783,11 @@
 <p><b><code>mindn</code></b>:  Min of digital number for each band in a list. </p>
 </li>
 </ul>
-<p>Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). </p>
-<p>References: 
-    - Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. </p>
+<p>Return:  An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). </p>
+<p>References: </p>
+<p>Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. </p>
 <hr />
-<p><a href="..\scikeo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-rad"><kbd>method</kbd> <code>RAD</code><a class="headerlink" href="#method-rad" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">RAD</span><span class="p">(</span><span class="n">sat</span><span class="o">=</span><span class="s1">&#39;LC08&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -786,9 +799,9 @@
 <ul>
 <li><b><code>sat</code></b>:  Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2. </li>
 </ul>
-<p>Return: An array with radiance values with 3d, i.e. (rows, cols, bands). </p>
+<p>Return:  An array with radiance values with 3d, i.e. (rows, cols, bands). </p>
 <hr />
-<p><a href="..\scikeo\atmosCorr.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\atmosCorr.py#L126"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-toa"><kbd>method</kbd> <code>TOA</code><a class="headerlink" href="#method-toa" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">TOA</span><span class="p">(</span><span class="n">sat</span><span class="o">=</span><span class="s1">&#39;LC08&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -800,7 +813,7 @@
 <ul>
 <li><b><code>sat</code></b>:  Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2. </li>
 </ul>
-<p>Return: An array with TOA values with 3d, i.e. (rows, cols, bands). </p>
+<p>Return:  An array with TOA values with 3d, i.e. (rows, cols, bands). </p>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>
 
@@ -809,7 +822,7 @@
   <small>
     
       Last update:
-      2023-06-25
+      2023-08-02
     
   </small>
 </div>

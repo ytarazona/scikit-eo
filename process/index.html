@@ -14,7 +14,7 @@
         <link rel="prev" href="../writeRaster/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -91,8 +91,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -219,8 +218,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -308,6 +306,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -360,17 +373,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -618,6 +631,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#function-print_info" class="md-nav__link">
+    function print_info
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -676,6 +696,13 @@
         <li class="md-nav__item">
   <a href="#function-confintervalml" class="md-nav__link">
     function confintervalML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-print_info" class="md-nav__link">
+    function print_info
   </a>
   
 </li>
@@ -758,7 +785,7 @@
 <p><b><code>matrix</code></b>:  confusion matrix or error matrix in numpy.ndarray.  </p>
 </li>
 <li>
-<p><b><code>image_pred</code></b>:  Array with 2d (rows, cols). This array should be the image classified with predicted classes.  </p>
+<p><b><code>image_pred</code></b>:  Could be an array with 2d (rows, cols). This array should be the image classified   with predicted classes. Or, could be a list with number of pixels for each class.  </p>
 </li>
 <li>
 <p><b><code>pixel_size</code></b>:  Pixel size of the image classified. By default is 10m of Sentinel-2.  </p>
@@ -768,11 +795,31 @@
 </li>
 </ul>
 <p>Return: </p>
+<p>Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well.  </p>
+<p>Reference: </p>
+<p>Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices<br />
+ - <b><code>for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148</code></b>:  42–57.<br />
+ - <b><code>doi</code></b>: https://doi.org/10.1016/j.rse.2014.02.015. </p>
+<p><strong>Note:</strong></p>
+<blockquote>
+<p>Columns and rows in a confusion matrix indicate reference and prediction respectively. </p>
+</blockquote>
+<hr />
+<p><a href="..\scikeo\process.py#L315"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<h2 id="function-print_info"><kbd>function</kbd> <code>print_info</code><a class="headerlink" href="#function-print_info" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">print_info</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Information: Confusion Matrix by Estimated Proportions of area an uncertainty </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><b><code>params</code></b>:  <code>confintervalML</code> result. See the function: https://github.com/ytarazona/scikit-eo/blob/main/scikeo/process.py </li>
+</ul>
+<p>Return: </p>
 <p>Information of confusion matrix by proportions of area, overall accuracy, user's accuracy with confidence interval  and estimated area with confidence interval as well. </p>
 <p><strong>Note:</strong></p>
 <blockquote>
-<p>Columns and rows in a confusion matrix indicate reference and prediction respectively. 
-Reference: - Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148: 42–57. doi:https://doi.org/10.1016/j.rse.2014.02.015. </p>
+<p>This function was tested using ground-truth values obtained by Olofsson et al. (2014). 
+</p>
 </blockquote>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>
@@ -782,7 +829,7 @@ Reference: - Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E
   <small>
     
       Last update:
-      2023-06-25
+      2023-08-02
     
   </small>
 </div>

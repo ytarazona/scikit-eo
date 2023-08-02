@@ -35,7 +35,7 @@ Parameter:
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L200"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L203"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `DOS`
 
@@ -56,14 +56,15 @@ The Dark Object Subtraction Method was proposed by Chavez (1988). This image-bas
 
  - <b>`mindn`</b>:  Min of digital number for each band in a list. 
 
-Return: An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
+Return:  An array with Surface Reflectance values with 3d, i.e. (rows, cols, bands). 
 
 References: 
-    - Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. 
+
+Chavez, P.S. (1988). An Improved Dark-Object Subtraction Technique for Atmospheric  Scattering Correction of Multispectral Data. Remote Sensing of Envrironment, 24(3), 459-479. 
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L47"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L48"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `RAD`
 
@@ -85,11 +86,11 @@ Lλ = TOA spectral radiance (Watts/(m2*srad*μm)) ML = Band-specific multiplicat
  
  - <b>`sat`</b>:  Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2. 
 
-Return: An array with radiance values with 3d, i.e. (rows, cols, bands). 
+Return:  An array with radiance values with 3d, i.e. (rows, cols, bands). 
 
 ---
 
-<a href="..\scikeo\atmosCorr.py#L124"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="..\scikeo\atmosCorr.py#L126"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `TOA`
 
@@ -111,7 +112,7 @@ Equation to obtain TOA reflectance:
  
  - <b>`sat`</b>:  Type of Satellite. It could be Landsat-5 TM, Landsat-8 OLI or Landsat-9 OLI-2. 
 
-Return: An array with TOA values with 3d, i.e. (rows, cols, bands). 
+Return:  An array with TOA values with 3d, i.e. (rows, cols, bands). 
 
 
 

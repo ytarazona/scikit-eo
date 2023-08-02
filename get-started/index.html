@@ -16,7 +16,7 @@
       
         <link rel="next" href="../tutorials/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -221,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -320,6 +318,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -370,17 +383,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -625,15 +638,15 @@
 
 
 <!-- #region -->
-<h1 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
+<h1 id="get-started"><strong>Get Started</strong><a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
 <p>This Get Started is intended as a guide to apply several remote sensing tools in order to analyze and process satellite imagery such as Landsat, Sentinel-2, etc. Various methods including ML/DL, Spectral Mixture Analysis, Calibrations methods, Principal Component Analysis, among others are available in this python package. </p>
-<h1 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h1>
+<h1 id="content"><strong>Content</strong><a class="headerlink" href="#content" title="Permanent link">&para;</a></h1>
 <p><a href="#example01">Example 01: Random Forest (RF) classifier</a></p>
 <p><a href="#example02">Example 02: Calibration methods for supervised classification</a></p>
 <p><a href="#example03">Example 03: Imagery Fusion - optical/radar</a></p>
-<p><a href="#example04">Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95% (1.96)</a></p>
-<h1 id="brief-examples">Brief examples<a class="headerlink" href="#brief-examples" title="Permanent link">&para;</a></h1>
-<h2 id="example-01-random-forest-rf-classifier"><a name = "example01"></a>Example 01: Random Forest (RF) classifier<a class="headerlink" href="#example-01-random-forest-rf-classifier" title="Permanent link">&para;</a></h2>
+<p><a href="#example04">Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95%</a></p>
+<h1 id="brief-examples"><strong>Brief examples</strong><a class="headerlink" href="#brief-examples" title="Permanent link">&para;</a></h1>
+<h2 id="example-01-random-forest-rf-classifier"><a name = "example01"></a><strong>Example 01: Random Forest (RF) classifier</strong><a class="headerlink" href="#example-01-random-forest-rf-classifier" title="Permanent link">&para;</a></h2>
 <p>In this example, in a small region of southern Brazil, optical imagery from Landsat-8 OLI (Operational Land Imager) will be used to classify land cover using the machine learning algorithm Random Forest (RF) <a href="https://doi.org/10.1023/A:1010933404324">(Breiman, 2001)</a>. Four types of land cover will be mapped, i.e., agriculture, forest, bare soil and water. The input data needed is the satellite image and the spectral signatures collected. The output as a dictionary will provide: i) confusion matrix, ii) overall accuracy, iii) kappa index and iv) a classes map.</p>
 <h4 id="01-optical-image-to-be-used">01. Optical image to be used<a class="headerlink" href="#01-optical-image-to-be-used" title="Permanent link">&para;</a></h4>
 <p>Landsat-8 OLI (Operational Land Imager) will be used to obtain in order to classify using Random Forest (RF). This image, which is in surface reflectance with bands:</p>
@@ -742,7 +755,7 @@ Applying the <code>plotRGB()</code> algorithm is easy:</p>
 </a>
 </p>
 
-<h2 id="example-02-calibration-methods-for-supervised-classification"><a name = "example02"></a>Example 02: Calibration methods for supervised classification<a class="headerlink" href="#example-02-calibration-methods-for-supervised-classification" title="Permanent link">&para;</a></h2>
+<h2 id="example-02-calibration-methods-for-supervised-classification"><a name = "example02"></a><strong>Example 02: Calibration methods for supervised classification</strong><a class="headerlink" href="#example-02-calibration-methods-for-supervised-classification" title="Permanent link">&para;</a></h2>
 <p>Given a large number of machine learning algorithms, it is necessary to select the one with the best performance in the classification, i.e., the algorithm in which the training and testing data used converge the learning iteratively to a solution that appears to be satisfactory <a href="https://www.tandfonline.com/doi/full/10.1080/07038992.2021.1941823">(Tarazona et al., 2021)</a>.
 To deal with this, users can apply the calibration methods Leave One Out Cross-Validation (LOOCV), Cross-Validation (CV) and Monte Carlo Cross-Validation (MCCV) in order to calibrate a supervised classification with different algorithms. The input data needed are the spectral signatures collected as a <em>.dbf</em> or <em>.csv</em>. The output will provide a graph with the errors of each classifier obtained.</p>
 <h4 id="01-endmembers-as-a-dbf">01. Endmembers as a .dbf<a class="headerlink" href="#01-endmembers-as-a-dbf" title="Permanent link">&para;</a></h4>
@@ -773,7 +786,7 @@ To deal with this, users can apply the calibration methods Leave One Out Cross-V
 <p>With this result it can be observed that SVM and RF obtained a higher overall accuracy (less error). Therefore, you can use these algorithms to classify a satellite image.</p>
 <!-- #endregion -->
 
-<h2 id="example-03-imagery-fusion-opticalradar"><a name = "example03"></a>Example 03: Imagery Fusion - optical/radar<a class="headerlink" href="#example-03-imagery-fusion-opticalradar" title="Permanent link">&para;</a></h2>
+<h2 id="example-03-imagery-fusion-opticalradar"><a name = "example03"></a><strong>Example 03: Imagery Fusion - optical/radar</strong><a class="headerlink" href="#example-03-imagery-fusion-opticalradar" title="Permanent link">&para;</a></h2>
 <p>This is an area where <strong>scikit-eo</strong> provides a novel approach to merge different types of satellite imagery. We are in a case where, after combining different variables into a single output, we want to know the contributions of the different original variables in the data fusion. The fusion of radar and optical images, despite of its well-know use, to improve land cover mapping, currently has no tools that help researchers to integrate or combine those resources. In this third example, users can apply imagery fusion with different observation geometries and different ranges of the electromagnetic spectrum <a href="https://www.tandfonline.com/doi/full/10.1080/07038992.2021.1941823">(Tarazona et al., 2021)</a>. The input data needed are the optical satellite image and the radar satellite image, for instance.</p>
 <p>In <code>scikit-eo</code> we developed the function <code>fusionrs()</code> which provides us with a dictionary with the following image fusion interpretation features:</p>
 <ul>
@@ -867,7 +880,7 @@ To deal with this, users can apply the calibration methods Leave One Out Cross-V
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Fusion of optical and radar images. Principal Component 1 corresponds to red channel, Principal Component 2 corresponds to green channel and Principal Component 3 corresponds to blue channel." src="../images/scikit_eo_04.png" width="55%" /></p>
-<h2 id="example-04-confusion-matrix-by-estimated-proportions-of-area-with-a-confidence-interval-at-95-196"><a name = "example04"></a>Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95% (1.96)<a class="headerlink" href="#example-04-confusion-matrix-by-estimated-proportions-of-area-with-a-confidence-interval-at-95-196" title="Permanent link">&para;</a></h2>
+<h2 id="example-04-confusion-matrix-by-estimated-proportions-of-area-with-a-confidence-interval-at-95"><a name = "example04"></a><strong>Example 04: Confusion matrix by estimated proportions of area with a confidence interval at 95%</strong><a class="headerlink" href="#example-04-confusion-matrix-by-estimated-proportions-of-area-with-a-confidence-interval-at-95" title="Permanent link">&para;</a></h2>
 <p>In this final example, after obtaining the predicted class map, we are in a case where we want to know the uncertainties of each class. The assessing accuracy and area estimate will be obtained following guidance proposed by <a href="https://doi.org/10.1016/j.rse.2014.02.015">(Olofsson et al., 2014)</a>. All that users need are the confusion matrix and a previously obtained predicted class map.</p>
 <p><code>confintervalML</code> requires the following parameters:</p>
 <ul>
@@ -909,7 +922,7 @@ To deal with this, users can apply the calibration methods Leave One Out Cross-V
   <small>
     
       Last update:
-      2023-08-01
+      2023-08-02
     
   </small>
 </div>

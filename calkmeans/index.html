@@ -16,7 +16,7 @@
       
         <link rel="next" href="../pca/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -221,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -310,6 +308,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -362,17 +375,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -700,56 +713,37 @@
 <p>Calibrating kmeans </p>
 <p>This function allows to calibrate the kmeans algorithm. It is possible to obtain the best 'k' value and the best embedded algorithm in KMmeans.  </p>
 <p><strong>Parameters:</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`image`&lt;/b&gt;:  Optical images. It must be rasterio.io.DatasetReader with 3d.
-
-
- - &lt;b&gt;`k`&lt;/b&gt;:  k This argument is None when the objective is to obtain the best &#39;k&#39; value.  If the objective is to select the best algorithm embedded in kmeans, please specify a &#39;k&#39; value.
-
-
- - &lt;b&gt;`max_iter`&lt;/b&gt;:  The maximum number of iterations allowed. Strictly related to KMeans. Please see 
- - &lt;b&gt;`https`&lt;/b&gt;: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
-
-
- - &lt;b&gt;`algo`&lt;/b&gt;:  It can be &quot;auto&quot; and &#39;elkan&#39;. &quot;auto&quot; and &quot;full&quot; are deprecated and they will be  removed in Scikit-Learn 1.3. They are both aliases for &quot;lloyd&quot;.
-
-
- - &lt;b&gt;`Changed in version 1.1`&lt;/b&gt;:  Renamed “full” to “lloyd”, and deprecated “auto” and “full”.  Changed “auto” to use “lloyd” instead of “elkan”.
-
-
- - &lt;b&gt;`n_iter`&lt;/b&gt;:  Iterations number to obtain the best &#39;k&#39; value. &#39;n_iter&#39; must be greater than the  number of classes expected to be obtained in the classification. Default is 10.
-
-
- - &lt;b&gt;`nodata`&lt;/b&gt;:  The NoData value to replace with -99999.
-
-
- - &lt;b&gt;`**kwargs`&lt;/b&gt;:  These will be passed to scikit-learn KMeans, please see full lists at: 
- - &lt;b&gt;`https`&lt;/b&gt;: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html.
-</code></pre></div></td></tr></table></div>
-<p>Return: </p>
-<p>Labels of classification as numpy object with 2d. </p>
+<ul>
+<li>
+<p><b><code>image</code></b>:  Optical images. It must be rasterio.io.DatasetReader with 3d.  </p>
+</li>
+<li>
+<p><b><code>k</code></b>:  k This argument is None when the objective is to obtain the best 'k' value.   f the objective is to select the best algorithm embedded in kmeans, please specify a 'k' value. </p>
+</li>
+<li>
+<p><b><code>max_iter</code></b>:  The maximum number of iterations allowed. Strictly related to KMeans. Please see </p>
+</li>
+<li>
+<p><b><code>https</code></b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html </p>
+</li>
+<li>
+<p><b><code>algo</code></b>:  It can be "auto" and 'elkan'. "auto" and "full" are deprecated and they will be   removed in Scikit-Learn 1.3. They are both aliases for "lloyd".  </p>
+</li>
+<li>
+<p><b><code>Changed in version 1.1</code></b>:  Renamed “full” to “lloyd”, and deprecated “auto” and “full”.   Changed “auto” to use “lloyd” instead of “elkan”.  </p>
+</li>
+<li>
+<p><b><code>n_iter</code></b>:  Iterations number to obtain the best 'k' value. 'n_iter' must be greater than the   number of classes expected to be obtained in the classification. Default is 10.  </p>
+</li>
+<li>
+<p><b><code>nodata</code></b>:  The NoData value to replace with -99999.   </p>
+</li>
+<li>
+<p><b><code>**kwargs</code></b>:  These will be passed to scikit-learn KMeans, please see full lists at: </p>
+</li>
+<li><b><code>https</code></b>: //scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html. </li>
+</ul>
+<p>Return: Labels of classification as numpy object with 2d. </p>
 <p><strong>Note:</strong></p>
 <blockquote>
 <p>If the idea is to find the optimal value of 'k' (clusters or classes), k = None as an argument of the function must be put, because the function find 'k' for which the intra-class inertia is stabilized. If the 'k' value is known and the idea is to find the best algorithm embedded in kmeans (that maximizes inter-class distances), k = n, which 'n' is a specific class number, must be put. It can be greater than or equal to 0. 
@@ -763,7 +757,7 @@
   <small>
     
       Last update:
-      2023-06-25
+      2023-08-02
     
   </small>
 </div>

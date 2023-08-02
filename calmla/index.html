@@ -16,7 +16,7 @@
       
         <link rel="next" href="../rkmeans/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -221,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -310,6 +308,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -362,17 +375,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -781,10 +794,12 @@
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code><a class="headerlink" href="#method-__init__" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">endmembers</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Parameter:  </p>
-<p>endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted.  </p>
+<p>Parameter: </p>
+<p>endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember.   Rows represent the endmembers and columns represent the spectral bands.  The number of bands must be equal to the number of endmembers.  E.g. an image with 6 bands, endmembers dimension should be $n*6$, where $n$   is rows with the number of endmembers and 6 is the number of bands   (should be equal).  In addition, Endmembers must have a field (type int or float) with the names   of classes to be predicted. </p>
+<p>References: </p>
+<p>Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A.   Fusing Landsat and SAR data for mapping tropical deforestation through machine learning   classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote   Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021. </p>
 <hr />
-<p><a href="..\scikeo\calmla.py#L312"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\calmla.py#L321"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-cv"><kbd>method</kbd> <code>CV</code><a class="headerlink" href="#method-cv" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -822,9 +837,9 @@
 </li>
 <li><b><code>https</code></b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning </li>
 </ul>
-<p>Return: </p>
+<p>Return:   A graphic with errors for each machine learning algorithms. </p>
 <hr />
-<p><a href="..\scikeo\calmla.py#L215"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\calmla.py#L223"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-loocv"><kbd>method</kbd> <code>LOOCV</code><a class="headerlink" href="#method-loocv" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">LOOCV</span><span class="p">(</span><span class="n">split_data</span><span class="p">,</span> <span class="n">models</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;svm&#39;</span><span class="p">,</span> <span class="s1">&#39;dt&#39;</span><span class="p">),</span> <span class="n">cv</span><span class="o">=</span><span class="n">LeaveOneOut</span><span class="p">(),</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -848,9 +863,9 @@
 </li>
 <li><b><code>https</code></b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning </li>
 </ul>
-<p>Return:  </p>
+<p>Return:   A graphic with errors for each machine learning algorithms.  </p>
 <hr />
-<p><a href="..\scikeo\calmla.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\calmla.py#L422"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-mccv"><kbd>method</kbd> <code>MCCV</code><a class="headerlink" href="#method-mccv" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -890,9 +905,9 @@
 </li>
 <li><b><code>https</code></b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning </li>
 </ul>
-<p>Return:  </p>
+<p>Return:   A graphic with errors for each machine learning algorithms.  </p>
 <hr />
-<p><a href="..\scikeo\calmla.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\calmla.py#L99"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-sa"><kbd>method</kbd> <code>SA</code><a class="headerlink" href="#method-sa" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">SA</span><span class="p">(</span><span class="n">split_data</span><span class="p">,</span> <span class="n">models</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;svm&#39;</span><span class="p">,</span> <span class="s1">&#39;dt&#39;</span><span class="p">,</span> <span class="s1">&#39;rf&#39;</span><span class="p">),</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -916,9 +931,9 @@
 </li>
 <li><b><code>https</code></b>: //scikit-learn.org/stable/supervised_learning.html#supervised-learning </li>
 </ul>
-<p>Return:   </p>
+<p>Return:   A graphic with errors for each machine learning algorithms. </p>
 <hr />
-<p><a href="..\scikeo\calmla.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\calmla.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-splitdata"><kbd>method</kbd> <code>splitData</code><a class="headerlink" href="#method-splitdata" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">splitData</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -934,7 +949,7 @@
   <small>
     
       Last update:
-      2023-06-25
+      2023-08-02
     
   </small>
 </div>

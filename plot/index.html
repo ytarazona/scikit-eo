@@ -16,7 +16,7 @@
       
         <link rel="next" href="../writeRaster/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="scikit-eo" class="md-header__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -221,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="scikit-eo" class="md-nav__button md-logo" aria-label="scikit-eo" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     scikit-eo
@@ -310,6 +308,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
@@ -362,17 +375,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API Reference
         </label>
@@ -721,69 +734,43 @@
 </code></pre></div></td></tr></table></div>
 <p>This function allows to plot satellite images histogram. </p>
 <p><strong>Parameters:</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`image`&lt;/b&gt;:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.
-
-
- - &lt;b&gt;`bands`&lt;/b&gt;:  Must be specified as a number of a list.
-
-
- - &lt;b&gt;`bins`&lt;/b&gt;:  By default is 128.
-
-
- - &lt;b&gt;`alpha`&lt;/b&gt;:  Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates 100%. By default is 80%.
-
-
- - &lt;b&gt;`title`&lt;/b&gt;:  Assigned title.
-
-
- - &lt;b&gt;`xlabel`&lt;/b&gt;:  X axis title.
-
-
- - &lt;b&gt;`ylabel`&lt;/b&gt;:  Y axis title.
-
-
- - &lt;b&gt;`label`&lt;/b&gt;:  Labeling the histogram.
-
-
- - &lt;b&gt;`ax`&lt;/b&gt;:  current axes
-
-
- - &lt;b&gt;`**kwargs`&lt;/b&gt;:  These will be passed to the matplotlib imshow(), please see full lists at: 
- - &lt;b&gt;`https`&lt;/b&gt;: //matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html
-</code></pre></div></td></tr></table></div>
-<p>Return: </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`ax `&lt;/b&gt;:  A histogram of an image.
-</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><b><code>image</code></b>:  Optical images. It must be rasterio.io.DatasetReader with 3d or 2d.  </p>
+</li>
+<li>
+<p><b><code>bands</code></b>:  Must be specified as a number of a list.  </p>
+</li>
+<li>
+<p><b><code>bins</code></b>:  By default is 128.   </p>
+</li>
+<li>
+<p><b><code>alpha</code></b>:  Percentage (%) of transparency between 0 and 1. 0 indicates 0% and 1 indicates  100%. By default is 80%.  </p>
+</li>
+<li>
+<p><b><code>title</code></b>:  Assigned title. </p>
+</li>
+<li>
+<p><b><code>xlabel</code></b>:  X axis title. </p>
+</li>
+<li>
+<p><b><code>ylabel</code></b>:  Y axis title.  </p>
+</li>
+<li>
+<p><b><code>label</code></b>:  Labeling the histogram. </p>
+</li>
+<li>
+<p><b><code>ax</code></b>:  current axes </p>
+</li>
+<li>
+<p><b><code>**kwargs</code></b>:  These will be passed to the matplotlib imshow(), please see full lists at: </p>
+</li>
+<li><b><code>https</code></b>: //matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html </li>
+</ul>
+<p>Return: 
+ - <b><code>ax</code></b>:  A histogram of an image. </p>
 <hr />
-<p><a href="..\scikeo\plot.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="..\scikeo\plot.py#L90"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="function-plotrgb"><kbd>function</kbd> <code>plotRGB</code><a class="headerlink" href="#function-plotrgb" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -808,55 +795,35 @@
 <p>Plotting an image in RGB. </p>
 <p>This function allows to plot an satellite image in RGB channels.  </p>
 <p><strong>Parameters:</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`image`&lt;/b&gt;:  Optical images. It must be rasterio.io.DatasetReader with 3d.
-
-
- - &lt;b&gt;`bands`&lt;/b&gt;:  A list contain the order of bands to be used in order to plot in RGB. For example,  for six bands (blue, green, red, nir, swir1 and swir2), number four (4) indicates   the swir1 band, number three (3) indicates the nir band and the number two (2) indicates  the red band.
-
-
- - &lt;b&gt;`stretch`&lt;/b&gt;:  Contrast enhancement using the histogram. There are two options here: i) using  standard deviation (&#39;std&#39;) and ii) using percentiles (&#39;per&#39;). For default is &#39;std&#39;, which means  standard deviation.
-
-
- - &lt;b&gt;`title`&lt;/b&gt;:  Assigned title.
-
-
- - &lt;b&gt;`xlabel`&lt;/b&gt;:  X axis title.
-
-
- - &lt;b&gt;`ylabel`&lt;/b&gt;:  Y axis title.
-
-
- - &lt;b&gt;`ax`&lt;/b&gt;:  current axes
-
-
- - &lt;b&gt;`**kwargs`&lt;/b&gt;:  These will be passed to the matplotlib imshow(), please see full lists at: 
- - &lt;b&gt;`https`&lt;/b&gt;: //matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
-</code></pre></div></td></tr></table></div>
-<p>Return: </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> - &lt;b&gt;`ax `&lt;/b&gt;:  Graphic of an image in RGB.
-</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><b><code>image</code></b>:  Optical images. It must be rasterio.io.DatasetReader with 3d.  </p>
+</li>
+<li>
+<p><b><code>bands</code></b>:  A list contain the order of bands to be used in order to plot in RGB. For example,  for six bands (blue, green, red, nir, swir1 and swir2), number four (4) indicates   the swir1 band, number three (3) indicates the nir band and the number two (2) indicates  the red band.  </p>
+</li>
+<li>
+<p><b><code>stretch</code></b>:  Contrast enhancement using the histogram. There are two options here: i) using  standard deviation ('std') and ii) using percentiles ('per'). For default is 'std', which means  standard deviation.  </p>
+</li>
+<li>
+<p><b><code>title</code></b>:  Assigned title. </p>
+</li>
+<li>
+<p><b><code>xlabel</code></b>:  X axis title. </p>
+</li>
+<li>
+<p><b><code>ylabel</code></b>:  Y axis title. </p>
+</li>
+<li>
+<p><b><code>ax</code></b>:  current axes </p>
+</li>
+<li>
+<p><b><code>**kwargs</code></b>:  These will be passed to the matplotlib imshow(), please see full lists at: </p>
+</li>
+<li><b><code>https</code></b>: //matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html </li>
+</ul>
+<p>Return: 
+ - <b><code>ax</code></b>:  Graphic of an image in RGB. </p>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>
 
@@ -865,7 +832,7 @@
   <small>
     
       Last update:
-      2023-06-25
+      2023-08-02
     
   </small>
 </div>

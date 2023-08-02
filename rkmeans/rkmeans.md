@@ -25,7 +25,7 @@ In principle, this function allows to classify satellite images specifying a ```
 
 
 **Parameters:**
-  
+ 
 
 
  - <b>`image`</b>:  Optical images. It must be rasterio.io.DatasetReader with 3d. 
