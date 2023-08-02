@@ -23,7 +23,7 @@ theme:
         repo: fontawesome/brands/github
     icon:
         repo: fontawesome/brands/github
-    logo: images/logo.jpg
+    logo: images/logo.png
     favicon: assets/favicon.png
     features:
         - navigation.instant
