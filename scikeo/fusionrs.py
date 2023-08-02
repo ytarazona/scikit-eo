@@ -34,6 +34,12 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     
         A dictionary.
     
+    References:
+        Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A. 
+        Fusing Landsat and SAR data for mapping tropical deforestation through machine learning 
+        classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote 
+        Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021.
+      
     Note:
     Before executing the function, it is recommended that images coming from different sensors 
     or from the same sensor have a co-registration.
@@ -47,12 +53,7 @@ def fusionrs(optical, radar, stand_varb = True, nodata = -99999, **kwargs):
     axes (or the cosine, from a geometrical point of view) --- this is used to assess the quality of 
     the representation of the variables of the principal component, and it is computed as 
     (cos(variable,axis)^2/total cos2 of the component)×100.
-
-    References:
-    - Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A. 
-      Fusing Landsat and SAR data for mapping tropical deforestation through machine learning 
-      classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote 
-      Sensing., vol. 47, no. 5, pp. 677–696, Sep. 2021.
+    
     '''
     
     for args in [optical, radar]:
