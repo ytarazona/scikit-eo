@@ -38,28 +38,23 @@ class linearTrend(object):
         Return:
             a dictionary with slope, intercept and p-value obtained. All of them in numpy.ndarray 
             with 2d.
-            
-        Note:
-        Linear regression is widely used to analyze forest degradation or land degradation.
-        Specifically, the slope and its reliability are used as main parameters and they
-        can be obtained with this function. On the other hand, logistic regression allows
-        obtaining a degradation risk map, in other words, it is a probability map.
         
         References:
-        - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
-          remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
-          Sensing Applications: Society and Environment, 19, 100337.
+            Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
+            remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
+            Sensing Applications: Society and Environment, 19, 100337.
         
-        - Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for
-          analysis of variance. Appl. Stat. 22, 392-399.
+            Wilkinson, G.N., Rogers, C.E., 1973. Symbolic descriptions of factorial models for
+            analysis of variance. Appl. Stat. 22, 392-399.
         
-        - Chambers, J.M., 1992. Statistical Models in S. CRS Press.
-    
+            Chambers, J.M., 1992. Statistical Models in S. CRS Press.
+        
         Note:
         Linear regression is widely used to analyze forest degradation or land degradation.
         Specifically, the slope and its reliability are used as main parameters and they
         can be obtained with this function. On the other hand, logistic regression allows
         obtaining a degradation risk map, in other words, it is a probability map.
+        
         '''
         
         if not isinstance(self.image, (rasterio.io.DatasetReader)):
@@ -120,16 +115,16 @@ class linearTrend(object):
         Return:
             a dictionary with the summary of logistic regression and an array of probability with 2d.
             
+        References:
+            Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
+            remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
+            Sensing Applications: Society and Environment, 19, 100337.
+        
+            Chambers, J.M., 1992. Statistical Models in S. CRS Press.
+        
         Note:
         Logistic regression allows obtaining a degradation risk map (for instance), in other words, 
         it is a probability map.
-        
-        References:
-        - Tarazona, Y., Maria, Miyasiro-Lopez. (2020). Monitoring tropical forest degradation using
-          remote sensing. Challenges and opportunities in the Madre de Dios region, Peru. Remote
-          Sensing Applications: Society and Environment, 19, 100337.
-        
-        - Chambers, J.M., 1992. Statistical Models in S. CRS Press.
         '''
         
         if not isinstance(self.image, (rasterio.io.DatasetReader)):
