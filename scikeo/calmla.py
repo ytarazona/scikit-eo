@@ -28,6 +28,7 @@ class calmla(object):
         
         '''
         Parameter:
+        
             endmembers: Endmembers must be a matrix (numpy.ndarray) and with more than one endmember. 
                         Rows represent the endmembers and columns represent the spectral bands.
                         The number of bands must be equal to the number of endmembers.
@@ -38,6 +39,7 @@ class calmla(object):
                         of classes to be predicted.
         
         References:
+        
             Tarazona, Y., Zabala, A., Pons, X., Broquetas, A., Nowosad, J., and Zurqani, H.A. 
             Fusing Landsat and SAR data for mapping tropical deforestation through machine learning 
             classification and the PVts-β non-seasonal detection approach, Canadian Journal of Remote 
