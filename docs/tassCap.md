@@ -39,17 +39,12 @@ The Tasseled-Cap Transformation is a linear transformation method for various  r
 
 Return: numpy.ndarray with 3d containing brightness, greenness and wetness indices. 
 
-References: 
-
-
-- Crist, E.P., R. Laurin, and R.C. Cicone. 1986. Vegetation and soils information  contained in transformed Thematic Mapper data. Pages 1465-1470 Ref. ESA SP-254.  
+References: Crist, E.P., R. Laurin, and R.C. Cicone. 1986. Vegetation and soils information  contained in transformed Thematic Mapper data. Pages 1465-1470 Ref. ESA SP-254.  
  - <b>`European Space Agency, Paris, France. http`</b>: //www.ciesin.org/docs/005-419/005-419.html. 
 
+Baig, M.H.A., Shuai, T., Tong, Q., 2014. Derivation of a tasseled cap transformation  based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431.  
 
-- Baig, M.H.A., Shuai, T., Tong, Q., 2014. Derivation of a tasseled cap transformation  based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431.  
-
-
-- Li, B., Ti, C., Zhao, Y., Yan, X., 2016. Estimating Soil Moisture with Landsat Data  and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies.  Remote Sensing, 8(1), 38. 
+Li, B., Ti, C., Zhao, Y., Yan, X., 2016. Estimating Soil Moisture with Landsat Data  and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies.  Remote Sensing, 8(1), 38. 
 
 
 
