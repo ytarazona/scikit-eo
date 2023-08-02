@@ -1,4 +1,4 @@
-# Contributing
+# **Contributing**
 
 Contributions are welcome, and they are greatly appreciated! Every
 little bit helps, and credit will always be given.
@@ -106,7 +106,3 @@ Before you submit a pull request, check that it meets these guidelines:
 3.  The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and
     for PyPy. Check <https://github.com/ytarazona/scikit-eo/pull_requests> and make sure that the tests pass for all
     supported Python versions.
-
-```python
-
-```
