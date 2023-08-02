@@ -1,5 +1,5 @@
 <!-- #region -->
-# Installation
+# **Installation**
 
 To use **scikit-eo** it is necessary to install it in your terminal. There are two options to use its functions/classes:
 
