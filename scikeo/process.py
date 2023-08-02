@@ -184,6 +184,7 @@ def confintervalML(matrix, image_pred, pixel_size = 10, conf = 1.96, nodata = No
         and estimated area with confidence interval as well.
          
     Reference:
+    
         Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E., and Wulder, M.A. 2014. “Good practices 
         for estimating area and assessing accuracy of land change.” Remote Sensing of Environment, Vol. 148: 42–57. 
         doi:https://doi.org/10.1016/j.rse.2014.02.015.
