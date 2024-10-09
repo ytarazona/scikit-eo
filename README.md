@@ -1,7 +1,5 @@
 <!-- #region -->
-# Scikit-eo: A Python package for Remote Sensing Data Analysis -
-
-**DO NOT CLONE or USE THIS REPOSITORY**. 
+# DO NOT CLONE or USE THIS REPOSITORY 
 
 This is an old version of scikit-eo and has not been updated or supported.
 
