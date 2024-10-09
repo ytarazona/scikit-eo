@@ -7,7 +7,7 @@ Please refer to the most updated repository and tool at
 https://github.com/yotarazona/scikit-eo
 
 
-If you have additional question please contact us at:
+If you have additional questions please contact us at:
 
 * https://github.com/yotarazona
 * https://github.com/mfbenitezp
