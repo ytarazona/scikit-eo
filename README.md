@@ -13,6 +13,8 @@
 
 <img src="https://raw.githubusercontent.com/ytarazona/scikit-eo/main/docs/images/scikit-eo_logo.jpg" align="right" width="220"/>
 
+This is a test to validate if I can remove this repo's content.
+
 <!-- #region -->
 # Introduction
 
