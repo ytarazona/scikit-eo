@@ -9,5 +9,7 @@ https://github.com/yotarazona/scikit-eo
 
 If you have additional questions please contact us at:
 
-* https://github.com/yotarazona
-* https://github.com/mfbenitezp
+* https://github.com/yotarazona - [Yonatan Tarazona Coronel, Phd Candidate at the University of Coimbra]
+* https://github.com/Nowosad  - [Jakub Nowosad, Prof at Adam Mickiewicz University]
+* https://github.com/mfbenitezp - [Fernando Benitez- Paez, Lecturer at the University of St Andrews]
+
